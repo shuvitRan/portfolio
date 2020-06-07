@@ -1,0 +1,18 @@
+.contentContainer{
+    display: grid;
+    /* position: absolute; */
+    grid-template-columns: 60vw auto;
+    grid-template-areas: "pics sidebar" ;
+    column-gap: 10px;
+    text-align: left;
+    padding: 20px;
+}
+
+.imgList{
+    grid-area: pics;
+}
+
+.descriptionBar{
+    grid-area: sidebar;
+    word-wrap: break-word;
+}
