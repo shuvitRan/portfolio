@@ -1,0 +1,29 @@
+.aboutContainer{
+    display: inline-block;
+    text-align: left;
+    width: 100%;
+    font-size: 1.2em;
+    animation: fadein 2s;
+    right: 0;
+    padding-top: 50px;
+
+}
+.aboutContainer h1{
+    font-size: 2em;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: rgb(41, 41, 41);
+}
+.textBlock{
+    float: left;
+    padding: 2rem;
+    width: 55%;
+    min-width: 400px;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}

@@ -1,18 +1,75 @@
 .contentContainer{
     display: grid;
-    /* position: absolute; */
+    top: 0;
+    position: absolute;
     grid-template-columns: 60vw auto;
+    /* height:100vh; */
+    margin-top:50px;
     grid-template-areas: "pics sidebar" ;
-    column-gap: 10px;
+    column-gap: 2vw;
     text-align: left;
+    /* align-items: flex-start; */
     padding: 20px;
+    
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+
+.contentContainer h1{
+    /* padding: -10; */
+    margin: 0;
+   
 }
 
 .imgList{
     grid-area: pics;
+    animation: fadein 4s;
+    
+    /* display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start; */
+    /* text-align: right; */
+}
+
+/* iframe{
+    left:0; 
+    top:0; 
+    width:100%; 
+    height:100%
+} */
+.h_iframe{
+    position: relative; 
+    padding-bottom: 56.25%; 
+    height: 0; 
+    overflow: hidden;
+    max-width: 100%; 
+    height: auto;
+    margin-bottom: 20px;
+    /* margin-top: 0; */
+    animation: fadein 3s;
+}
+/* .h_iframe .ratio {display:block;width:100%;height:auto;} */
+.h_iframe iframe {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%; 
+    height:100%;}
+
+.imgList img{
+    width: 100%;
+    /* max-width: 640px; */
+    /* padding-bottom: 20px; */
+    /* height: 500px; */
 }
 
 .descriptionBar{
     grid-area: sidebar;
     word-wrap: break-word;
+    animation: fadein 2s;
 }

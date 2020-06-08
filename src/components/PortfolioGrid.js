@@ -1,9 +1,9 @@
 import ReactDOM from 'react-dom'
 import React, { useRef, useState } from 'react'
 import { Canvas,useFrame } from 'react-three-fiber'
-import {Box} from './components/Box'
+import {Box} from './Box'
 // import Box from './components/Box'
-import './App.css';
+import '../App.css';
 
 
 

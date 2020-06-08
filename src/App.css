@@ -1,20 +1,9 @@
 .App {
   text-align: center;
+  
 }
 
-.gridContainer{
-  position: relative;
-  display: flex;
-  /* align-items: flex-start; */
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  width: 100%;
-  min-height: 100%;
-  /* min-width: 300px; */
-  /* padding: 10px; */
 
-}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -50,7 +39,10 @@
     transform: rotate(360deg);
   }
 }
-
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
 
 .canvasContainer{
   position: absolute;
@@ -60,13 +52,95 @@
   /* z-index: -1; */
   /* overflow: hidden; */
 }
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.goBack{
+  text-align: left;
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  left:2vw; 
+  cursor: pointer;
+  transition: 2s;
+  animation: fadein 4s;
+  /* opacity: 0.5; */
+  width: 80px;
+  background-color: black;
+  color: rgb(160, 160, 160);
+  
+}
+.goBack:hover {
+  color: #ff0080;
+  opacity: 1;
+  transition: 2s;
+  /* transform: scale(1.2); */
+ background-color: #ff0080;
+
+}
 
 
+
+
+.goBackIcon{
+  width: 30px;
+  height: 30px;
+  
+  /* mask-repeat: no-repeat; */
+  /* background-size: contain; */
+  /* mask-size: contain; */
+  /* position: relative; */
+  display: inline-block;
+  border-radius:50% ;
+  transition: 2s;
+  cursor: pointer;
+  text-align: center;
+  margin: auto;
+  vertical-align: middle;
+  background-color: rgb(160, 160, 160);
+  /* fill: #282c34; */
+  mask: url("/portfolio/assets/icons/chevron-left.svg");
+  -webkit-mask: url("/portfolio/assets/icons/chevron-left.svg")center center;
+  mask-position: center;
+  /* -webkit-mask-size: 150% 150%; */
+}
+
+.goBackIcon:hover{
+  /* opacity: 0.5; */
+  /* transform: scale(1.2);
+  background-color: #ff0080;
+  
+  
+  transition: 1s; */
+}
+.gridContainer{
+  position: relative;
+  display: flex;
+  /* align-items: flex-start; */
+  align-items: center;
+  justify-content: right;
+  /* height: 80vh; */
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  /* margin-top: 10%; */
+  /* min-height: 30%; */
+  /* min-width: 300px; */
+  /* padding: 10px; */
+
+}
 .gridSystem{
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  margin: 10px 10px;
+  margin: 10px 1rem;
   /* min-width:750px; */
   /* overflow-y: auto; */
   /* height: 210px; */
@@ -82,6 +156,7 @@
   /* min-width: 10vw; */
   /* height: 500px;; */
   cursor: pointer;
+  animation: fadein 2s;
   
   
 }
@@ -112,4 +187,5 @@
   font-size: 3em;
   color: rgb(0, 0, 0);
   z-index: 1;
+  animation: fadein 5s;
 }

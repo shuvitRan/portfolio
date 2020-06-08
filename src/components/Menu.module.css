@@ -1,0 +1,58 @@
+.menu{
+    font-family:  Helvetica, sans-serif;
+    font-size: 2.5em;
+    text-align: left;
+    /* display: inline-block; */
+    /* position: absolute; */
+    /* left: 10px; */
+    padding: 1rem 1rem;
+    float: left;
+    /* position: absolute; */
+
+}
+
+.homeOn{
+    /* display: inline-block; */
+    padding:0 1rem;
+    cursor: pointer;
+    transition: 1s;
+    opacity: 1;
+    text-decoration: underline;
+    /* border-left: 2px  solid */
+}
+.homeOff{
+
+    padding:0 1rem;
+    cursor: pointer;
+    transition: 1s;
+    opacity: 0.5;
+
+}
+.homeOff:hover{
+    color: #ff0080;
+    transition: 1s;
+    opacity: 1;
+}
+.aboutOn{
+    display: inline-block;
+    padding:0 1rem;
+    cursor: pointer;
+    transition: 1s;
+    text-decoration: underline;
+    /* border-left: 2px solid */
+}
+
+.aboutOff{
+    opacity: 0.5;
+    display: inline-block;
+    padding:0 1rem;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.aboutOff:hover{
+    color: #ff0095;
+    transition: 1s;
+    opacity: 1;
+
+}
