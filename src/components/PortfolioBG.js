@@ -1,13 +1,15 @@
 import ReactDOM from 'react-dom'
 import React, { useRef, useState } from 'react'
 import { Canvas,useFrame } from 'react-three-fiber'
-import {Box} from './Box'
+import {Box} from './Box';
+import MyModel from './myModel/MyModel'
+
 // import Box from './components/Box'
 import '../App.css';
 
 
 
-function PortfolioGrid (props){
+function PortfolioBG (props){
 // const mesh = useRef();
 
 
@@ -21,8 +23,9 @@ function PortfolioGrid (props){
                 <sphereBufferGeometry attach="geometry" />
                 <meshStandardMaterial attach="material" color="hotpink" />
                 </mesh> */}
-                <Box position={[-1.2, 0, 0]} />
+                
                 <Box position={[1.2, 0, 0]} />
+                <MyModel position={[0, 0, 0]}  />
                     
             </Canvas>
 
@@ -31,4 +34,4 @@ function PortfolioGrid (props){
 }
 
 
-export default PortfolioGrid;
+export default PortfolioBG;

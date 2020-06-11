@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import styles from './PortfolioContent.module.css';
 
 
@@ -13,55 +13,78 @@ const PortfolioCotent = (props)=>{
             id: 0,
             title:"ALL AT ONCE",
             tools:"JQuery, D3, OpenSeaDragon",
-            descriptions:"",
+            descriptions:"All At Once invites an algorithmic, data-driven dive into WCMA’s collection. Developed by Studio TheGreenEyl, a design and research practice, the project presents WCMA’s collection as a whole, seen from a new perspective, and allows new adjacencies and connections to come to the fore.",
             imgFolder:"WCMA", 
-            imgsScrs:["1.png", "2.png","3.png", "4.png"],
-            
+            imgsScrs:["1.png", "2.png","3.png", "4.png", "5.png"],
+            videoP: true
         },
         {
             id: 1, 
-            title:"The Growth and Livability in a Mega City ",
-            tools:"Vue.js, Nuxt.js, D3, MapBox",
-            descriptions:"",
+            title:"Shenzhen: The Growth and Livability of a Mega City ",
+            tools:"Vue.js, Nuxt.js, Mapbox GL JS & Studio, D3.js, Scrollama, and Baidu Map API.",
+            descriptions:"This is a web interactive storytelling project associate with <b>The Nature Conservancy: Shenzhen</b>. It is also the thesis project in partial fulfillment of the requirements for the degree of Master of Science in Data Visualization, at <b>Parsons School of Design</b>.<br><br>Shenzhen, known as China's booming silicon valley today, used to be a small fish town 40 years ago. Today, it ranks one of the top mega-cities in China and leading examples of urbanization in developing countries. By looking at Shenzhen, we could learn about the challenges that come with rapid growth and learn to build our city better.<br>",
+            button:['https://shuvitran.github.io/szapp/'],
+            buttonName:['visit project'],
             imgFolder:"TNC", 
-            imgsScrs:["1.jpg", "2.jpg","3.jpg", "4.jpg"],
-            videoLink:['https://player.vimeo.com/video/420423868']
+            imgsScrs:["1.png", "2.jpg","3.jpg", "4.jpg",'5.jpg','6.jpg','7.jpg'],
+            videoLink:['https://player.vimeo.com/video/420423868'],
+            videoTop: true
         },
         {
             id: 2, 
             title:"MET",
-            tools:"D3, p5.js, OpenCV, Python, Numpy, Pandas",
+            tools:"D3, DeepAR SDK, p5.js, OpenCV, Python, Numpy, Pandas",
             descriptions:"",
-            imgFolder:"Met", 
-            imgsScrs:["1.png", "2.png","3.png"],
-            videoLink:['https://player.vimeo.com/video/379099271']
+            imgFolder:"Met",
+            button:['https://shuvitran.github.io/MetPartnershipProjectsDoc/BuddhasAtTheMet/','https://shuvitran.github.io/MetPartnershipProjectsDoc/MetMasquerade/','https://shuvitran.github.io/MetPartnershipProjectsDoc/WhatAreTheyPainting/','https://shuvitran.github.io/MetPartnershipProjectsDoc/LetTheMusicPlay/'], 
+            buttonName:['Buddhas At The Met', 'Met Masquerade', 'What Are They Painting','Let The Music Play' ],
+         
+            imgsScrs:["1.jpg", "2.jpg","3.jpg",'4.jpg'],
+            // videoLink:['https://player.vimeo.com/video/379099271','https://player.vimeo.com/video/378957942','https://player.vimeo.com/video/378954055','https://player.vimeo.com/video/379094736/'],
+            videoTop: false
         },
         {
             id: 3, 
+            title:"Blue Desert Disco",
+            tools:"Unity, C#, Game Design & Development, Physical Computing, Arduino",
+            descriptions:"Blue Desert Disco is a 2-3 player fighting digital game in which each gamer has their own custom 3D print controller paired with a specific character in the game. Each character has their own unique “weapon” that reflects on their corresponding controller. Their speed and strengths also vary from each other. The controllers are identical in their overall shape but different in the reflective device/components of the characters’ abilities. The players have to adapt to the controller and figure out their own way to play quickly, and meanwhile, defeats the other players. The winner, of course, has the dance floor all to herself/himself.",
+            imgFolder:"Games", 
+            imgsScrs:['1.jpg','2.jpg','3.jpg'],
+            button:['https://vimeo.com/376450826','https://vimeo.com/370009707'],
+            buttonName:['Early Stage Blue Desert Disco','more game Love You Away'],
+            videoLink:['https://player.vimeo.com/video/378023986'],
+            videoTop: true
+        },
+        {
+            id: 4,    
             title:"Peeq",
             tools:"UI & UX, Interaction Design, Motion Graphics",
-            descriptions:"",
+            descriptions:"Peeq Data is a technology start-up company based in the San Francisco Bay Area. Peeq IOS app is a smart mobile multi-angle camera and editing system which can auto-generate highlight videos.<br><br>I was a full-time motion and interaction designer at Peeq Data, Inc. Responsible for design related activities including creating motion graphics and processing video, user interface and user experience of the website and mobile applications.<br><br>I was in charge of design interaction motion template and video sample for the Peeq app and its video product. The clients of our video products include Dew NBA, SteveNash Foundation, Drew League, and WorkForce Athletics.  As a member of the Peeq design team, I worked on the app UI/UX design, Peeq website design and its development. One of the video samples that I created was shown on Discovery channel Daily Planet Show which featuring Peeq on December 2017.<br><br>The Peeq Demo video can be viewed at the bottom of the page.",
             imgFolder:"Peeq", 
             imgsScrs:["1.jpg", "2.jpg","3.gif","4.gif","5.png"],
             videoLink:['https://player.vimeo.com/video/310027671']
         },
         {
-            id: 4, 
-            title:"Games",
-            tools:"Unity, Game Design & Development",
+            id: 5,    
+            title:"Firis App Design",
+            tools:"UI & UX, Interaction Design, Motion Graphics",
             descriptions:"",
-            imgFolder:"Games", 
-            imgsScrs:["1.png", "2.png","3.png"],
-            videoLink:['https://player.vimeo.com/video/378023986','https://player.vimeo.com/video/370009707']
+            imgFolder:"Peeq", 
+            imgsScrs:["1.jpg", "2.jpg","3.gif","4.gif","5.png"],
+            videoLink:['https://player.vimeo.com/video/310027671']
         }
         
     ];
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
 
     let videoShow ;
         if(eachContent[props.contentId] && typeof eachContent[props.contentId].videoLink!='undefined'){
         //    videoShow=  (<iframe src={`${eachContent[props.contentId].videoLink}?autoplay=1&loop=1&title=0&byline=0&portrait=0`} width="640" height="330" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>)
            videoShow=  (
-            <>  
+            <div>  
             {eachContent[props.contentId].videoLink.map((eachVideo, index)=>{
             return(
             <div key={"video"+index} className={styles.h_iframe}> 
@@ -70,13 +93,16 @@ const PortfolioCotent = (props)=>{
              )
            })
            }
-           </>
+           </div>
          )
         }
+   
+
+
     let imgsShow; 
-        if (eachContent[props.contentId]){
+        if (eachContent[props.contentId]&& typeof eachContent[props.contentId].imgsScrs!='undefined'){
             imgsShow = (
-                <div>
+                <>
                 { eachContent[props.contentId].imgsScrs.map((eachImg,index)=>{
                     return (
                         <img key={"content"+index} src={`/portfolio/assets/projectImgs/${eachContent[props.contentId].imgFolder}/${eachImg}`} />
@@ -85,28 +111,68 @@ const PortfolioCotent = (props)=>{
                 })
 
                 }
-                </div>
+                </>
             )
         }
+
+        let ImgNVideo;
+        if(eachContent[props.contentId].videoTop!='undefined' && eachContent[props.contentId].videoTop){
+            ImgNVideo=(
+                <>
+                {videoShow}
+                {imgsShow}
+                </>
+            )
+
+        } else {
+            ImgNVideo=(
+                <>
+                {imgsShow}
+                {videoShow}
+                </>
+            )
+        }
+
+        let buttonToWeb=null;
+        if(eachContent[props.contentId].button!='undefined'&&eachContent[props.contentId].button){
+            buttonToWeb =(
+            <div>
+                {eachContent[props.contentId].button.map((eachButton,index)=>{
+                    return(
+                        <div  key={"buttonout"+index} className={styles.buttonToWeb}>
+                        <a target="_blank" href={eachButton}> > {eachContent[props.contentId].buttonName[index]}</a>
+                        </div>
+
+                        
+                    )
+                })
+            }
+
+            </div>)
+            
+        }
+
+
+
 
 
     return (
         <div className={styles.contentContainer}>
+           
             <div className={styles.imgList}>
-
-                {videoShow}
-                {/* <img src={`/portfolio/assets/projectImgs/${eachContent[props.contentId].imgFolder}/1.png`} /> */}  
-                {imgsShow}
+            {ImgNVideo}
             
             </div>
             <div className={styles.descriptionBar}>
                 <h1>
                     {eachContent[props.contentId].title}
                 </h1>
-                <p dangerouslySetInnerHTML={{__html: props.content}}> 
+                <p> <b> {eachContent[props.contentId].tools}</b></p>
+                <p dangerouslySetInnerHTML={{__html: eachContent[props.contentId].descriptions}}> 
                     {/* {props.content}SSS  sdsadd sdsad dsads sdsadsdsddsadsads dsadsadsasdssdsdsadsds  */}
                 </p>
-                <p>Tools and Skills: <b> {eachContent[props.contentId].tools}</b></p>
+                {buttonToWeb}
+                
             </div>
         </div>
 

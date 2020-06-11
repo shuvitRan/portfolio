@@ -1,25 +1,30 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import { DefaultLoadingManager } from 'three'
 import styles from './About.module.css';
 
 const About=()=>{
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
+
     return(
         <div className={styles.aboutContainer}>
             <div className={styles.textBlock}>
-                <h1>冉聃 dan ran</h1>
-                <p><b>interaction designer, creative developer & video artist</b> 
+                <h1>冉聃</h1> <b>ran,dan</b>
+                
+                <p> <b>Interaction Designer, Developer & Artist </b>
                 <br/><br/>M.S. Data Visualization. 
-                <br/> Awarded with President’s Scholarship 
+                <br/> Awarded with President’s Scholarship, 
                 <br/>Parsons School of Design.     
                  <br/> B.F.A. Digital Design & Interactive Technology
                  <br/> Graduate with Honor, Pratt Institute.</p>
-                <p> Email: <a href="mailto:randanfx@gmail.com">randanfx@gmail.com</a> 
-                <br/> Vimeo: <a href="https://vimeo.com/randan">vimeo.com/randan</a>
-                <br/> Github: <a href="https://github.com/shuvitRan">github.com/shuvitRan</a>
-                <br/> Project Archive: <a href="http://www.danranpresent.com/">danranpresent.com</a></p>
+                <p className={styles.linkOut}> email: <a href="mailto:randanfx@gmail.com">randanfx@gmail.com</a> 
+                <br/> vimeo: <a href="https://vimeo.com/randan">vimeo.com/randan</a>
+                <br/> github: <a href="https://github.com/shuvitRan">github.com/shuvitRan</a>
+                <br/> project archive: <a href="http://www.danranpresent.com/">danranpresent.com</a></p>
             </div>
-            <div className={styles.textBlock}>
-                <b>Exhibition&Recognition</b>
+            <div className={styles.textBlockReco}>
+                <b>Exhibition & Recognition</b>
                 <p>Pratt Digital Arts 2017 Exhibition, Pablo’s Birthday Gallery Manhattan, New York, Group Exhibition, Project: Wuwei, Type: Interactive Projection Art, Apr 30-May 6, 2017</p>
                 <p>Politics and Power, Ann Street Gallery, Newburgh, New York, Group Exhibition, Project: Lvl++，Type: Interactive Art Installation, October 8 to Nov 26, 2016</p>
                 <p>Grief* in three languages，Dekalb Gallery, Brooklyn， NY，Group Exhibition, Project: Grieving ,Type: Video Art， Curated by Zina Saro-Wiwa, Dec 2016</p>
