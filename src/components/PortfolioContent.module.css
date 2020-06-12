@@ -18,6 +18,37 @@
     
 }
 
+
+@media only screen and (max-width: 768px) {
+    .contentContainer{
+        display: grid;
+        top: 0;
+        position: relative;
+        /* position: absolute; */
+        grid-template-columns:90vw;
+        /* grid-template-rows: 100vw 100vw; */
+        /* height:auto; */
+        /* width: 100%; */
+        /* margin-top: 5rem; */
+        grid-template-areas: 
+        "sidebar" 
+        "pics" 
+      ;
+        /* column-gap: 2vw; */
+        text-align: left;
+        /* align-items: flex-start; */
+        margin:5rem 0rem 1rem 1em;
+        /* padding:1em,5em; */
+        /* margin-left: 5rem; */
+        z-index: 2;
+        /* background-color: black; */
+        
+    }
+
+
+
+}
+
 @keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
@@ -96,7 +127,7 @@
     /* background-color: black; */
     text-align: left;
     /* color: whitesmoke; */
-    
+    /* width: 100%; */
     /* display: inline-block; */
     /* position: relative; */
     /* height: 20px; */
@@ -104,7 +135,7 @@
 .buttonToWeb a{
     color: rgb(241, 241, 241);
     /* font-weight: bold; */
-    padding: 15px 5px;
+    padding: 15px 0px;
     background-color: black;
     width: 100%;
     transition: 1s;

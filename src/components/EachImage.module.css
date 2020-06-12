@@ -17,6 +17,28 @@
     /* animation: fadein 4s; */
   }
 
+
+  @media only screen and (max-width: 768px) {
+    .cardContainer{
+    
+      /* height:20vh; */
+      width: 90%;
+      /* height: 210px; */
+      /* background-color: #c9c9c9; */
+      min-width: 250px;
+      position: relative;
+      cursor: pointer;  
+      margin: none;
+      /* padding-bottom: 50px; */
+      /* margin-bottom: 50px; */
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      /* display: inline-block; */
+      /* padding: 5px; */
+      /* overflow: hidden; */
+      /* animation: fadein 4s; */
+    }
+  }
+
   .cardContainer:hover .overlay{
     /* background:rgb(0,0,0); */
     /* z-index: 10; */

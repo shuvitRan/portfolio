@@ -12,11 +12,12 @@ const PortfolioCotent = (props)=>{
         {
             id: 0,
             title:"ALL AT ONCE",
-            tools:"JQuery, D3, OpenSeaDragon",
+            tools:"D3, Bootstrap, JQuery, OpenSeaDragon",
             descriptions:"All At Once invites an algorithmic, data-driven dive into WCMA’s collection. Developed by Studio TheGreenEyl, a design and research practice, the project presents WCMA’s collection as a whole, seen from a new perspective, and allows new adjacencies and connections to come to the fore.",
             imgFolder:"WCMA", 
             imgsScrs:["1.png", "2.png","3.png", "4.png", "5.png"],
-            videoP: true
+            videoLink:['https://player.vimeo.com/video/428276309'],
+            videoTop: true
         },
         {
             id: 1, 
@@ -69,8 +70,8 @@ const PortfolioCotent = (props)=>{
             title:"Firis App Design",
             tools:"UI & UX, Interaction Design, Motion Graphics",
             descriptions:"",
-            imgFolder:"Peeq", 
-            imgsScrs:["1.jpg", "2.jpg","3.gif","4.gif","5.png"],
+            imgFolder:"Firis", 
+            imgsScrs:["Artboard.jpg", "2.jpg","FirisMotion.gif","3.jpg","ironduan.gif"],
             videoLink:['https://player.vimeo.com/video/310027671']
         }
         
@@ -140,7 +141,7 @@ const PortfolioCotent = (props)=>{
                 {eachContent[props.contentId].button.map((eachButton,index)=>{
                     return(
                         <div  key={"buttonout"+index} className={styles.buttonToWeb}>
-                        <a target="_blank" href={eachButton}> > {eachContent[props.contentId].buttonName[index]}</a>
+                        <a target="_blank" href={eachButton}> &nbsp;&gt; {eachContent[props.contentId].buttonName[index]}</a>
                         </div>
 
                         
