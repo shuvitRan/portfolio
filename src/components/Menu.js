@@ -10,12 +10,13 @@ const Menu=(props)=>{
         <div className={[styles.menu, "noselect"].join(' ')}> 
         
           <div className={(props.isAbout?styles.homeOff:styles.homeOn)} onClick={props.onClickHome} >
-                recent by< div className={styles.myName}> dan ran</div> 
+          < div className={styles.recent}>recent  by</div>   < span className={styles.myName}> dān rǎn</span> 
         </div>
         
         <div className={(!props.isAbout?styles.aboutOff:styles.aboutOn)} onClick={props.onClickAbout}>
             about
         </div>
+        
         
       </div>
 

@@ -4,6 +4,7 @@
   height:100%;
   top:0;
   background-color: white;
+  /* position: relative; */
 }
 
 
@@ -50,7 +51,7 @@
 .canvasContainer{
   position: fixed;
   display: inline-block;
-  width: 100%;
+  width: 100vw;
   height: 100%;
   top:0;
 
@@ -98,6 +99,18 @@
   color: #ff0080;
   opacity: 1;
   transition: 2s;
+
+  /* transform: scale(1.2); */
+ background-color: #000;
+
+}
+
+.goBack:hover .goBackIcon{
+  background-color: #ff0080;
+  opacity: 1;
+  transition: 2s;
+  
+
   /* transform: scale(1.2); */
  /* background-color: #000; */
 
@@ -121,21 +134,18 @@
   margin: auto;
   vertical-align: middle;
   background-color: black;
-  /* fill: #282c34; */
   mask: url("/portfolio/assets/icons/chevron-left.svg");
   -webkit-mask: url("/portfolio/assets/icons/chevron-left.svg")center center;
   mask-position: center;
   /* -webkit-mask-size: 150% 150%; */
 }
 
-.goBackIcon:hover{
-  /* opacity: 0.5; */
-  /* transform: scale(1.2);
-  background-color: #ff0080;
+/* .goBackIcon:hover{ */
+  /* opacity: 0.5;
   
   
   transition: 1s; */
-}
+/* } */
 .gridContainer{
   position: relative;
   display: flex;
@@ -143,7 +153,7 @@
   align-items: center;
   justify-content: right;
   /* height: 80vh; */
-  /* width: 100%; */
+  width: 100vw;
   /* height: 100%; */
   /* margin: 0 3rem; */
   padding: 0 0 2rem;
@@ -177,10 +187,26 @@
 .projectContentContainer{
   position: relative;
   background-color: white;
-  /* width: max-content; */
+  max-width: 4000px;
   /* height: 100vh; */
   z-index: 2;
+  width: 100vw;
 
+}
+
+.footer{
+  margin-left: 8em;
+  font-size: 10px;
+  float: left;
+  width: 60%;
+  opacity: 0.6;
+  /* text-align: left; */
+  /* display: inline-block; */
+  /* position: absolute; */
+  animation: fadein 4s;
+  /* bottom: 5px; */
+  /* z-index: 130; */
+  
 }
 
 
@@ -209,7 +235,7 @@
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    margin-left: 1em;
+    margin:0 1.5em 0;
     margin-top: 3rem;
     
     /* padding-top: 50px; */
@@ -223,6 +249,15 @@
     /* margin: none; */
     animation: fadein 4s;
   
+  }
+  .footer{
+    margin-left: 2.5em;
+    font-size: 10px;
+    float: left;
+    animation: fadein 4s;
+    /* width: 100%; */
+    /* display: inline-block; */
+    
   }
 
 

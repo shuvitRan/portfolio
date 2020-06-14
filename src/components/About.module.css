@@ -11,6 +11,7 @@
     right: 0;
     padding-top: 2rem;
     /* z-index: 0; */
+    margin-left: 5rem
 
 }
 p{
@@ -45,9 +46,9 @@ a{
     font-size: 1em;
     float: left;
     display: inline-block;
-    margin-left: 5rem;
+    /* margin-left: 5rem; */
     padding-bottom: 2rem;
-    width: 50%;
+    width: 60%;
     min-width: 200px;
     /* font-weight: bold; */
     /* z-index: 5; */
@@ -56,11 +57,12 @@ a{
 .textBlockReco{
     font-size: 0.9em;
     float: left;
-    display: inline-block;
-    margin-left: 5rem;
+    display: block;
+    /* margin-left: 5rem; */
     padding-bottom: 2rem;
-    width: 45%;
+    width: 60%;
     min-width: 200px;
+    max-width: 700px;
     /* font-weight: bold; */
 }
 .textBlockReco p{
@@ -80,6 +82,46 @@ a{
 
 
 
-/* @media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
+    .aboutContainer{
+        /* display: inline-block; */
+        position: relative;
+        align-items: center;
+      justify-content: center;
+        text-align: left;
+        /* width: 100%;
+        height: 100%; */
+        
+        animation: fadein 2s;
+        right: 0;
+        padding-top: 2rem;
+        /* z-index: 0; */
+        margin-left: 1.5rem
+    
+    }
 
-} */
+    .textBlock{
+        /* font-size: 14px; */
+        font-size: 1em;
+        float: left;
+        display: inline-block;
+        /* margin-left: 5rem; */
+        padding-bottom: 2rem;
+        width: 80%;
+        min-width: 200px;
+        /* font-weight: bold; */
+        /* z-index: 5; */
+    }
+    
+    .textBlockReco{
+        font-size: 0.9em;
+        float: left;
+        display: block;
+        /* margin-left: 5rem; */
+        padding-bottom: 2rem;
+        width: 80%;
+        min-width: 200px;
+       
+        /* font-weight: bold; */
+    }
+}

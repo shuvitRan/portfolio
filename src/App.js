@@ -50,12 +50,13 @@ function App() {
         {/* <PortfolioBG /> */}
        
         <SwarmGroup mouse={mouse} isAbout={pageState.isAboutOpen} />
-
+        
       <Menu onClickHome={closeAboutPage} onClickAbout={aboutPage} isAbout={pageState.isAboutOpen} />
-
+      
       {!pageState.isAboutOpen?
 
       <div className="projectContentContainer">
+        
       <div className="gridContainer"><ImgGridSystem /></div>
       </div>  
       :
@@ -67,18 +68,9 @@ function App() {
       
       }
 
-     
+<div className='footer'><p>this website is built on React.js, Written by Dan Ran.</p></div>
        
       
-      
-      {/* <header className="App-header"> */}
-    
-      {/* <div className="gridContainer"><ImgGridSystem /></div> */}
-      
-        
-       
-      
-      {/* </header> */}
     </div>
   );
 }

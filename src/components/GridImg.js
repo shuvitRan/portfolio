@@ -11,7 +11,7 @@ const GridImg = (props)=>{
         <>
         <div className ={styles.cardContainer} onClick={props.onClick} imgid={props.projectId}  >
                 <div className={styles.imgContainer} >
-                    <img className={styles.eachImage}  src={ props.content.src } alt={props.content.title}/>
+                    <img className={styles.eachImage}  src={"/assets/GridImg/"+props.content.src } alt={props.content.title}/>
                
                     <div className={styles.overlay} >                   
                     </div>

@@ -13,12 +13,12 @@ const ImgGridSystem = ()=>{
     const fadeinAnimation = useSpring({opacity: 1, from: {opacity: 0}})
 
     let imgList = [
-        {id: 0, src: '/portfolio/assets/GridImg/wcma2.jpg', title: 'All AT ONCE - WCMA', partner:"Studio TheGreenEyl", category:"creative app", descriptions:"tqqqqqqghis adsd <br> sdf <b>sdads</b> adsqwewqrwqrwqrwq"},
-        {id: 1, src: '/portfolio/assets/GridImg/TNC3.jpg', title: 'MEGA CITY',partner:"The Natrual Conservancy", category:"web app, interactive storytelling", descriptions:'wqex ff sdsfq'},
-        {id: 2, src: '/portfolio/assets/GridImg/MET2.png', title: 'MET',partner:"Metropolitan Museum of Art", category:"creative app", descriptions:'sdawr adsd sds ff sdadsadsqwewqrwqrwqrwq'},
-        {id: 3, src: '/portfolio/assets/GridImg/Games2.jpg', title: 'BLUE DESERT DISCO', partner:"Wonderville Brooklyn", category:"game development, phsyical computing",descriptions:'ffffff adsd sds fqrwqrwq'},
-        {id: 4, src: '/portfolio/assets/GridImg/Peeq2.png', title: 'PEEQ',partner:"Peeq Data Inc", category:"ui/ux, motion, video", descriptions:'ffffff adsd sds fqrwqrwq'},
-        {id: 5, src: '/portfolio/assets/GridImg/ProductDesign.jpg', title: 'FIRIS', partner:"Cornell Start-up Studio", category:"ui/ux, product design ",descriptions:'ffffff adsd sds fqrwqrwq'}
+        {id: 0, src: 'wcma2.jpg', title: 'All AT ONCE - WCMA', partner:"Studio TheGreenEyl", category:"creative app", descriptions:"tqqqqqqghis adsd <br> sdf <b>sdads</b> adsqwewqrwqrwqrwq"},
+        {id: 1, src: 'TNC3.jpg', title: 'MEGA CITY',partner:"The Natrual Conservancy", category:"web app, interactive storytelling", descriptions:'wqex ff sdsfq'},
+        {id: 2, src: 'MET2.png', title: 'MET',partner:"Metropolitan Museum of Art", category:"creative app", descriptions:'sdawr adsd sds ff sdadsadsqwewqrwqrwqrwq'},
+        {id: 3, src: 'Games2.jpg', title: 'BLUE DESERT DISCO', partner:"Wonderville Brooklyn", category:"game development, phsyical computing",descriptions:'ffffff adsd sds fqrwqrwq'},
+        {id: 4, src: 'Peeq2.png', title: 'PEEQ',partner:"Peeq Data Inc", category:"ui/ux, motion, video", descriptions:'ffffff adsd sds fqrwqrwq'},
+        {id: 5, src: 'ProductDesign.jpg', title: 'FIRIS', partner:"Cornell Start-up Studio", category:"ui/ux, product design ",descriptions:'ffffff adsd sds fqrwqrwq'}
     ]; 
     // let isImgClicked = false;
     // let activeId ='';

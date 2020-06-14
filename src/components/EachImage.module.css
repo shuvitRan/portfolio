@@ -22,7 +22,7 @@
     .cardContainer{
     
       /* height:20vh; */
-      width: 90%;
+      width: 100%;
       /* height: 210px; */
       /* background-color: #c9c9c9; */
       min-width: 250px;
@@ -60,6 +60,7 @@
     position: relative;
     width: 100%;
     
+    
 }
 
 .eachImage{
@@ -86,7 +87,7 @@
     opacity: 0;
     transition: .5s ease;
     background-color: rgba(0, 0, 0, 0.4);
-    background-image: url('/portfolio/assets/GridImg/grid4.png');
+    background-image: url('/assets/GridImg/grid4.png');
   }
   .textOverlay{
       width: 70%;

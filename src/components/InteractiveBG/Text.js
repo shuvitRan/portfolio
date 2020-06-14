@@ -3,7 +3,7 @@ import React, { useMemo } from 'react'
 import { useLoader, useUpdate } from 'react-three-fiber'
 
 export default function({ children, vAlign = 'center', hAlign = 'center', size = 1, color = '#000000', ...props }) {
-  const font = useLoader(THREE.FontLoader, 'portfolio/assets/jsFont/Helvetica.json')
+  const font = useLoader(THREE.FontLoader, '/assets/jsFont/Helvetica.json')
   const config = useMemo(
     () => ({ font, size: 40, height: 10, curveSegments: 32, bevelEnabled: true, bevelThickness: 1, bevelSize: 2.5, bevelOffset: 0, bevelSegments: 8 }),
     [font]
@@ -23,7 +23,7 @@ export default function({ children, vAlign = 'center', hAlign = 'center', size =
       <mesh ref={mesh}  >
         <textGeometry attach="geometry" args={[children, config]} />
         {/* <meshBasicMaterial flatShading={true} attach="material" color={"#ff0061"} /> */}
-        <meshPhongMaterial attach="material" color="rgb(245, 245, 245)" />
+        <meshPhongMaterial attach="material" color="rgb(200, 200, 245)"  transparent= "true" opacity="0.9"/>
       </mesh>
     </group>
   )

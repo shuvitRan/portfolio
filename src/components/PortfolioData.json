@@ -1,0 +1,132 @@
+[
+    {
+       "id": 0,
+       "title": "ALL AT ONCE",
+       "tools": "D3, Bootstrap, JQuery, Canvas, Interaction Design,",
+       "descriptions": "This creative web application is a new part of the All At Once series, a project that invites an algorithmic, data-driven dive into <b>Williams College Museum of Art's</b> collection. A design and research practice, the project presents WCMA's collection as a whole, seen from a new perspective, and allows new adjacencies and connections to come to the fore. <br><br>I did the interaction design and developed this application for the <b>Studio TheGreenEyl</b> in May 2020. The concept design is by Richard The. This canvas and SVG based application render more than 4000 High-resolution images in one browser tab fluently. With a very tight schedule, this project is executed beautifully and efficiently. ",
+       "imgFolder": "WCMA",
+       "imgsScrs": [
+          "1.png",
+          "2.png",
+          "3.png",
+          "4.png",
+          "5.png"
+       ],
+       "videoLink": [
+          "https://player.vimeo.com/video/428276309"
+       ],
+       "videoTop": true,
+       "button":[],
+       "buttonName":[]
+    },
+    {
+       "id": 1,
+       "title": "Shenzhen: The Growth and Livability of a Mega City ",
+       "tools": "Vue.js, Nuxt.js, Mapbox GL JS & Studio, D3.js, Scrollama, and Baidu Map API.",
+       "descriptions": "This is a web application and interactive storytelling project,  partnered with <b>The Nature Conservancy: Shenzhen.</b>  It is a project aimed to raise people's awareness to improve the livability of the cities in developing countries, instead of solely focusing on pursuing economic growth.  It is also the application part of my thesis project in partial fulfillment of the requirements for the degree of Master of Science in Data Visualization at <b>Parsons School of Design</b>.<br><br>Shenzhen, known as China's booming silicon valley today, used to be a small fish town 40 years ago. Today, it ranks one of the top mega-cities in China and leading examples of urbanization in developing countries. By looking at Shenzhen, we could learn about the challenges that come with rapid growth and learn to build our city better.",
+       "button": [
+          "https://shuvitran.github.io/szapp/", "https://github.com/shuvitRan/ShenzhenLivability/blob/master/ShenzhenLivabilityinThreeAspects.pdf"
+       ],
+       "buttonName": [
+          "visit project", "check the academic paper"
+       ],
+       "imgFolder": "TNC",
+       "imgsScrs": [
+          "1.png",
+          "2.jpg",
+          "3.jpg",
+          "4.jpg",
+          "5.jpg",
+          "6.jpg",
+          "7.jpg"
+       ],
+       "videoLink": [
+          "https://player.vimeo.com/video/420423868"
+       ],
+       "videoTop": true
+    },
+    {
+       "id": 2,
+       "title": "MET",
+       "tools": "D3, DeepAR SDK, p5.js, OpenCV, Python, Numpy, Pandas",
+       "descriptions": "This is a collection of four very different creative applications that I made for the research collaboration between the <b>Metropolitan Museum of Art</b> and MSDV at Parsons School of Design.<br><br><b>Buddha at The Met</b>: A computer-vision based research and data visualization on the Buddha statues at the museum.<br><br><b>Met Masquerade</b>: A playful AR application, introducing the mask collection at the Met.<br><br><b>What are They Painting?</b>: An insight into the Met's paintings collection. A data visualization of the top 10 tags of paintings from 9 countries/civilizations during four periods of time. <br><br><b>Let the Music Play</b>: An interactive listen-and-guess game to provide the audience with a sensual association between 24 instruments and their sounds. <br><br> click the button for more detail and link to the project",
+       "imgFolder": "Met",
+       "button": [
+          "https://shuvitran.github.io/MetPartnershipProjectsDoc/BuddhasAtTheMet/",
+          "https://shuvitran.github.io/MetPartnershipProjectsDoc/MetMasquerade/",
+          "https://shuvitran.github.io/MetPartnershipProjectsDoc/WhatAreTheyPainting/",
+          "https://shuvitran.github.io/MetPartnershipProjectsDoc/LetTheMusicPlay/"
+       ],
+       "buttonName": [
+          "Buddhas at the Met",
+          "Met Masquerade",
+          "What Are They Painting?",
+          "Let the Music Play"
+       ],
+       "imgsScrs": [
+          "1.jpg",
+          "2.jpg",
+          "3.jpg",
+          "4.jpg"
+       ],
+       "videoTop": false
+    },
+    {
+       "id": 3,
+       "title": "Blue Desert Disco",
+       "tools": "Unity, C#, Game Design & Development, Physical Computing, Arduino",
+       "descriptions": "Blue Desert Disco is a 2-3 players fighting digital game that comes with custom 3D print controllers.  It was showcased in <b>Wonderville</b>( An Independent Game Space) in Brooklyn in December 2019. <br><br>I lead the team and serve as the concept designer and developer of this game. I am the sole developer of the game software. I also helped with physical computing development.<br><br>In this game, each gamer has their own custom 3D print controller paired with a specific character in the game. Each character has their own unique \"weapon\" that reflects on their corresponding controller. Their speed and strengths also vary from each other. The controllers are identical in their overall shape but different in the reflective device/components of the characters' abilities. The players have to adapt to the controller and figure out their own way to play quickly, and meanwhile, defeats the other players. The winner, of course, has the dance floor all to herself/himself.",
+       "imgFolder": "Games",
+       "imgsScrs": [
+          "1.jpg",
+          "2.jpg",
+          "3.jpg"
+       ],
+       "button": [
+          "https://vimeo.com/376450826",
+          "https://vimeo.com/370009707"
+       ],
+       "buttonName": [
+          "early stage Blue Desert Disco",
+          "more game I made - Love You Away"
+       ],
+       "videoLink": [
+          "https://player.vimeo.com/video/378023986"
+       ],
+       "videoTop": true
+    },
+    {
+       "id": 4,
+       "title": "Peeq",
+       "tools": "UI & UX, Interaction Design, Motion Graphics",
+       "descriptions": "Peeq Data is a technology start-up company based in the San Francisco Bay Area. Peeq IOS app is a smart mobile multi-angle camera and editing system which can auto-generate highlight videos.<br><br>I was a full-time motion and interaction designer at Peeq Data, Inc. Responsible for design related activities including creating motion graphics and processing video, user interface and user experience of the website and mobile applications.<br><br>I was in charge of design interaction motion template and video sample for the Peeq app and its video product. The clients of our video products include Dew NBA, SteveNash Foundation, Drew League, and WorkForce Athletics.  As a member of the Peeq design team, I worked on the app UI/UX design, Peeq website design and its development. One of the video samples that I created was shown on Discovery channel Daily Planet Show which featuring Peeq on December 2017.<br><br>The Peeq Demo video can be viewed at the bottom of the page.",
+       "imgFolder": "Peeq",
+       "imgsScrs": [
+          "1.jpg",
+          "2.jpg",
+          "3.gif",
+          "4.gif",
+          "5.png"
+       ],
+       "videoLink": [
+          "https://player.vimeo.com/video/310027671"
+       ]
+    },
+    {
+       "id": 5,
+       "title": "Firis App Design",
+       "tools": "UI & UX, Interaction Design, Motion Graphics",
+       "descriptions": "Firis is a video-making app that swaps user's face and voice into premium videos. it is a startup idea and product prototype developed in <b>Cornell Tech Startup studio.</b> <br><br>As the full-stack designer, I teamed up with four developers. I designed full package for the Firis, including brand identity, pitch deck, UI/UX, motion and interaction, special effects and video comercial. <br><br>Have you or your friends dreamed to at as Harley Quinn or IronMan in a movie video? We are building a mobile app to enable you to fuse yourself with the movie characters you love and even place yourself into movie fragments using computer vision. The new character can look like you or even be you but speaking the original lines in the movie video. Besides that, you can also share your videos to social networks and receive likes and followers. ",
+       "imgFolder": "Firis",
+       "imgsScrs": [
+          "Artboard.jpg",
+          "2.jpg",
+          "FirisMotion.gif",
+          "3.jpg",
+          "ironduan.gif"
+       ],
+       "videoLink": [
+          
+       ]
+    }
+ ]

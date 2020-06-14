@@ -23,7 +23,7 @@ export default function Post() {
       rings: 4,
       distanceThreshold: 1, // Render distance depends on camera near&far.
       distanceFalloff: 0.0, // No need for falloff.
-      rangeThreshold: 0.05, // Larger value works better for this camera frustum.
+      rangeThreshold: 0.01, // Larger value works better for this camera frustum.
       rangeFalloff: 0.01,
       luminanceInfluence: 0.6,
       radius: 30,

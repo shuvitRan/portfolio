@@ -1,5 +1,6 @@
 import React,{useEffect} from 'react';
 import styles from './PortfolioContent.module.css';
+import PortfolioData from './PortfolioData';
 
 
 
@@ -8,7 +9,9 @@ import styles from './PortfolioContent.module.css';
 
 const PortfolioCotent = (props)=>{
 
-    let eachContent =[
+    let eachContent = PortfolioData;
+    // console.log(eachContent2[1])
+    let eachContent2 =[
         {
             id: 0,
             title:"ALL AT ONCE",
@@ -106,7 +109,7 @@ const PortfolioCotent = (props)=>{
                 <>
                 { eachContent[props.contentId].imgsScrs.map((eachImg,index)=>{
                     return (
-                        <img key={"content"+index} src={`/portfolio/assets/projectImgs/${eachContent[props.contentId].imgFolder}/${eachImg}`} />
+                        <img key={"content"+index} src={`/assets/projectImgs/${eachContent[props.contentId].imgFolder}/${eachImg}`} />
                     )
 
                 })
