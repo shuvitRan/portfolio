@@ -4,8 +4,8 @@
     position: relative;
     /* max-width: 2000px; */
     /* position: absolute; */
-    grid-template-columns: 55vw 30vw;
-    grid-template-columns: minmax(300px, 1400px) minmax(100px, 800px);
+    /* grid-template-columns: 50vw 30vw; */
+    grid-template-columns: minmax(300px, 1400px) minmax(100px, 980px);
     /* height:auto; */
     /* width: 100%; */
     /* margin-top: 5rem; */
@@ -15,7 +15,7 @@
     /* align-items: flex-start; */
     margin:3rem 0rem 1rem;
     margin-left: 5rem;
-    margin-right: 1rem;
+    margin-right: 0rem;
     z-index: 2;
     
     /* background-color: black; */
