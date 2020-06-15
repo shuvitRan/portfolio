@@ -10,7 +10,8 @@
           "2.png",
           "3.png",
           "4.png",
-          "5.png"
+          "5.png",
+          "6.jpg"
        ],
        "videoLink": [
           "https://player.vimeo.com/video/428276309"
@@ -28,7 +29,7 @@
           "https://shuvitran.github.io/szapp/", "https://github.com/shuvitRan/ShenzhenLivability/blob/master/ShenzhenLivabilityinThreeAspects.pdf"
        ],
        "buttonName": [
-          "visit project", "check the academic paper"
+          "visit project (desktop only)", "check the academic paper"
        ],
        "imgFolder": "TNC",
        "imgsScrs": [
@@ -87,7 +88,7 @@
           "https://vimeo.com/370009707"
        ],
        "buttonName": [
-          "early stage Blue Desert Disco",
+          "early stage documenation",
           "more game I made - Love You Away"
        ],
        "videoLink": [
