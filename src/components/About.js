@@ -17,8 +17,8 @@ const About=()=>{
                  Awarded with President’s Scholarship, 
                 Parsons School of Design. 
                     
-                 <br/> B.F.A. Digital Design & Interactive Technology
-                 Graduate with Honor, Pratt Institute.</p>
+                 <br/> B.F.A. Digital Design & Interactive Technology,
+                 graduated with Honor, Pratt Institute.</p>
                 <p className={styles.linkOut}> email: <a href="mailto:randanfx@gmail.com">randanfx@gmail.com</a> 
                 <br/> vimeo: <a href="https://vimeo.com/randan">vimeo.com/randan</a>
                 <br/> github: <a href="https://github.com/shuvitRan">github.com/shuvitRan</a>
