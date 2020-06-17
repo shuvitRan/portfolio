@@ -1,11 +1,11 @@
 import React ,{useState, useCallback, useRef, useEffect} from 'react';
-import logo from './logo.svg';
 import './App.css';
 import  PortfolioBG  from './components/PortfolioBG';
 import ImgGridSystem from './components/ImgGridSystem';
 import Menu from './components/Menu';
 import About from './components/About';
-import SwarmGroup from './components/InteractiveBG/SwarmGroup'
+import SwarmGroup from './components/InteractiveBG/SwarmGroup';
+import ReactGa from 'react-ga';
 
 
 function App() {
@@ -19,17 +19,30 @@ function App() {
   })
 
   const aboutPage = ()=>{
+    ReactGa.event({
+      category:'About Page Button',
+      action:'About page button is opened'
+    });
+
     setPageState({
       isAboutOpen:true
     })
   }
 
   const closeAboutPage = ()=>{
+    ReactGa.event({
+      category:'Logo Button is Clicked',
+      action:'About page is closed'
+    });
     setPageState({
       isAboutOpen:false
     })
   }
 
+  useEffect(()=>{
+    ReactGa.initialize('UA-169847537-1')
+    ReactGa.pageview(window.location.pathname+ window.location.search);
+  })
 
     // if(isAboutOpen){
 
@@ -68,7 +81,7 @@ function App() {
       
       }
 
-<div className='footer'><p>this website is built on React.js, Written by Dan Ran.</p></div>
+      <div className='footer'><p>this website is built on React.js, Written by Dan Ran.</p></div>
        
       
     </div>

@@ -1,6 +1,8 @@
 import React,{useEffect} from 'react';
 import styles from './PortfolioContent.module.css';
 import PortfolioData from './PortfolioData';
+import ReactGa from 'react-ga';
+
 
 
 
@@ -144,7 +146,13 @@ const PortfolioCotent = (props)=>{
                 {eachContent[props.contentId].button.map((eachButton,index)=>{
                     return(
                         <div  key={"buttonout"+index} className={styles.buttonToWeb}>
-                        <a target="_blank" href={eachButton}> &nbsp;&gt; {eachContent[props.contentId].buttonName[index]}</a>
+                             <ReactGa.OutboundLink
+                                        eventLabel={eachContent[props.contentId].buttonName[index]+" Button Clicked"}
+                                        to={eachButton}
+                                        target="_blank"
+                                        trackerNames={['tracker2']}
+                                    >&nbsp;&gt; {eachContent[props.contentId].buttonName[index]}</ReactGa.OutboundLink>
+                        {/* <a target="_blank" href={eachButton}> &nbsp;&gt; {eachContent[props.contentId].buttonName[index]}</a> */}
                         </div>
 
                         

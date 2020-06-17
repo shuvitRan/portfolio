@@ -4,7 +4,8 @@ import ReactDOM from "react-dom";
 // import {useImage} from 'react-image';
 import GridImg  from './GridImg';
 import PortfolioCotent from './PortfolioContent';
-import {useSpring, animated} from 'react-spring'
+import {useSpring, animated} from 'react-spring';
+import ReactGa from 'react-ga';
 // import gobackIcon from '../icons/chevron-left.svg';
 
 const ImgGridSystem = ()=>{
@@ -32,7 +33,9 @@ const ImgGridSystem = ()=>{
     const openInfoHandler =(e)=>{
         // console.log(e);
         // e.preventDefault();
-        // console.log(e.target.getAttribute("imgid"))
+        
+       
+
        setImgState ({
            isImgClicked: true,
            activeId: e.currentTarget.getAttribute("imgid")
@@ -43,6 +46,10 @@ const ImgGridSystem = ()=>{
         
     }
     const goBackHandler =()=>{
+        ReactGa.event({
+            category:'GoBack Button is Clicked',
+            action:`BackToHome`
+          });
         setImgState ({
             isImgClicked: false,
             activeId: null
@@ -63,6 +70,10 @@ const ImgGridSystem = ()=>{
         //   currentState = this.currentState;
           let imgId = currentState.activeId;
         //    myObj = imgList.find(x=>x.id===imgId)
+        ReactGa.event({
+            category:'PortFolio is clicked',
+            action:`${imgList[imgId].title}`
+          });
           
           return (
               <div >
