@@ -71,7 +71,7 @@ const ImgGridSystem = ()=>{
           let imgId = currentState.activeId;
         //    myObj = imgList.find(x=>x.id===imgId)
         ReactGa.event({
-            category:'PortFolio is clicked',
+            category:'Portfolio is clicked',
             action:`${imgList[imgId].title}`
           });
           

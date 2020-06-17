@@ -1,6 +1,8 @@
 import React,{useEffect} from 'react'
 import { DefaultLoadingManager } from 'three'
 import styles from './About.module.css';
+import ReactGa from 'react-ga';
+
 
 const About=()=>{
     useEffect(() => {
@@ -19,10 +21,35 @@ const About=()=>{
                     
                  <br/> B.F.A. Digital Design & Interactive Technology,
                  graduated with Honor, Pratt Institute.</p>
-                <p className={styles.linkOut}> email: <a href="mailto:randanfx@gmail.com">randanfx@gmail.com</a> 
-                <br/> vimeo: <a href="https://vimeo.com/randan">vimeo.com/randan</a>
-                <br/> github: <a href="https://github.com/shuvitRan">github.com/shuvitRan</a>
-                <br/> project archive: <a href="http://www.danranpresent.com/">danranpresent.com</a></p>
+                <p className={styles.linkOut}> email: 	&nbsp;
+                 <ReactGa.OutboundLink
+                                    eventLabel={"Email is Clicked"}
+                                    to="mailto:randanfx@gmail.com"
+                                    trackerNames={['tracker2']}
+                                > randanfx@gmail.com</ReactGa.OutboundLink>
+                <br/> vimeo:	&nbsp; 
+                <ReactGa.OutboundLink
+                                    eventLabel={"vimeo account is oppened"}
+                                    to="https://vimeo.com/randan"
+                                    target="_blank"
+                                    trackerNames={['tracker2']}
+                                > vimeo.com/randan</ReactGa.OutboundLink>
+                <br/> github:	&nbsp;       
+                <ReactGa.OutboundLink
+                                    eventLabel={"Github Page is clicked"}
+                                    to="https://github.com/shuvitRan"
+                                    target="_blank"
+                                    trackerNames={['tracker2']}
+                                > github.com/shuvitRan</ReactGa.OutboundLink>
+                <br/> project archive:	&nbsp; 
+                <ReactGa.OutboundLink
+                                    eventLabel={"Old Archive is clicked"}
+                                    to="http://www.danranpresent.com/"
+                                    target="_blank"
+                                    trackerNames={['tracker2']}
+                                > danranpresent.com</ReactGa.OutboundLink></p>
+
+                {/* <a href="mailto:randanfx@gmail.com">randanfx@gmail.com</a> <a href="https://vimeo.com/randan">vimeo.com/randan</a> <a href="http://www.danranpresent.com/">danranpresent.com</a>*/}
             </div>
             <div className={styles.textBlockReco}>
                 <b>Exhibition & Recognition</b>
