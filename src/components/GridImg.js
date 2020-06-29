@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from "react-dom";
-import styles from "./EachImage.module.css";
-
+import styles from "./GridImg.module.css";
+import SplitText from "react-pose-text";
+import TextFx from './TextFx';
 // import React, {Suspense} from 'react-image'
 // import {useImage} from 'react-image'
 
@@ -21,9 +22,21 @@ const GridImg = (props)=>{
                 {/* <img src={require(`${ props.imgsrc }`)} alt="P1"/> */}
                
                 <div className={styles.textOverlay} >
-                    <h1 className={styles.cardText}>{props.content.title }</h1>
-                    <p className={styles.cardCo}>{props.content.partner}</p>
-                    <p className={styles.cardCate}>{props.content.category}</p>
+                    <h1 className={styles.cardText}> 
+                    <SplitText initialPose="exit" pose="enter" charPoses={TextFx}>
+                        {props.content.title }
+                    </SplitText>    
+                    </h1>
+                    <div className={styles.cardCo}>
+                    <SplitText initialPose="exit" pose="enter" charPoses={TextFx}>
+                        {props.content.partner}
+                    </SplitText>
+                    </div>
+                    <div className={styles.cardCate}>
+                    <SplitText initialPose="exit" pose="enter" charPoses={TextFx}>
+                        {props.content.category}
+                        </SplitText>
+                    </div>
                     {/* <p className={styles.cardCo}>Web Application</p> */}
                    
                 </div>

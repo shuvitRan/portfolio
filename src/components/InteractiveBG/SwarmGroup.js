@@ -104,13 +104,13 @@ const SwarmGroup=(props)=> {
         gl={{ alpha: true, antialias: false, logarithmicDepthBuffer: true }}
         camera={{ fov: 50, position: [0, 0, 70] }}
         onCreated={({ gl }) => {
-        //   gl.setClearColor('white')
+          // gl.setClearColor('white')
           gl.toneMapping = THREE.ACESFilmicToneMapping
           gl.outputEncoding = THREE.sRGBEncoding
         }}>
         <ambientLight intensity={1} />
         <pointLight position={[100, 100, 100]} intensity={2.2} />
-        <pointLight position={[-100, -100, -100]} intensity={15} color="rgb(0, 0, 200)" />
+        <pointLight position={[-100, -100, -100]} intensity={1} color="rgb(0, 0, 200)" />
         {/* <Swarm type='lineh' mouse={props.mouse} count={120} /> */}
         {/* <Swarm type='linev' mouse={props.mouse} count={3} /> */}
         <Swarm type='snowBall' mouse={props.mouse} count={5} />
@@ -121,6 +121,8 @@ const SwarmGroup=(props)=> {
         <DisplayText mouse={props.mouse} />
         
         </Suspense>
+
+  
   
       </Canvas>
       

@@ -15,7 +15,8 @@ function App() {
     window.location.reload(true);
   }
   const [pageState, setPageState] = useState({
-    isAboutOpen : false
+    isAboutOpen : false,
+    isHomeOpen:true
   })
 
   const aboutPage = ()=>{
@@ -25,7 +26,8 @@ function App() {
     });
 
     setPageState({
-      isAboutOpen:true
+      isAboutOpen:true,
+      isHomeOpen:false
     })
   }
 
@@ -35,8 +37,19 @@ function App() {
       action:'About page is closed'
     });
     setPageState({
-      isAboutOpen:false
+      isAboutOpen:false,
+      isHomeOpen:true
     })
+  }
+
+
+  const ChangePageState=(NewValue)=>{
+
+    setPageState({
+      isAboutOpen:false,
+      isHomeOpen:NewValue
+    })
+
   }
 
   useEffect(()=>{
@@ -67,22 +80,24 @@ function App() {
       <Menu onClickHome={closeAboutPage} onClickAbout={aboutPage} isAbout={pageState.isAboutOpen} />
       
       {!pageState.isAboutOpen?
-
+      <>
       <div className="projectContentContainer">
         
-      <div className="gridContainer"><ImgGridSystem /></div>
+      <div className="gridContainer"><ImgGridSystem pageState={ChangePageState} isHome={pageState.isHomeOpen}  /></div>
       </div>  
+      
+      </>
       :
       <>
       <About />
-     
+      <div className='footer'> <p> this website is built on React.js, Written by Dan Ran.</p></div>
       
       </>
       
       }
 
-      <div className='footer'><p>this website is built on React.js, Written by Dan Ran.</p></div>
-       
+      
+
       
     </div>
   );

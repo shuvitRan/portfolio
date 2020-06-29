@@ -31,6 +31,10 @@
     /* word-spacing: .2ch; */
     
 }
+.toolList{
+    font-size: 16px;
+    /* color: #5e5e5e; */
+}
 
 
 @media only screen and (max-width: 768px) {
@@ -81,6 +85,8 @@
 .contentContainer h1{
     /* padding: -10; */
     margin: 0;
+    margin-bottom: 10px;
+    font-weight: 500;
    
 }
 
@@ -169,10 +175,11 @@
     /* height: 20px; */
 }
 .buttonToWeb a{
-    color: rgb(241, 241, 241);
+    
     /* font-weight: bold; */
     padding: 15px 0px;
     background-color: black;
+    color: rgb(255, 255, 255);
     width: 100%;
     transition: 1s;
     text-decoration: none;
@@ -184,4 +191,8 @@
     color: black;
     background-color: #ff0080;
     transition: 1s;
+}
+
+.descriptionText{
+    animation: fadein 5s;
 }

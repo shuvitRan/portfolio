@@ -8,7 +8,7 @@ import {useSpring, animated} from 'react-spring';
 import ReactGa from 'react-ga';
 // import gobackIcon from '../icons/chevron-left.svg';
 
-const ImgGridSystem = ()=>{
+const ImgGridSystem = (props)=>{
 
    
     const fadeinAnimation = useSpring({opacity: 1, from: {opacity: 0}})
@@ -33,7 +33,7 @@ const ImgGridSystem = ()=>{
     const openInfoHandler =(e)=>{
         // console.log(e);
         // e.preventDefault();
-        
+        props.pageState(false);
        
 
        setImgState ({
@@ -50,6 +50,7 @@ const ImgGridSystem = ()=>{
             category:'GoBack Button is Clicked',
             action:`BackToHome`
           });
+          props.pageState(true);
         setImgState ({
             isImgClicked: false,
             activeId: null
@@ -59,13 +60,12 @@ const ImgGridSystem = ()=>{
         window.scrollTo(0, 0)
       }, [])
  
-   
+      
+    
       
 
     let myObj;
-    // useEffect(() => console.log(imgState));
-    // useEffect(() => console.log(imgState.activeId));
-    // useEffect(() => console.log(myObj));
+
       const openImageInformation = (currentState)=>{
         //   currentState = this.currentState;
           let imgId = currentState.activeId;
@@ -74,6 +74,8 @@ const ImgGridSystem = ()=>{
             category:'Portfolio is clicked',
             action:`${imgList[imgId].title}`
           });
+
+        
           
           return (
               <div >
@@ -96,7 +98,7 @@ const ImgGridSystem = ()=>{
       let gridimg = null;
       let projectContent = null;
 
-    if(!imgState.isImgClicked ){
+    if(props.isHome==true ){
      
         gridimg=(// return (
            <div className="gridSystem"> 
@@ -113,16 +115,17 @@ const ImgGridSystem = ()=>{
                         //  <img src={require(`${myimg.src}`)} alt="P1"/>  
                     )
             })}
-            
+          
            </div>
          )
-    }else if(imgState.isImgClicked){
+    }else if(imgState.isImgClicked && props.isHome==false  ){
       
         
         projectContent = (
             < > 
                 
                 { openImageInformation(imgState) }
+          
             </>
         )
 
@@ -139,6 +142,7 @@ const ImgGridSystem = ()=>{
             {gridimg}
             {projectContent}
          {/* </div> */}
+        
          </>
     );
 

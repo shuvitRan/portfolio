@@ -3,7 +3,8 @@ import styles from './PortfolioContent.module.css';
 import PortfolioData from './PortfolioData';
 import ReactGa from 'react-ga';
 
-
+import SplitText from "react-pose-text";
+import TextFx from './TextFx';
 
 
 
@@ -151,7 +152,12 @@ const PortfolioCotent = (props)=>{
                                         to={eachButton}
                                         target="_blank"
                                         trackerNames={['tracker2']}
-                                    >&nbsp;&gt; {eachContent[props.contentId].buttonName[index]}</ReactGa.OutboundLink>
+                                        
+                                    >
+                                        
+                                        &nbsp;&gt; {eachContent[props.contentId].buttonName[index]}
+                                        
+                                        </ReactGa.OutboundLink>
                         {/* <a target="_blank" href={eachButton}> &nbsp;&gt; {eachContent[props.contentId].buttonName[index]}</a> */}
                         </div>
 
@@ -177,10 +183,16 @@ const PortfolioCotent = (props)=>{
             </div>
             <div className={styles.descriptionBar}>
                 <h1>
+                <SplitText initialPose="exit" pose="enter" charPoses={TextFx}>
                     {eachContent[props.contentId].title}
+                 </SplitText>   
                 </h1>
-                <p> <b> {eachContent[props.contentId].tools}</b></p>
-                <p dangerouslySetInnerHTML={{__html: eachContent[props.contentId].descriptions}}> 
+                <span> <b className={styles.toolList}> 
+                    <SplitText initialPose="exit" pose="enter" charPoses={TextFx}>
+                    {eachContent[props.contentId].tools}
+                    </SplitText>
+                    </b></span>
+                <p className={styles.descriptionText} dangerouslySetInnerHTML={{__html: eachContent[props.contentId].descriptions}}> 
                     {/* {props.content}SSS  sdsadd sdsad dsads sdsadsdsddsadsads dsadsadsasdssdsdsadsds  */}
                 </p>
                 {buttonToWeb}
