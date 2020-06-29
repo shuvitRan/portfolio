@@ -85,7 +85,7 @@ const About=()=>{
                 <p>Enter Playmode, Wonderville, Brooklyn, New York, Game Showcase, Project: Blue Desert Disco, Type: Digital Game, December 2019</p>
                 <p>Pratt Digital Arts 2017 Exhibition, Pablo’s Birthday Gallery Manhattan, New York, Group Exhibition, Project: Wuwei, Type: Interactive Projection Art, Apr 30-May 6, 2017</p>
                 <p>Politics and Power, Ann Street Gallery, Newburgh, New York, Group Exhibition, Project: Lvl++，Type: Interactive Art Installation, October 8 to Nov 26, 2016</p>
-                <p>Grief* in three languages，Dekalb Gallery, Brooklyn， NY，Group Exhibition, Project: Grieving ,Type: Video Art， Curated by Zina Saro-Wiwa, Dec 2016</p>
+                <p>Grief* in three languages，Dekalb Gallery, Brooklyn, NY, Group Exhibition, Project: Grieving, Type: Video Art, Curated by Zina Saro-Wiwa, Dec 2016</p>
                 <p>SoCal Clips Indie Film Festival Screening, Luna(2016)， New York, NY, Oct 2 2016</p>
                 <p>The Sadness of Modernity Pop-up show, Myrtle Gallery, Brooklyn, NY, Group Exhibition, Type: Interactive Art Installation, April 2016</p>
                 <p>Animal Patterning Project, SYNCED Under the Viaduct Festival, Project: Orbs, Group Project, Type: Physical Computing, Nov 2015</p>

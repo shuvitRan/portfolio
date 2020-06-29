@@ -47,7 +47,24 @@
        "videoTop": true
     },
     {
-       "id": 2,
+      "id": 2,
+      "title": "Firis App Design",
+      "tools": "UI & UX | Interaction Design | Motion Graphics",
+      "descriptions": "Firis is a video-making app that swaps user's face and voice into premium videos. it is a startup idea and product prototype developed in <b>Cornell Tech Startup studio.</b> <br><br>As the full-stack designer, I teamed up with four developers. I designed full package for the Firis, including brand identity, pitch deck, UI/UX, motion and interaction, special effects and video comercial. <br><br>Have you or your friends dreamed to at as Harley Quinn or IronMan in a movie video? We are building a mobile app to enable you to fuse yourself with the movie characters you love and even place yourself into movie fragments using computer vision. The new character can look like you or even be you but speaking the original lines in the movie video. Besides that, you can also share your videos to social networks and receive likes and followers. ",
+      "imgFolder": "Firis",
+      "imgsScrs": [
+         "Artboard.jpg",
+         "2.jpg",
+         "FirisMotion.gif",
+         "3.jpg",
+         "ironduan.gif"
+      ],
+      "videoLink": [
+         
+      ]
+   },
+    {
+       "id": 3,
        "title": "MET Creative Projects",
        "tools": "D3 | DeepAR SDK | p5.js | OpenCV | Python | Numpy | Pandas",
        "descriptions": "This is a collection of four very different creative applications that I made for the research collaboration between the <b>Metropolitan Museum of Art</b> and MSDV at Parsons School of Design.<br><br><b>Buddha at The Met</b>: A computer-vision based research and data visualization on the Buddha statues at the museum.<br><br><b>Met Masquerade</b>: A playful AR application, introducing the mask collection at the Met.<br><br><b>What are They Painting?</b>: An insight into the Met's paintings collection. A data visualization of the top 10 tags of paintings from 9 countries/civilizations during four periods of time. <br><br><b>Let the Music Play</b>: An interactive listen-and-guess game to provide the audience with a sensual association between 24 instruments and their sounds. <br><br> click the button for more detail and link to the project",
@@ -67,35 +84,12 @@
        "imgsScrs": [
           "1.jpg",
           "2.jpg",
-          "3.jpg",
-          "4.jpg"
+          "3.jpg"
+          
        ],
        "videoTop": false
     },
-    {
-       "id": 3,
-       "title": "Blue Desert Disco",
-       "tools": "Unity | C# | Game Design & Development | Physical Computing | Arduino",
-       "descriptions": "Blue Desert Disco is a 2-3 players fighting digital game that comes with custom 3D print controllers.  It was showcased in <b>Wonderville</b>( An Independent Game Space) in Brooklyn in December 2019. <br><br>I lead the team and serve as the concept designer and developer of this game. I am the sole developer of the game software. I also helped with physical computing development.<br><br>In this game, each gamer has their own custom 3D print controller paired with a specific character in the game. Each character has their own unique \"weapon\" that reflects on their corresponding controller. Their speed and strengths also vary from each other. The controllers are identical in their overall shape but different in the reflective device/components of the characters' abilities. The players have to adapt to the controller and figure out their own way to play quickly, and meanwhile, defeats the other players. The winner, of course, has the dance floor all to herself/himself.",
-       "imgFolder": "Games",
-       "imgsScrs": [
-          "1.jpg",
-          "2.jpg",
-          "3.jpg"
-       ],
-       "button": [
-          "https://vimeo.com/376450826",
-          "https://vimeo.com/370009707"
-       ],
-       "buttonName": [
-          "early stage documenation",
-          "more game I made - Love You Away"
-       ],
-       "videoLink": [
-          "https://player.vimeo.com/video/378023986"
-       ],
-       "videoTop": true
-    },
+  
     {
        "id": 4,
        "title": "Peeq",
@@ -113,21 +107,29 @@
           "https://player.vimeo.com/video/310027671"
        ]
     },
+
     {
-       "id": 5,
-       "title": "Firis App Design",
-       "tools": "UI & UX | Interaction Design | Motion Graphics",
-       "descriptions": "Firis is a video-making app that swaps user's face and voice into premium videos. it is a startup idea and product prototype developed in <b>Cornell Tech Startup studio.</b> <br><br>As the full-stack designer, I teamed up with four developers. I designed full package for the Firis, including brand identity, pitch deck, UI/UX, motion and interaction, special effects and video comercial. <br><br>Have you or your friends dreamed to at as Harley Quinn or IronMan in a movie video? We are building a mobile app to enable you to fuse yourself with the movie characters you love and even place yourself into movie fragments using computer vision. The new character can look like you or even be you but speaking the original lines in the movie video. Besides that, you can also share your videos to social networks and receive likes and followers. ",
-       "imgFolder": "Firis",
-       "imgsScrs": [
-          "Artboard.jpg",
-          "2.jpg",
-          "FirisMotion.gif",
-          "3.jpg",
-          "ironduan.gif"
-       ],
-       "videoLink": [
-          
-       ]
-    }
+      "id": 5,
+      "title": "Blue Desert Disco",
+      "tools": "Unity | C# | Game Design & Development | Physical Computing | Arduino",
+      "descriptions": "Blue Desert Disco is a 2-3 players fighting digital game that comes with custom 3D print controllers.  It was showcased in <b>Wonderville</b>( An Independent Game Space) in Brooklyn in December 2019. <br><br>I lead the team and serve as the concept designer and developer of this game. I am the sole developer of the game software. I also helped with physical computing development.<br><br>In this game, each gamer has their own custom 3D print controller paired with a specific character in the game. Each character has their own unique \"weapon\" that reflects on their corresponding controller. Their speed and strengths also vary from each other. The controllers are identical in their overall shape but different in the reflective device/components of the characters' abilities. The players have to adapt to the controller and figure out their own way to play quickly, and meanwhile, defeats the other players. The winner, of course, has the dance floor all to herself/himself.",
+      "imgFolder": "Games",
+      "imgsScrs": [
+         "1.jpg",
+         "2.jpg",
+         "3.jpg"
+      ],
+      "button": [
+         "https://vimeo.com/376450826",
+         "https://vimeo.com/370009707"
+      ],
+      "buttonName": [
+         "early stage documenation",
+         "more game I made - Love You Away"
+      ],
+      "videoLink": [
+         "https://player.vimeo.com/video/378023986"
+      ],
+      "videoTop": true
+   }
  ]
