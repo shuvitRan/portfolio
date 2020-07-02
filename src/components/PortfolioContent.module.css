@@ -73,6 +73,16 @@
         /* height: 20px; */
     }
 
+    .descriptionBar{
+        grid-area: sidebar;
+        word-wrap: break-word;
+        animation: fadein 2s;
+        max-width: 980px;
+        top: unset !important;;
+        position: unset !important;;
+        height: unset !important;;
+    }
+
 
 }
 
@@ -98,6 +108,7 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: none;
     margin:none;
+    
     /* display: flex;
     flex-direction: column;
     justify-content: start;
@@ -161,6 +172,9 @@
     word-wrap: break-word;
     animation: fadein 2s;
     max-width: 980px;
+    top: 10vh;
+    position: sticky;
+    height: 120vh;
     /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 }
 
