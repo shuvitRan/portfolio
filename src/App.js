@@ -7,6 +7,7 @@ import About from './components/About';
 import SwarmGroup from './components/InteractiveBG/SwarmGroup';
 import ReactGa from 'react-ga';
 
+import {Route, NavLink,Link, BrowserRouter, Switch, HashRouter} from 'react-router-dom';
 
 function App() {
  
@@ -67,6 +68,8 @@ function App() {
     const onMouseMove = useCallback(({ clientX: x, clientY: y }) => (mouse.current = [x - window.innerWidth / 2, y - window.innerHeight / 2]), [])
 
   return (
+
+    <HashRouter > 
     <div className="App"  onMouseMove={onMouseMove}>
 
       {/* <div className="menu"> 
@@ -100,6 +103,7 @@ function App() {
 
       
     </div>
+    </HashRouter>
   );
 }
 
