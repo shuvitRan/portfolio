@@ -178,7 +178,7 @@ a{
   
   /* align-items: center; */
   padding: none;
-  animation: fadein 4s;
+  animation: fadein 1s;
   /* height:150%; */
   /* width: 100%; */
   /* height: 500px;  */
@@ -188,7 +188,7 @@ a{
 
 .projectContentContainer{
   position: relative;
-  background-color: white;
+  background: rgb(255, 253, 253);
   /* margin-bottom: 5rem; */
   max-width: 4000px;
   /* top:10px; */
@@ -249,7 +249,7 @@ a{
     flex-direction:column;
     padding: none;
     /* margin: none; */
-    animation: fadein 4s;
+    animation: fadein 1s;
   
   }
   .footer{
@@ -257,7 +257,6 @@ a{
     /* padding: 10px; */
     font-size: 10px;
     float: left;
-    animation: fadein 4s;
     /* width: 100%; */
     display: block;
     animation: fadein 4s;
@@ -266,3 +265,14 @@ a{
 
 }
 
+.ErroPage{
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  
+  width: 100%;
+  height: 50vh;
+  
+}

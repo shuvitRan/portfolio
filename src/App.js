@@ -10,7 +10,7 @@ import ReactGa from 'react-ga';
 import PortfolioCotent from './components/PortfolioContent';
 import {Route, NavLink,Link, BrowserRouter,useHistory, Switch, HashRouter,withRouter} from 'react-router-dom';
 const About = React.lazy(()=>import('./components/About'));
-
+const ErrorPage = React.lazy(()=>import('./components/ErrorPage'));
 
 function App() {
  
@@ -62,7 +62,7 @@ function App() {
           <div className='footer'> <p> this website is built on React.js, Written by Dan Ran.</p></div>              
         </Suspense>
       </Route>
-    <Route exact path={'/:id/:name'}>
+    <Route path={'/:id/:name'} exact>
           {/* <div className="gridContainer"> */}
                        
                         <PortfolioCotent  />
@@ -71,11 +71,18 @@ function App() {
     </Route>
     
         
- 
 
-      <Route path='/' >
+
+      <Route path='/' exact>
             <ImgGridSystem  />
       </Route>
+
+   
+      <Route path="*">
+      <Suspense fallback='null'>
+        <ErrorPage />        
+      </Suspense>
+          </Route>
     
     </Switch>
       

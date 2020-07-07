@@ -16,14 +16,20 @@
     margin: none;
     /* padding-bottom: 50px; */
     /* margin-bottom: 50px; */
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     /* display: inline-block; */
-    /* padding: 5px; */
+    padding: 0px;
+    margin-right:15px;
+    margin-bottom: 15px;
     /* overflow: hidden; */
     /* animation: fadein 4s; */
   }
 
-
+  .cardContainer:hover{
+    /* padding:0 20px; */
+    transition: 2s;
+    /* position: fixed; */
+  }
 
 
 
@@ -52,18 +58,41 @@
     /* background:rgb(0,0,0); */
     /* z-index: 10; */
     opacity: 1;
+
   }
   .cardContainer:hover .cardText{
       color:rgb(255, 0, 103);
+      /* font-size: 3em; */
+      /* transition: 2s; */
+  
   }
 
   .cardContainer:hover .eachImage{
+   
+    /* width: 120%; */
+    
     transform: scale(1.2);
     transition: 1s;
-    /* width: 120%; */
+    /* animation-name: floating;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out; */
     
   }
 
+  .cardContainer:hover .textOverlay{
+  background-color: rgb(255, 255, 255);
+  /* opacity: 0.8; */
+  /* height: 100%; */
+    transition: 2s;
+
+  }
+  .cardContainer:hover .cardCo {
+    color: rgb(56, 56, 56);
+  }
+  .cardContainer:hover  .cardCate{
+    color: rgb(56, 56, 56);
+  }
 .imgContainer{
     overflow: hidden;
     position: relative;
@@ -80,7 +109,7 @@
     /* height: 50%; */
     display: block;
     cursor: pointer;
-    animation: fadein 2s;
+    /* animation: fadein 2s; */
     transition: 2s;
     
     
@@ -104,7 +133,7 @@
   }
   .textOverlay{
       width: 70%;
-      background: white;
+      background: rgb(255, 253, 253);
       opacity: 1;
       position: absolute;
       /* top: 0; */
@@ -112,10 +141,11 @@
       left: 0;
       right: 0;
       text-align: left;
-      padding-left: 5px;
+      padding-left: 8px;
+      transition: 2s;
   }
   .cardText {
-    /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+    /* font-family: 'Times New Roman', serif; */
     /* font-weight: bold; */
     font-weight: lighter;
     /* display: none; */
@@ -137,19 +167,28 @@
   .cardCo{
     margin:5px 0;
     /* font-weight: bold; */
-    color: #5a5a5a;
+    color: #555555;
     font-size: 14px;
     /* font-family: Times, 'Times New Roman', serif; */
     /* font-family: 'Courier New', Courier, monospace; */
+ 
   }
 
   .cardCate{
     font-size: 14px;
     margin:5px 0;
     /* font-weight: bold; */
-    color: #5a5a5a;
+    color: #555555;
     /* font-family: 'Courier New', Courier, monospace; */
-    
+    /* visibility: hidden; */
+    /* opacity:0;
+    position: absolute; */
   }
 
 
+  @keyframes floating {
+    from { transform: translate(0,  0px); }
+    60%  { transform: translate(0px, -5px); }
+    /* 80%  { transform: translate(0px, 5px); } */
+    to   { transform: translate(0, -0px); }    
+}

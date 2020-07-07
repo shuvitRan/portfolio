@@ -6,14 +6,16 @@ import ReactGa from 'react-ga';
 import SplitText from "react-pose-text";
 import TextFx from './TextFx';
 
-import {useParams,useHistory} from "react-router-dom"
+import {useParams,useHistory,Redirect} from "react-router-dom"
 
 
 
 const PortfolioCotent = (props)=>{
+  
 
     let params=  useParams();
     // console.log(params.id)
+  
 
     let eachContent = PortfolioData;
     // console.log(eachContent2[1])
@@ -85,7 +87,7 @@ const PortfolioCotent = (props)=>{
         }
         
     ];
-
+   
 
     let history = useHistory();
     const goBackHandler =()=>{
@@ -97,6 +99,8 @@ const PortfolioCotent = (props)=>{
   
   
   }
+
+
     useEffect(() => {
         window.scrollTo(0, 0)
       }, [])
@@ -137,7 +141,7 @@ const PortfolioCotent = (props)=>{
         }
 
         let ImgNVideo;
-        if(eachContent[params.id].videoTop!='undefined' && eachContent[params.id].videoTop){
+        if(eachContent[params.id]&& eachContent[params.id].videoTop!='undefined' && eachContent[params.id].videoTop){
             ImgNVideo=(
                 <>
                 {videoShow}
@@ -155,7 +159,7 @@ const PortfolioCotent = (props)=>{
         }
 
         let buttonToWeb=null;
-        if(eachContent[params.id].button!='undefined'&&eachContent[params.id].button){
+        if(eachContent[params.id]&& eachContent[params.id].button!='undefined'&&eachContent[params.id].button){
             buttonToWeb =(
             <div>
                 {eachContent[params.id].button.map((eachButton,index)=>{
@@ -185,8 +189,9 @@ const PortfolioCotent = (props)=>{
         }
 
 
-
-
+        if(!(eachContent[params.id])) {
+            return <Redirect to="/404" />
+        }
 
     return (
 
