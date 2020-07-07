@@ -184,12 +184,15 @@
     text-align: left;
     /* color: whitesmoke; */
     /* width: 100%; */
-    /* display: inline-block; */
+    /* display: block; */
     /* position: relative; */
-    /* height: 20px; */
+    height: auto;
+
+    /* padding: 15px 0px; */
 }
 .buttonToWeb a{
-    
+    position: relative;
+    display: inline-block;
     /* font-weight: bold; */
     padding: 15px 0px;
     background-color: black;

@@ -8,6 +8,9 @@ import {useSpring, animated} from 'react-spring';
 import ReactGa from 'react-ga';
 // import gobackIcon from '../icons/chevron-left.svg';
 
+import {Route, NavLink, Switch} from 'react-router-dom';
+
+
 const ImgGridSystem = (props)=>{
 
    
@@ -24,113 +27,32 @@ const ImgGridSystem = (props)=>{
     // let isImgClicked = false;
     // let activeId ='';
 
-   
-    const [imgState, setImgState] = useState({
-        isImgClicked:false,
-        activeId: null
-    })
-
-    const openInfoHandler =(e)=>{
-        // console.log(e);
-        // e.preventDefault();
-        props.pageState(false);
-       
-
-       setImgState ({
-           isImgClicked: true,
-           activeId: e.currentTarget.getAttribute("imgid")
-       })
-    //    console.log(imgState)
-    //    console.log(isImgClicked)
-       
-        
-    }
-    const goBackHandler =()=>{
-        ReactGa.event({
-            category:'GoBack Button is Clicked',
-            action:`BackToHome`
-          });
-          props.pageState(true);
-        setImgState ({
-            isImgClicked: false,
-            activeId: null
-        })
-    }
     useEffect(() => {
         window.scrollTo(0, 0)
       }, [])
  
-      
     
-      
-
-    let myObj;
-
-      const openImageInformation = (currentState)=>{
-        //   currentState = this.currentState;
-          let imgId = currentState.activeId;
-        //    myObj = imgList.find(x=>x.id===imgId)
-        ReactGa.event({
-            category:'Portfolio is clicked',
-            action:`${imgList[imgId].title}`
-          });
-
-        
-          
-          return (
-              <div >
-               <div onClick={goBackHandler} className="goBack noselect">
-               <div  className="goBackIcon"  />
-               <b>back
-            </b> 
-                
-               </div>
-           
-              <PortfolioCotent contentId={imgId} title={imgList[imgId].title} content = {imgList[imgId].descriptions} />
-            </div>
-          ) 
-
-        
-
-      }
  
       
       let gridimg = null;
-      let projectContent = null;
-
-    if(props.isHome==true ){
-     
+  
         gridimg=(// return (
            <div className="gridSystem"> 
             
             { imgList.map((myimg)=>{
             return (
-                // <animated.div   style={fadeinAnimation}>
+                
+              
                     <GridImg key={myimg.id} 
                              projectId={myimg.id}   
-                             onClick={openInfoHandler}   
-                             
                              content={myimg} />
-                        // </animated.div>
-                        //  <img src={require(`${myimg.src}`)} alt="P1"/>  
+                       
                     )
             })}
           
            </div>
          )
-    }else if(imgState.isImgClicked && props.isHome==false  ){
-      
-        
-        projectContent = (
-            < > 
-                
-                { openImageInformation(imgState) }
-          
-            </>
-        )
 
-
-    };
 
 
 
@@ -139,9 +61,15 @@ const ImgGridSystem = (props)=>{
         <>
             {/* <div></div> */}
         {/* <div className="gridSystem">     */}
+        <div className="projectContentContainer">  
+          <div className="gridContainer">
             {gridimg}
-            {projectContent}
+          </div>
+        </div>
+            {/* {projectContent} */}
          {/* </div> */}
+
+      
         
          </>
     );

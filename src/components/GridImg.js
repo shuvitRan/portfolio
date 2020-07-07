@@ -6,20 +6,21 @@ import TextFx from './TextFx';
 // import React, {Suspense} from 'react-image'
 // import {useImage} from 'react-image'
 
+import { NavLink, Switch} from 'react-router-dom';
 const GridImg = (props)=>{
     
     return (
         <>
         <div className ={styles.cardContainer} onClick={props.onClick} imgid={props.projectId}  >
+
+                <NavLink to={{pathname:'/'+props.projectId+"/"+props.content.title}} >
                 <div className={styles.imgContainer} >
                     <img className={styles.eachImage}  src={"/assets/GridImg/"+props.content.src } alt={props.content.title}/>
                
                     <div className={styles.overlay} >                   
                     </div>
                 </div>
-                
-                {/* <img src={require(`${ props.imgsrc }`)} alt="P1"/> */}
-                {/* <img src={require(`${ props.imgsrc }`)} alt="P1"/> */}
+
                
                 <div className={styles.textOverlay} >
                     <h1 className={styles.cardText}> 
@@ -40,7 +41,7 @@ const GridImg = (props)=>{
                     {/* <p className={styles.cardCo}>Web Application</p> */}
                    
                 </div>
-                
+                </NavLink>  
         </div>
         
         </>

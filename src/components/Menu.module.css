@@ -17,9 +17,22 @@
     
     /* float: none; */
     /* position: absolute; */
-    
+  
 
 }
+
+.menu a{
+    color: rgb(99, 99, 99);
+    transition: 1s;
+}
+
+.menu a:hover{
+    color: #ff0080;
+}
+
+/* .menu a:hover{
+    color: #ff0080;
+} */
 .myName{
     font-family:  'Roboto', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, sans-serif;
     /* font-style: italic; */
@@ -35,7 +48,7 @@
     vertical-align: text-top;
 }
 
-.homeOn{
+.menu  a.homeOn{
     /* color: white; */
     /* font-size: 1.1em; */
     /* word-spacing: 1ch; */
@@ -45,49 +58,25 @@
     transition: 1s;
     opacity: 1;
     margin: 0;
+    color: black;
 
     /* text-decoration: underline; */
     /* border-left: 2px  solid */
 }
-.homeOff{
-    display: inline-block;
-    /* padding:0 1rem;
-     */
-    cursor: pointer;
-    transition: 1s;
-    opacity: 0.5;
 
+
+.menu a.aboutOn{
+    color: rgb(0, 0, 0);
 }
-.homeOff:hover{
-    color: #ff0080;
-    transition: 1s;
-    opacity: 1;
-}
-.aboutOn{
+
+.about{
     font-size: 0.9em;
     display: inline-block;
     padding:0 1rem;
     cursor: pointer;
-    transition: 1s;
-    text-decoration: underline;
-    /* border-left: 2px solid */
+    
 }
 
-.aboutOff{
-    font-size: 0.9em;
-    opacity: 0.5;
-    display: inline-block;
-    padding:0 1rem;
-    cursor: pointer;
-    transition: 1s;
-}
-
-.aboutOff:hover{
-    color: #ff0095;
-    transition: 1s;
-    opacity: 1;
-
-}
 
 
 @media only screen and (max-width: 768px) {

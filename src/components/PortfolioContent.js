@@ -6,11 +6,14 @@ import ReactGa from 'react-ga';
 import SplitText from "react-pose-text";
 import TextFx from './TextFx';
 
-
+import {useParams,useHistory} from "react-router-dom"
 
 
 
 const PortfolioCotent = (props)=>{
+
+    let params=  useParams();
+    // console.log(params.id)
 
     let eachContent = PortfolioData;
     // console.log(eachContent2[1])
@@ -83,16 +86,27 @@ const PortfolioCotent = (props)=>{
         
     ];
 
+
+    let history = useHistory();
+    const goBackHandler =()=>{
+      ReactGa.event({
+          category:'GoBack Button is Clicked',
+          action:`BackToHome`
+        });
+        history.push("/");
+  
+  
+  }
     useEffect(() => {
         window.scrollTo(0, 0)
       }, [])
 
     let videoShow ;
-        if(eachContent[props.contentId] && typeof eachContent[props.contentId].videoLink!='undefined'){
+        if(eachContent[params.id] && typeof eachContent[params.id].videoLink!='undefined'){
         //    videoShow=  (<iframe src={`${eachContent[props.contentId].videoLink}?autoplay=1&loop=1&title=0&byline=0&portrait=0`} width="640" height="330" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>)
            videoShow=  (
             <div>  
-            {eachContent[props.contentId].videoLink.map((eachVideo, index)=>{
+            {eachContent[params.id].videoLink.map((eachVideo, index)=>{
             return(
             <div key={"video"+index} className={styles.h_iframe}> 
              <iframe src={`${eachVideo}?autoplay=0&loop=1&title=0&byline=0&portrait=0`} frameBorder="0" allow="autoplay; fullscreen" allowFullScreen></iframe>
@@ -107,12 +121,12 @@ const PortfolioCotent = (props)=>{
 
 
     let imgsShow; 
-        if (eachContent[props.contentId]&& typeof eachContent[props.contentId].imgsScrs!='undefined'){
+        if (eachContent[params.id]&& typeof eachContent[params.id].imgsScrs!='undefined'){
             imgsShow = (
                 <>
-                { eachContent[props.contentId].imgsScrs.map((eachImg,index)=>{
+                { eachContent[params.id].imgsScrs.map((eachImg,index)=>{
                     return (
-                        <img key={"content"+index} src={`/assets/projectImgs/${eachContent[props.contentId].imgFolder}/${eachImg}`} />
+                        <img key={"content"+index} src={`/assets/projectImgs/${eachContent[params.id].imgFolder}/${eachImg}`} />
                     )
 
                 })
@@ -123,7 +137,7 @@ const PortfolioCotent = (props)=>{
         }
 
         let ImgNVideo;
-        if(eachContent[props.contentId].videoTop!='undefined' && eachContent[props.contentId].videoTop){
+        if(eachContent[params.id].videoTop!='undefined' && eachContent[params.id].videoTop){
             ImgNVideo=(
                 <>
                 {videoShow}
@@ -141,21 +155,21 @@ const PortfolioCotent = (props)=>{
         }
 
         let buttonToWeb=null;
-        if(eachContent[props.contentId].button!='undefined'&&eachContent[props.contentId].button){
+        if(eachContent[params.id].button!='undefined'&&eachContent[params.id].button){
             buttonToWeb =(
             <div>
-                {eachContent[props.contentId].button.map((eachButton,index)=>{
+                {eachContent[params.id].button.map((eachButton,index)=>{
                     return(
                         <div  key={"buttonout"+index} className={styles.buttonToWeb}>
                              <ReactGa.OutboundLink
-                                        eventLabel={eachContent[props.contentId].buttonName[index]+" Button Clicked"}
+                                        eventLabel={eachContent[params.id].buttonName[index]+" Button Clicked"}
                                         to={eachButton}
                                         target="_blank"
                                         trackerNames={['tracker2']}
                                         
                                     >
                                         
-                                        &nbsp;&gt; {eachContent[props.contentId].buttonName[index]}
+                                        &nbsp;&gt; {eachContent[params.id].buttonName[index]}
                                         
                                         </ReactGa.OutboundLink>
                         {/* <a target="_blank" href={eachButton}> &nbsp;&gt; {eachContent[props.contentId].buttonName[index]}</a> */}
@@ -175,8 +189,16 @@ const PortfolioCotent = (props)=>{
 
 
     return (
+
+<div className="projectContentContainer">  
+          <div className="gridContainer">
+          <div >
+            <div onClick={goBackHandler} className="goBack noselect">
+            <div  className="goBackIcon"  />
+            <b> back </b>                 
+            </div>
+            </div>
         <div className={styles.contentContainer}>
-           
             <div className={styles.imgList}>
             {ImgNVideo}
             
@@ -184,22 +206,23 @@ const PortfolioCotent = (props)=>{
             <div className={styles.descriptionBar}>
                 <h1>
                 <SplitText initialPose="exit" pose="enter" charPoses={TextFx}>
-                    {eachContent[props.contentId].title}
+                    {eachContent[params.id].title}
                  </SplitText>   
                 </h1>
                 <span> <b className={styles.toolList}> 
                     <SplitText initialPose="exit" pose="enter" charPoses={TextFx}>
-                    {eachContent[props.contentId].tools}
+                    {eachContent[params.id].tools}
                     </SplitText>
                     </b></span>
-                <p className={styles.descriptionText} dangerouslySetInnerHTML={{__html: eachContent[props.contentId].descriptions}}> 
-                    {/* {props.content}SSS  sdsadd sdsad dsads sdsadsdsddsadsads dsadsadsasdssdsdsadsds  */}
+                <p className={styles.descriptionText} dangerouslySetInnerHTML={{__html: eachContent[params.id].descriptions}}> 
+                    
                 </p>
                 {buttonToWeb}
                 
             </div>
         </div>
-
+</div> 
+</div>
     )
 }
 

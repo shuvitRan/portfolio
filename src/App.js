@@ -1,13 +1,16 @@
-import React ,{useState, useCallback, useRef, useEffect} from 'react';
+import React ,{useState, useCallback, useRef, useEffect, Suspense} from 'react';
 import './App.css';
 import  PortfolioBG  from './components/PortfolioBG';
 import ImgGridSystem from './components/ImgGridSystem';
 import Menu from './components/Menu';
-import About from './components/About';
+// import About from './components/About';
 import SwarmGroup from './components/InteractiveBG/SwarmGroup';
 import ReactGa from 'react-ga';
 
-import {Route, NavLink,Link, BrowserRouter, Switch, HashRouter} from 'react-router-dom';
+import PortfolioCotent from './components/PortfolioContent';
+import {Route, NavLink,Link, BrowserRouter,useHistory, Switch, HashRouter,withRouter} from 'react-router-dom';
+const About = React.lazy(()=>import('./components/About'));
+
 
 function App() {
  
@@ -15,48 +18,13 @@ function App() {
   function refreshPage() {
     window.location.reload(true);
   }
-  const [pageState, setPageState] = useState({
-    isAboutOpen : false,
-    isHomeOpen:true
-  })
 
-  const aboutPage = ()=>{
-    ReactGa.event({
-      category:'About Page Button',
-      action:'About page button is opened'
-    });
-
-    setPageState({
-      isAboutOpen:true,
-      isHomeOpen:false
-    })
-  }
-
-  const closeAboutPage = ()=>{
-    ReactGa.event({
-      category:'Logo Button is Clicked',
-      action:'About page is closed'
-    });
-    setPageState({
-      isAboutOpen:false,
-      isHomeOpen:true
-    })
-  }
-
-
-  const ChangePageState=(NewValue)=>{
-
-    setPageState({
-      isAboutOpen:false,
-      isHomeOpen:NewValue
-    })
-
-  }
 
   useEffect(()=>{
     ReactGa.initialize('UA-169847537-1')
     ReactGa.pageview(window.location.pathname+ window.location.search);
   })
+
 
     // if(isAboutOpen){
 
@@ -70,6 +38,7 @@ function App() {
   return (
 
     <HashRouter > 
+    
     <div className="App"  onMouseMove={onMouseMove}>
 
       {/* <div className="menu"> 
@@ -78,33 +47,41 @@ function App() {
       </div> */}
         {/* <PortfolioBG /> */}
        
-        <SwarmGroup mouse={mouse} isAbout={pageState.isAboutOpen} />
+      <SwarmGroup mouse={mouse} />
         
-      <Menu onClickHome={closeAboutPage} onClickAbout={aboutPage} isAbout={pageState.isAboutOpen} />
-      
-      {!pageState.isAboutOpen?
-      <>
-      <div className="projectContentContainer">
-        
-      <div className="gridContainer"><ImgGridSystem pageState={ChangePageState} isHome={pageState.isHomeOpen}  /></div>
-      </div>  
-      
-      </>
-      :
-      <>
-      <About />
-      <div className='footer'> <p> this website is built on React.js, Written by Dan Ran.</p></div>
-      
-      </>
-      
-      }
+      <Menu />
 
+    <Switch>
+
+    <Route path='/About' exact>
+        <Suspense fallback={null}>   
+          <About />
+          <div className='footer'> <p> this website is built on React.js, Written by Dan Ran.</p></div>              
+        </Suspense>
+      </Route>
+    <Route exact path={'/:id/:name'}>
+          {/* <div className="gridContainer"> */}
+                       
+                        <PortfolioCotent  />
+                   
+        {/* </div>   */}
+    </Route>
+    
+        
+ 
+
+      <Route path='/' >
+            <ImgGridSystem  />
+      </Route>
+    
+    </Switch>
       
 
       
     </div>
+    
     </HashRouter>
   );
 }
 
-export default App;
+export default withRouter(App);
