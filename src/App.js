@@ -22,7 +22,12 @@ function App() {
 
   useEffect(()=>{
     ReactGa.initialize('UA-169847537-1')
-    ReactGa.pageview(window.location.pathname+ window.location.search);
+    // const page = window.location.pathname;
+    // const hash = window.location.hash;
+    // console.log(hash)
+    // ReactGa.pageview(window.location.pathname+ window.location.search);
+    ReactGa.pageview(window.location.hash+ window.location.search);
+    // ReactGa.pageview(page)
   })
 
 
@@ -36,8 +41,6 @@ function App() {
     const onMouseMove = useCallback(({ clientX: x, clientY: y }) => (mouse.current = [x - window.innerWidth / 2, y - window.innerHeight / 2]), [])
 
   return (
-
-    <HashRouter > 
     
     <div className="App"  onMouseMove={onMouseMove}>
 
@@ -80,7 +83,7 @@ function App() {
       
     </div>
     
-    </HashRouter>
+   
   );
 }
 
