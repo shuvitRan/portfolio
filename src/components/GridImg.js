@@ -13,7 +13,7 @@ const GridImg = (props)=>{
         <>
         <div className ={styles.cardContainer} onClick={props.onClick} imgid={props.projectId}  >
 
-                <NavLink to={{pathname:'/'+props.projectId+"/"+props.content.title}} >
+                <NavLink to={{pathname:'/'+props.projectId+"/"+props.content.title.replace(/\s/g, '')}} >
                 <div className={styles.imgContainer} >
                     <img className={styles.eachImage}  src={"/assets/GridImg/"+props.content.src } alt={props.content.title}/>
                
