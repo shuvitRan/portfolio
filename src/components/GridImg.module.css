@@ -137,6 +137,7 @@
   .textOverlay{
       width: 70%;
       background: rgb(255, 253, 253);
+      perspective: 2000px;
       opacity: 1;
       position: absolute;
       /* top: 0; */
