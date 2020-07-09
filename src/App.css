@@ -158,7 +158,7 @@ a{
 
 .projectContentContainer{
   position: relative;
-  background: rgb(235, 235, 235);
+  /* background: rgb(235, 235, 235); */
   /* margin-bottom: 5rem; */
   max-width: 4000px;
   /* top:10px; */

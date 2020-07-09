@@ -61,7 +61,7 @@ function Swarm({ type ,count, mouse }) {
      display= (  
         <instancedMesh ref={mesh} args={[null, null, count]}>
           <sphereBufferGeometry attach="geometry" args={[20, 32, 32]} />
-          <meshPhongMaterial attach="material" color="rgb(155, 155, 155)"  transparent= "true" opacity="0.4" />
+          <meshPhongMaterial attach="material" color="rgb(155, 155, 155)"  transparent= "true" opacity="0.5" />
         </instancedMesh>
       )
     } else if(type=="linev"){
@@ -104,12 +104,12 @@ const SwarmGroup=(props)=> {
         gl={{ alpha: true, antialias: false, logarithmicDepthBuffer: true }}
         camera={{ fov: 50, position: [0, 0, 70] }}
         onCreated={({ gl }) => {
-          // gl.setClearColor('white')
+          // gl.setClearColor('rgb(235, 235, 235)')
           gl.toneMapping = THREE.ACESFilmicToneMapping
           gl.outputEncoding = THREE.sRGBEncoding
         }}>
         <ambientLight intensity={1} />
-        <pointLight position={[100, 100, 100]} intensity={2.2} />
+        <pointLight position={[100, 100, 100]} intensity={1.2} />
         <pointLight position={[-100, -100, -100]} intensity={1} color="rgb(0, 0, 200)" />
         {/* <Swarm type='lineh' mouse={props.mouse} count={120} /> */}
         {/* <Swarm type='linev' mouse={props.mouse} count={3} /> */}
