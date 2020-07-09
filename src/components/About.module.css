@@ -19,7 +19,7 @@
 }
 
 .aboutContentContainer{
-    min-width: 200px;
+    min-width: 400px;
     max-width: 1240px;
        margin: 0 7rem 0;
 }
@@ -72,7 +72,7 @@
     float: left;
     display: inline-block;
     padding-bottom: 2rem;
-    width: 80%;
+    width: 90%;
     min-width: 200px;
     max-width: 1000px;
 }

@@ -16,8 +16,9 @@ const About=()=>{
             <div className={styles.textBlock}>
                 <h1>
                     <SplitText initialPose="exit" pose="enter" charPoses={TextFx}>
-                    My name is Dan Ran, multidisciplinary designer and creative developer.
+                    My name is Dan Ran, multidisciplinary designer & developer.
                     </SplitText>
+                  
                 </h1>       
             </div>
                 <div className={styles.textBlockC2}> 
