@@ -45,7 +45,8 @@ const ImgGridSystem = (props)=>{
               
                     <GridImg key={myimg.id} 
                              projectId={myimg.id}   
-                             content={myimg} />
+                             content={myimg}
+                             />
                        
                     )
             })}

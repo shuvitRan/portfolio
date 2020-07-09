@@ -61,7 +61,7 @@ function Swarm({ type ,count, mouse }) {
      display= (  
         <instancedMesh ref={mesh} args={[null, null, count]}>
           <sphereBufferGeometry attach="geometry" args={[20, 32, 32]} />
-          <meshPhongMaterial attach="material" color="rgb(245, 245, 245)"  transparent= "true" opacity="0.4" />
+          <meshPhongMaterial attach="material" color="rgb(155, 155, 155)"  transparent= "true" opacity="0.4" />
         </instancedMesh>
       )
     } else if(type=="linev"){

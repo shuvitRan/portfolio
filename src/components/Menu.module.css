@@ -1,8 +1,8 @@
 .menu{
-    font-family:  "Roboto", 'Helvetica Neue', sans-serif,Helvetica, sans-serif;
+    font-family: Futura, "Roboto", 'Helvetica Neue', sans-serif,Helvetica, sans-serif;
     font-size: 1.3em;
     text-align: left;
-    padding: 0.5rem 5rem;
+    padding: 1em 4em;
     position: sticky;
     /* font-style: italic; */
     position: -webkit-sticky; 
@@ -10,6 +10,7 @@
     /* background: #ffffff; */
     z-index: 10;
     margin-top: 0.5em;
+    /* width: 80%; */
     /* display: inline-block; */
     /* display: inline-block; */
     /* position: absolute; */
@@ -36,25 +37,29 @@
     color: #ff0080;
 } */
 .myName{
-    font-family:  'Roboto', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, sans-serif;
+    font-family: 'Roboto', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, sans-serif;
     /* font-style: italic; */
     /* font-weight: lighter; */
     /* font-weight: 700; */
     font-size: 1.5em;
     word-spacing: -.2ch;
+    line-height: 0.9;
     /* display:inline; */
     /* text-decoration: none; */
 }
 .recent{
     font-size: 0.5em;
+    padding:0;
+    margin: none;
     vertical-align: text-top;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .menu  a.homeOn{
     /* color: white; */
     /* font-size: 1.1em; */
     /* word-spacing: 1ch; */
-    display: inline-block;
+    /* display: inline-block; */
     /* padding:0 1rem; */
     cursor: pointer;
     transition: 1s;
@@ -72,11 +77,14 @@
 }
 
 .about{
-    font-size: 0.9em;
-    display: inline-block;
-    padding:0em 1rem 0;
+    font-size: 1em;
+    /* display: abo; */
+    /* position: absolute; */
+    padding:0.2em 0em 0rem;
     cursor: pointer;
-    /* float: right; */
+    float: right;
+    /* right:0;
+    position: absolute; */
     /* bottom: 0; */
     
 }
@@ -86,7 +94,7 @@
 @media only screen and (max-width: 768px) {
     
     .menu{
-        font-family:  "Roboto", 'Helvetica Neue', sans-serif,Helvetica, sans-serif;
+        font-family:  Futura, "Roboto", 'Helvetica Neue', sans-serif,Helvetica, sans-serif;
         font-size: 1.3em;
         text-align: left;
         padding: 0rem 1.5rem;

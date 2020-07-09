@@ -1,32 +1,43 @@
 .aboutContainer{
-    /* display: inline-block; */
+    display: flex;
     position: relative;
     align-items: center;
   justify-content: center;
     text-align: left;
-    /* width: 100%;
-    height: 100%; */
+    flex-direction: column;
+    /* width: 100%; */
+    /* height: 100%; */
     
-    
+    font-family: Futura, Arial, sans-serif;
     right: 0;
-    padding-top: 2rem;
+    padding-top: 5rem;
     /* z-index: 0; */
-    margin-left: 5rem;
+ 
     z-index:1;
-    
+    word-wrap: break-word;
 
+}
+
+.aboutContentContainer{
+    min-width: 200px;
+    max-width: 1240px;
+       margin: 0 7rem 0;
 }
 
 .aboutContainer h1{
-    font-size: 4em;
+    font-size: 3.5em;
     margin: 0;
     /* font-family:  'Times New Roman', serif; */
     display: inline;
-    margin-right: 10px;
+    /* margin-right: 10px; */
     /* font-weight: bold; */
     font-weight: lighter;
+
+    
+    
 }
 .linkOut a{
+    font-family: Futura, Arial, sans-serif;
     text-decoration: none;
     color: rgb(41, 41, 41);
     z-index: 5;
@@ -50,38 +61,46 @@
     transition: 1s;
 }
 .textBlockReco b{
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: lighter;
 }
 
-.textBlock  b{
-    font-size: 1.5rem;
-    font-weight: lighter;
-}
+
 .textBlock{
     
     font-size: 1em;
     float: left;
     display: inline-block;
     padding-bottom: 2rem;
-    width: 60%;
+    width: 80%;
     min-width: 200px;
+    max-width: 1000px;
 }
 
 .textBlockReco{
-    font-size: 0.9em;
+    font-size: 3em;
     float: left;
     display: block;
     /* margin-left: 5rem; */
-    padding-bottom: 2rem;
-    width: 60%;
+    padding: 4rem 0 2rem;
+    width: 90%;
     min-width: 200px;
     max-width: 700px;
     /* font-weight: bold; */
 }
-.textBlockReco p{
-    font-size: 1em;
-    animation: fadein 4s;
+
+
+
+.textBlockC2{
+    width: 70%;
+    display: block;
+    position: static;
+    float: right;
+    /* margin-left: 10rem; */
+    min-width: 200px;
+    max-width: 1000px;
+    font-size: 1.2em;
+    /* padding-left: 20%; */
 }
 
 @keyframes fadein {
@@ -92,7 +111,7 @@
 
 .linkOut{
     /* font-weight: bold; */
-    color: rgb(100, 100, 100);
+    /* color: rgb(100, 100, 100); */
     animation: fadein 3s;
 }
 
@@ -117,6 +136,15 @@
     
     }
 
+    .aboutContentContainer{
+        margin: 0 1rem 0;
+    }
+    .aboutContainer h1{
+        font-size: 2.5em;
+       
+        
+    }
+
     .textBlock{
         /* font-size: 14px; */
         font-size: 1em;
@@ -131,7 +159,7 @@
     }
     
     .textBlockReco{
-        font-size: 0.9em;
+        font-size: 2em;
         float: left;
         display: block;
         /* margin-left: 5rem; */
@@ -140,6 +168,18 @@
         min-width: 200px;
        animation: fadein 4s;
         /* font-weight: bold; */
+    }
+
+    .textBlockC2{
+        width: 90%;
+        display: block;
+        position: static;
+        float: right;
+        /* margin-left: 10rem; */
+        min-width: 200px;
+        max-width: 1000px;
+        font-size: 1.2em;
+        /* padding-left: 20%; */
     }
 }
 

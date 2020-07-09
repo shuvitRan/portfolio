@@ -1,5 +1,6 @@
 import React ,{useState, useCallback, useRef, useEffect, Suspense} from 'react';
 import './App.css';
+import { useSpring, animated } from 'react-spring'
 import  PortfolioBG  from './components/PortfolioBG';
 import ImgGridSystem from './components/ImgGridSystem';
 import Menu from './components/Menu';
@@ -74,7 +75,7 @@ function App() {
 
 
       <Route path='/' exact>
-            <ImgGridSystem  />
+            <ImgGridSystem mouse={mouse}  />
       </Route>
 
    

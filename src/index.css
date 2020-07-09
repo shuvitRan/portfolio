@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: 'Roboto', 'Oxygen',
+  font-family:  'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
     /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
@@ -11,7 +11,37 @@ body {
   
 }
 
+@font-face {
+  font-family: 'Fututra';
+  src: local('Fututra'), url(./fonts/FuturaMediumBT.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'FututraBold';
+  src: local('FututraBold'), url(./fonts/FuturaBoldfont.ttf) format('truetype');
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+  position: absolute;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(34, 34, 34); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }

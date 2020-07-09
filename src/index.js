@@ -4,6 +4,9 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {HashRouter, BrowserRouter} from 'react-router-dom';
+import './fonts/FuturaBoldfont.ttf';
+import './fonts/FuturaMediumBT.ttf';
+
 ReactDOM.render(
   <React.StrictMode>
     <HashRouter>

@@ -20,7 +20,7 @@ const Menu=(props)=>{
           < div className={styles.recent}>
         
           <SplitText initialPose="exit" pose="enter" charPoses={TextFx}>
-            recent  by
+           recent by
           </SplitText>
          
           </div>   < span className={styles.myName}> 
@@ -37,11 +37,11 @@ const Menu=(props)=>{
                 activeClassName={styles.aboutOn}
                 to={{pathname:'/About'}}                 
                 > 
-                 < span className={styles.about}> 
+        < span className={styles.about}> 
         <SplitText initialPose="exit" pose="enter" charPoses={TextFx}>
             about
             </SplitText>
-            </span>
+        </span>
         </NavLink>
         {/* </div> */}
         
