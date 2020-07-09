@@ -10,7 +10,6 @@ import ReactGa from 'react-ga';
 
 import {Route, NavLink, Switch} from 'react-router-dom';
 
-
 const ImgGridSystem = (props)=>{
 
    
@@ -26,6 +25,16 @@ const ImgGridSystem = (props)=>{
     ]; 
     // let isImgClicked = false;
     // let activeId ='';
+    const [animationCard, set] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 5, tension: 350, friction: 60 } }))
+    const trans = (x, y, s) => `perspective(1000px) scale(${s}) `;
+    const trans2 = (x, y, s) => `perspective(2500px) rotateX(${x}deg) rotateY(${y}deg) scale(${s}) `;
+    
+    const calc = (x, y) => [-(y - window.innerHeight / 2) / 150, (x - window.innerWidth / 2) / 150, 0.95]
+    // const calc = (x, y) => [-(y - element.clientHeight / 2) / 30, (x - element.clientHeight / 2) / 30, 0.9]
+// const trans = (x, y, s) => `perspective(1000px) rotateX(${x}deg) rotateY(${y}deg) scale(${s}) `;
+
+    const cardref = useRef();
+
 
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -37,6 +46,10 @@ const ImgGridSystem = (props)=>{
       let gridimg = null;
   
         gridimg=(// return (
+          <animated.div 
+          onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
+          onMouseLeave={() => set({ xys: [0, 0, 1] })}
+          style={{ transform: animationCard.xys.interpolate(trans2) }}> 
            <div className="gridSystem"> 
             
             { imgList.map((myimg)=>{
@@ -52,6 +65,7 @@ const ImgGridSystem = (props)=>{
             })}
           
            </div>
+           </animated.div>
          )
 
 

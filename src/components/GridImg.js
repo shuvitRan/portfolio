@@ -31,20 +31,20 @@ const cardref = useRef();
 //     };
 //   }, []);
 
-  const calc = (x, y) => [-(y - window.innerHeight / 2) / 30, (x - window.innerWidth / 2) / 30, 1]
+  const calc = (x, y) => [-(y - window.innerHeight / 2) / 30, (x - window.innerWidth / 2) / 30, 0.9]
 
 
 
     return (
         <>
      
-        <div ref={cardref} className ={styles.cardContainer} onClick={animationCard.onClick} imgid={animationCard.projectId}  >
-
-                <NavLink to={{pathname:'/'+props.projectId+"/"+props.content.title.replace(/\s/g, '')}} >
-                <animated.div 
+        <div  className ={styles.cardContainer}  >
+        <animated.div 
                     onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
                     onMouseLeave={() => set({ xys: [0, 0, 1] })}
                     style={{ transform: animationCard.xys.interpolate(trans) }}>
+                <NavLink to={{pathname:'/'+props.projectId+"/"+props.content.title.replace(/\s/g, '')}} >
+           
                 
                 <div className={styles.imgContainer} >
                     <img className={styles.eachImage}  src={"/assets/GridImg/"+props.content.src } alt={props.content.title}/>
@@ -52,7 +52,7 @@ const cardref = useRef();
                     <div className={styles.overlay} >                   
                     </div>
                 </div>
-                </animated.div>
+               
                
                 <div className={styles.textOverlay} >
                 <animated.div 
@@ -81,6 +81,7 @@ const cardref = useRef();
                
                
                 </NavLink>  
+                </animated.div>
         </div>
        
         </>

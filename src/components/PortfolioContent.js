@@ -194,15 +194,16 @@ const PortfolioCotent = (props)=>{
         }
 
     return (
-
-<div className="projectContentContainer">  
-          <div className="gridContainer">
-          <div >
+<>
+<div >
             <div onClick={goBackHandler} className="goBack noselect">
             <div  className="goBackIcon"  />
             <b> back </b>                 
             </div>
             </div>
+<div className="projectContentContainer">  
+          <div className="gridContainer">
+       
         <div className={styles.contentContainer}>
             <div className={styles.imgList}>
             {ImgNVideo}
@@ -228,6 +229,7 @@ const PortfolioCotent = (props)=>{
         </div>
 </div> 
 </div>
+</>
     )
 }
 
