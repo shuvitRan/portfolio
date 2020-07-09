@@ -10,9 +10,9 @@
     
     font-family: Futura, Arial, sans-serif;
     right: 0;
-    padding-top: 5rem;
+    
     /* z-index: 0; */
- 
+    margin-top: 1em;
     z-index:1;
     word-wrap: break-word;
 
@@ -21,7 +21,7 @@
 .aboutContentContainer{
     min-width: 200px;
     max-width: 1240px;
-       margin: 0 7rem 0;
+       margin: 2rem 7rem 0;
 }
 
 .aboutContainer h1{
@@ -101,6 +101,7 @@
     max-width: 1000px;
     font-size: 1.2em;
     /* padding-left: 20%; */
+    padding-bottom: 6em;
 }
 
 @keyframes fadein {
@@ -115,6 +116,30 @@
     animation: fadein 3s;
 }
 
+.decoContainer{
+    width: 100%;
+    
+}
+
+.decoTextTop{
+    padding: 0em 3rem;
+    margin: none;
+    writing-mode: vertical-rl;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* letter-spacing: 1px; */
+    float: right;
+    font-size: 3em;
+}
+
+.decoTextBottom{
+    padding: 0em 3rem;
+    margin: none;
+    writing-mode: vertical-rl;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    right: 0;
+    float: left;
+    font-size: 3em;
+}
 
 
 @media only screen and (max-width: 768px) {
@@ -181,6 +206,16 @@
         font-size: 1.2em;
         /* padding-left: 20%; */
     }
+    .decoTextTop{
+        padding: 0em 1rem;
+    
+    }
+    
+    .decoTextBottom{
+        padding: 0em 1rem;
+    
+    }
+    
 }
 
 

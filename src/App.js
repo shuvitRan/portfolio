@@ -8,7 +8,7 @@ import Menu from './components/Menu';
 import SwarmGroup from './components/InteractiveBG/SwarmGroup';
 import ReactGa from 'react-ga';
 
-import PortfolioCotent from './components/PortfolioContent';
+import PortfolioCotent from './components/PortfolioContentV2';
 import {Route, NavLink,Link, BrowserRouter,useHistory, Switch, HashRouter,withRouter} from 'react-router-dom';
 const About = React.lazy(()=>import('./components/About'));
 const ErrorPage = React.lazy(()=>import('./components/ErrorPage'));

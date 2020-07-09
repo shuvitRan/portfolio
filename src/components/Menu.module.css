@@ -2,7 +2,7 @@
     font-family: Futura, "Roboto", 'Helvetica Neue', sans-serif,Helvetica, sans-serif;
     font-size: 1.3em;
     text-align: left;
-    padding: 1em 4em;
+    padding: 1em 4rem;
     position: sticky;
     /* font-style: italic; */
     position: -webkit-sticky; 
@@ -10,6 +10,7 @@
     /* background: #ffffff; */
     z-index: 10;
     margin-top: 0.5em;
+    
     /* width: 80%; */
     /* display: inline-block; */
     /* display: inline-block; */
@@ -18,19 +19,22 @@
     
     /* float: none; */
     /* position: absolute; */
-  
+      
 
 }
 
 
 
 .menu a{
-    color: rgb(99, 99, 99);
+    color: rgb(0, 0, 0);
     transition: 1s;
+    position: relative;
+    
 }
 
 .menu a:hover{
     color: #ff0080;
+    letter-spacing: 3px;
 }
 
 /* .menu a:hover{
@@ -44,11 +48,13 @@
     font-size: 1.5em;
     word-spacing: -.2ch;
     line-height: 1;
+    position: relative;
     /* display:inline; */
     /* text-decoration: none; */
+    
 }
 .recent{
-    font-size: 0.5em;
+    font-size: 0.6em;
     padding:0;
     margin: none;
     vertical-align: text-top;
@@ -67,7 +73,7 @@
     margin: 0;
     color: black;
 
-    /* text-decoration: underline; */
+   
     /* border-left: 2px  solid */
 }
 
@@ -83,13 +89,58 @@
     padding:0.2em 0em 0rem;
     cursor: pointer;
     float: right;
+   
     /* right:0;
     position: absolute; */
     /* bottom: 0; */
     
 }
+.about{
+    position: relative;
+}
+.about div:before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0px;
+    left: 0;
+
+    background-color: rgb(0, 0, 0);
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+.about div:hover:before{
+    transform: scaleX(1);
+    visibility: visible;
+    
+  /* transition: all 0.3s ease-in-out; */
+    /* text-decoration: underline; */
+}
+
+.myName div:before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0px;
+    left: 0;
+
+    background-color: rgb(0, 0, 0);
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
 
 
+.myName div:hover:before{
+    transform: scaleX(1);
+    visibility: visible;
+    
+  /* transition: all 0.3s ease-in-out; */
+    /* text-decoration: underline; */
+}
 
 @media only screen and (max-width: 768px) {
     

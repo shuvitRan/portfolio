@@ -12,6 +12,10 @@ const About=()=>{
 
     return(
         <div className={styles.aboutContainer}>
+            <div className={styles.decoContainer}>
+            <div className={styles.decoTextTop}>关于</div>
+            </div>
+            
             <div className={styles.aboutContentContainer}>
             <div className={styles.textBlock}>
                 <h1>
@@ -87,6 +91,12 @@ const About=()=>{
             </div>   
             
             </div>
+
+            <div className={styles.decoContainer}>
+            <div className={styles.decoTextBottom}>冉聃</div>
+            </div>
+            
+
         </div>
     )
 }

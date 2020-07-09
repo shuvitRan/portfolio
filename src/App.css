@@ -172,7 +172,7 @@ a{
 }
 
 .footer{
-  margin-left: 8em;
+  margin:0rem 4rem 1rem;
   font-size: 10px;
   float: left;
   width: 60%;
@@ -226,7 +226,7 @@ a{
   
   }
   .footer{
-    margin-left: 2.5em;
+    margin-left: 3rem;
     /* padding: 10px; */
     font-size: 10px;
     float: left;

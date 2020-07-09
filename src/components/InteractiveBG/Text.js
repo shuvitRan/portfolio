@@ -23,7 +23,7 @@ export default function({ children, vAlign = 'center', hAlign = 'center', size =
       <mesh ref={mesh}  >
         <textGeometry attach="geometry" args={[children, config]} />
         {/* <meshBasicMaterial flatShading={true} attach="material" color={"#ff0061"} /> */}
-        <meshPhongMaterial attach="material" color="rgb(200, 200, 245)"  transparent= "true" opacity="0.9"/>
+        <meshPhongMaterial attach="material" color="rgb(140, 140, 145)"  transparent= "true" opacity="0.9"/>
       </mesh>
     </group>
   )

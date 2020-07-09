@@ -118,7 +118,7 @@ const SwarmGroup=(props)=> {
         <Suspense fallback={null}>
         {/* <Effects /> */}
      
-        <DisplayText mouse={props.mouse} />
+        {/* <DisplayText mouse={props.mouse} /> */}
         
         </Suspense>
 

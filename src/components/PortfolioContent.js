@@ -9,7 +9,7 @@ import TextFx from './TextFx';
 import {useParams,useHistory,Redirect} from "react-router-dom"
 
 
-
+// simple two columns content layout
 const PortfolioCotent = (props)=>{
   
 

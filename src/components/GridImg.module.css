@@ -19,7 +19,7 @@
     /* margin-bottom: 50px; */
     
     /* display: inline-block; */
-    padding: 0px;
+    padding: 0.5rem;
     /* margin-right:15px;
     margin-bottom: 15px; */
     /* overflow: hidden; */
@@ -149,9 +149,9 @@
       transition: 2s;
   }
   .cardText {
-    /* font-family: 'Times New Roman', serif; */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     /* font-weight: bold; */
-    font-weight: lighter;
+    font-weight: normal;
     /* display: none; */
     display: inline-block;
     /* position: absolute; */
@@ -162,7 +162,7 @@
     font-size: 1.5em;
     margin: 5px 0 0;
     /* padding: 0; */
-    color: rgb(0, 0, 0);
+    color: rgb(20, 20, 20);
     /* z-index: 1; */
     animation: fadein 5s;
   }
@@ -171,7 +171,7 @@
   .cardCo{
     margin:5px 0;
     /* font-weight: bold; */
-    color: #555555;
+    color: #3b3b3b;
     font-size: 14px;
     /* font-family: Times, 'Times New Roman', serif; */
     /* font-family: 'Courier New', Courier, monospace; */
@@ -182,7 +182,7 @@
     font-size: 14px;
     margin:5px 0;
     /* font-weight: bold; */
-    color: #555555;
+    color: #3b3b3b;;
     /* font-family: 'Courier New', Courier, monospace; */
     /* visibility: hidden; */
     /* opacity:0;
