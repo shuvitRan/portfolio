@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import { render } from '@testing-library/react';
-import styles from './Menu.module.css';
+import styles from './Menu.module.scss';
 import SplitText from "react-pose-text";
 import TextFx from './TextFx'
 import {NavLink} from 'react-router-dom';
@@ -12,22 +12,25 @@ const Menu=(props)=>{
         <div className={[styles.menu, "noselect"].join(' ')}> 
         
           {/* <div className={(props.isAbout?styles.homeOff:styles.homeOn)} onClick={props.onClickHome} > */}
-          
           <NavLink 
                 activeClassName={styles.homeOn}
                 to={{pathname:'/'}}                 
                 exact > 
-          < div className={styles.recent}>
+          <div className={styles.logo} >
+          < span className={styles.recent}>
         
           <SplitText initialPose="exit" pose="enter" charPoses={TextFx}>
            recent by
           </SplitText>
          
-          </div>   < span className={styles.myName}> 
+          </span>
+         
+             < span className={styles.myName}> 
           <SplitText initialPose="exit" pose="enter" charPoses={TextFx}>
             dān rǎn
           </SplitText>
           </span> 
+          </div>
           </NavLink>
         {/* </div> */}
         

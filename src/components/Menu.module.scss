@@ -1,15 +1,25 @@
+
+
 .menu{
     font-family: Futura, "Roboto", 'Helvetica Neue', sans-serif,Helvetica, sans-serif;
-    font-size: 1.3em;
+    font-size: 1.2em;
     text-align: left;
-    padding: 1em 4rem;
-    position: sticky;
+
+    /* position: sticky; */
+    position: fixed;
+    /* position: static; */
     /* font-style: italic; */
-    position: -webkit-sticky; 
+    /* position: -webkit-sticky;  */
     top:0;
-    /* background: #ffffff; */
+    width: 100%;
+    /* margin: 1em 4rem; */
+    /* height: 50px; */
+    //  background: #ffffffc7;
     z-index: 10;
     margin-top: 0.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
     
     /* width: 80%; */
     /* display: inline-block; */
@@ -33,13 +43,21 @@
 }
 
 .menu a:hover{
-    color: #ff0080;
+    color: rgb(190, 55, 77);;
     letter-spacing: 3px;
 }
 
 /* .menu a:hover{
     color: #ff0080;
 } */
+
+.logo{
+display: flex;
+flex-direction: column;
+margin: 0em 5vw;
+}
+
+
 .myName{
     font-family: 'Roboto', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, sans-serif;
     /* font-style: italic; */
@@ -47,19 +65,23 @@
     /* font-weight: 700; */
     font-size: 1.5em;
     word-spacing: -.2ch;
-    line-height: 1;
+    /* line-height: 1; */
     position: relative;
     /* display:inline; */
     /* text-decoration: none; */
-    
+     
 }
 .recent{
     font-size: 0.6em;
     padding:0;
     margin: none;
+    /* display: inline-block; */
+    width: 100%;
     vertical-align: text-top;
+    
     /* font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
 }
+
 
 .menu  a.homeOn{
     /* color: white; */
@@ -83,12 +105,15 @@
 }
 
 .about{
+    margin: 0em 5vw;
     font-size: 1em;
     /* display: abo; */
     /* position: absolute; */
-    padding:0.2em 0em 0rem;
+    padding:0em;
+    margin: none;
     cursor: pointer;
     float: right;
+    
    
     /* right:0;
     position: absolute; */
@@ -97,6 +122,7 @@
 }
 .about{
     position: relative;
+    /* position: fixed; */
 }
 .about div:before{
     content: "";
@@ -146,10 +172,11 @@
     
     .menu{
         font-family:  Futura, "Roboto", 'Helvetica Neue', sans-serif,Helvetica, sans-serif;
-        font-size: 1.3em;
+        /* font-size: 1.3em; */
         text-align: left;
-        padding: 0rem 1.5rem;
-        position: sticky;
+        /* padding: 0rem 1.5rem; */
+        position: fixed;
+        
         /* font-style: italic; */
         position: -webkit-sticky; 
         top:0;

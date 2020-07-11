@@ -1,6 +1,6 @@
 import React,{useEffect} from 'react';
-import styles from './PortfolioContent.module.css';
-import PortfolioData from './PortfolioData';
+import styles from './PortfolioContentV2.module.scss';                      
+import PortfolioData from './PortfolioDatav2';
 import ReactGa from 'react-ga';
 
 import SplitText from "react-pose-text";
@@ -23,13 +23,13 @@ const PortfolioCotentV2 = (props)=>{
    
 
     let history = useHistory();
+
     const goBackHandler =()=>{
       ReactGa.event({
           category:'GoBack Button is Clicked',
           action:`BackToHome`
         });
         history.push("/");
-  
   
   }
 
@@ -42,11 +42,149 @@ const PortfolioCotentV2 = (props)=>{
         return <Redirect to="/404" />
     }
 
+    let imgHeader;
+    if (eachContent[params.id]&& typeof eachContent[params.id].header!='undefined'){
+        imgHeader = (
+            <div className={styles.imgHeader}>
+                    <img  src={`/assets/projectImgs/${eachContent[params.id].imgFolder}/${eachContent[params.id].header}`} />
+                
+            </div>
+        )
+    }
+    let Role;
+    if(eachContent[params.id].role&&eachContent[params.id].role!='undefined'){
+        Role=(
+           <span>  
+           <b>ROLE</b> 
+           {eachContent[params.id].role.map((theRole, index)=>{
+           return(
+           <div key={"Role"+index} > 
+           {theRole}
+            </div>
+            )
+          })
+          }
+          </span>
+       )
+   }
+   let Tools;
+   if(eachContent[params.id].tools!='undefined'){
+    Tools=(
+          <span>  
+          <b>TOOLS</b> 
+          {eachContent[params.id].tools.map((thisTools, index)=>{
+          return(
+          <div key={"thisTools"+index} > 
+          {thisTools}
+           </div>
+           )
+         })
+         }
+         </span>
+      )
+  }
+
+  let buttonToWeb=null;
+  if(eachContent[params.id].button&&eachContent[params.id].button!='undefined'&&eachContent[params.id].button.length>0){
+      buttonToWeb =(
+      <span>
+          <b>LINK</b>
+          {eachContent[params.id].button.map((eachButton,index)=>{
+              return(
+                  <div  key={"buttonout"+index} className={styles.buttonToWeb}>
+                       <ReactGa.OutboundLink
+                                  eventLabel={eachContent[params.id].buttonName[index]+" Button Clicked"}
+                                  to={eachButton}
+                                  target="_blank"
+                                  trackerNames={['tracker2']}
+                                  
+                              >
+                                  
+                                  &nbsp;&gt; {eachContent[params.id].buttonName[index]}
+                                  
+                                  </ReactGa.OutboundLink>
+                  {/* <a target="_blank" href={eachButton}> &nbsp;&gt; {eachContent[props.contentId].buttonName[index]}</a> */}
+                  </div>
+
+                  
+              )
+          })
+      }
+
+      </span>)
+      
+  }
+
+
+
+    let mainInfo;
+    if (eachContent[params.id]){
+        mainInfo = (
+            
+            <div className={styles.mainLayout}>
+                    <h1>
+                        <SplitText initialPose="exit" pose="enter" charPoses={TextFx}>
+                            {eachContent[params.id].title}
+                        </SplitText>   
+                    </h1>
+                    <div className={styles.textLayout}>
+                        <p className={styles.descriptionText} dangerouslySetInnerHTML={{__html: eachContent[params.id].descriptions}} />
+                        <span className={styles.categoryColumns}>
+                        {Role}
+                        {Tools}
+                        {buttonToWeb}
+                        </span>
+                     
+
+                    </div>
+                
+            </div>
+        )
+    }
+ 
+let imgSection;
+
+if (eachContent[params.id]&& typeof eachContent[params.id].imgsSection!='undefined'){
+    imgSection = (
+        <>
+        { eachContent[params.id].imgsSection.map((eachImg,index)=>{
+            return (
+                <div className={styles.imgSecLayout} key={"content"+index}>
+                <img  src={`/assets/projectImgs/${eachContent[params.id].imgFolder}/${eachImg.img}`} />
+                {eachImg.des&&typeof eachImg.des!='undefined'
+                ?<div className={styles.imgDes}><p  dangerouslySetInnerHTML={{__html: eachImg.des}} /> </div>
+                :<></>
+                }
+                {eachImg.title&&typeof eachImg.title!='undefined'
+                ? <div className={styles.DescriptionWithTitle}>
+                    <h1 dangerouslySetInnerHTML={{__html: eachImg.title}} />
+                    <div className={styles.textLayout}><p  dangerouslySetInnerHTML={{__html: eachImg.text}} /> </div>
+                  </div>
+                :<></>
+                }
+                {eachImg.text&&typeof eachImg.text!='undefined'&&typeof eachImg.title=='undefined'
+                ?<div className={styles.textLayout}><p className={styles.moreDescriptionText} dangerouslySetInnerHTML={{__html: eachImg.text}} /> </div>
+                :<></>
+                }
+                </div>
+            )
+
+        })
+
+        }
+        </>
+    )
+}
+
+
+
     let videoShow ;
         if(eachContent[params.id] && typeof eachContent[params.id].videoLink!='undefined'){
         //    videoShow=  (<iframe src={`${eachContent[props.contentId].videoLink}?autoplay=1&loop=1&title=0&byline=0&portrait=0`} width="640" height="330" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>)
            videoShow=  (
-            <div>  
+            <div className={styles.videoContainer}>  
+            <div className={styles.videoTitle}><h1>Video Documentation</h1></div>
+            
             {eachContent[params.id].videoLink.map((eachVideo, index)=>{
             return(
             <div key={"video"+index} className={styles.h_iframe}> 
@@ -58,112 +196,37 @@ const PortfolioCotentV2 = (props)=>{
            </div>
          )
         }
-   
+    
+  
 
 
-    let imgsShow; 
-        if (eachContent[params.id]&& typeof eachContent[params.id].imgsScrs!='undefined'){
-            imgsShow = (
-                <>
-                { eachContent[params.id].imgsScrs.map((eachImg,index)=>{
-                    return (
-                        <img key={"content"+index} src={`/assets/projectImgs/${eachContent[params.id].imgFolder}/${eachImg}`} />
-                    )
 
-                })
 
-                }
-                </>
-            )
-        }
 
-        let ImgNVideo;
-        if(eachContent[params.id]&& eachContent[params.id].videoTop!='undefined' && eachContent[params.id].videoTop){
-            ImgNVideo=(
-                <>
-                {videoShow}
-                {imgsShow}
-                </>
-            )
-
-        } else {
-            ImgNVideo=(
-                <>
-                {imgsShow}
-                {videoShow}
-                </>
-            )
-        }
-
-        let buttonToWeb=null;
-        if(eachContent[params.id]&& eachContent[params.id].button!='undefined'&&eachContent[params.id].button){
-            buttonToWeb =(
-            <div>
-                {eachContent[params.id].button.map((eachButton,index)=>{
-                    return(
-                        <div  key={"buttonout"+index} className={styles.buttonToWeb}>
-                             <ReactGa.OutboundLink
-                                        eventLabel={eachContent[params.id].buttonName[index]+" Button Clicked"}
-                                        to={eachButton}
-                                        target="_blank"
-                                        trackerNames={['tracker2']}
-                                        
-                                    >
-                                        
-                                        &nbsp;&gt; {eachContent[params.id].buttonName[index]}
-                                        
-                                        </ReactGa.OutboundLink>
-                        {/* <a target="_blank" href={eachButton}> &nbsp;&gt; {eachContent[props.contentId].buttonName[index]}</a> */}
-                        </div>
-
-                        
-                    )
-                })
-            }
-
-            </div>)
-            
-        }
 
 
     
 
     return (
 <>
-<div >
-            <div onClick={goBackHandler} className="goBack noselect">
-            <div  className="goBackIcon"  />
-            <b> back </b>                 
-            </div>
-            </div>
-<div className="projectContentContainer">  
-          <div className="gridContainer">
+
+         
+
        
         <div className={styles.contentContainer}>
-            <div className={styles.imgList}>
-            {ImgNVideo}
-            
-            </div>
-            <div className={styles.descriptionBar}>
-                <h1>
-                <SplitText initialPose="exit" pose="enter" charPoses={TextFx}>
-                    {eachContent[params.id].title}
-                 </SplitText>   
-                </h1>
-                <span> <b className={styles.toolList}> 
-                    <SplitText initialPose="exit" pose="enter" charPoses={TextFx}>
-                    {eachContent[params.id].tools}
-                    </SplitText>
-                    </b></span>
-                <p className={styles.descriptionText} dangerouslySetInnerHTML={{__html: eachContent[params.id].descriptions}}> 
-                    
-                </p>
-                {buttonToWeb}
-                
-            </div>
+       
+        <div onClick={goBackHandler} className={[styles.goBack, "noselect"].join(' ')} >
+            <div  className={styles.goBackIcon}  />
+            {/* <b>BACK</b>                  */}
         </div>
-</div> 
-</div>
+       
+            {imgHeader}
+            {mainInfo}
+            {imgSection}
+            {videoShow}
+   
+        </div>
+
 </>
     )
 }
