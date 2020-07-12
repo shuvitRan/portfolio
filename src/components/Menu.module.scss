@@ -1,5 +1,5 @@
-
-
+// @use 'base';
+@import'../base.scss';
 .menu{
     font-family: Futura, "Roboto", 'Helvetica Neue', sans-serif,Helvetica, sans-serif;
     font-size: 1.2em;
@@ -36,14 +36,14 @@
 
 
 .menu a{
-    color: rgb(0, 0, 0);
+    color:$primeTextColor;
     transition: 1s;
     position: relative;
     
 }
 
 .menu a:hover{
-    color: rgb(190, 55, 77);;
+    color: $hoverColor;
     letter-spacing: 3px;
 }
 
@@ -93,7 +93,7 @@ margin: 0em 5vw;
     transition: 1s;
     opacity: 1;
     margin: 0;
-    color: black;
+    color: $primeTextColor;
 
    
     /* border-left: 2px  solid */
@@ -101,7 +101,7 @@ margin: 0em 5vw;
 
 
 .menu a.aboutOn{
-    color: rgb(0, 0, 0);
+    color: $primeTextColor;
 }
 
 .about{
@@ -122,6 +122,7 @@ margin: 0em 5vw;
 }
 .about{
     position: relative;
+    
     /* position: fixed; */
 }
 .about div:before{
@@ -131,8 +132,8 @@ margin: 0em 5vw;
     height: 2px;
     bottom: 0px;
     left: 0;
-
-    background-color: rgb(0, 0, 0);
+    // background-color: $primeTextColor;
+    background-color: $primeTextColor;
     visibility: hidden;
     transform: scaleX(0);
     transition: all 0.3s ease-in-out;
@@ -153,7 +154,7 @@ margin: 0em 5vw;
     bottom: 0px;
     left: 0;
 
-    background-color: rgb(0, 0, 0);
+    background-color: $primeTextColor;
     visibility: hidden;
     transform: scaleX(0);
     transition: all 0.3s ease-in-out;

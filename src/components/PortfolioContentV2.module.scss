@@ -1,6 +1,6 @@
-$bgColor: rgb(243, 240, 237);
-$textColor: rgb(0, 0, 0);
-$hoverColor:rgb(87, 56, 74);
+
+
+@import'../base.scss';
 
 .contentContainer{
     position: relative;
@@ -9,10 +9,10 @@ $hoverColor:rgb(87, 56, 74);
     width: 100%;
     max-width: 2000px;
     // height: 10000px;
-    background-color: $bgColor;
+    background-color: $primeBgColor;
     z-index: 2;
     flex-direction: column;
-    color: $textColor;
+    color: $primeTextColor;
     align-items: center;
     justify-content: center;
     font-family: "Futura";
@@ -59,13 +59,13 @@ div{
    
 
     h1{
-        font-size: 5rem;
+        font-size: 4rem;
         max-width:1000px ;
        
     }
     a{
         text-decoration: none;
-        color:rgb(80, 119, 43);
+        color: $linkColor;
         transition:0.5s;
     }
     a:hover{
@@ -88,8 +88,8 @@ div{
     display: flex;
     flex-direction: column;
     .descriptionText{
-        font-size: 2rem;
-        padding:5% 0 10%;
+        font-size: 1.5rem;
+        padding:8% 0 8%;
     }
     .categoryColumns{
         display: flex;
@@ -125,11 +125,12 @@ div{
     
 }
 .DescriptionWithTitle{
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-top:10%;
     h1{
         font-size: 3rem;
         max-width:1000px ;
+        padding-bottom: 5%;
     }
     div{
         margin-bottom: 10%;
@@ -137,7 +138,7 @@ div{
 
 }
 .moreDescriptionText{
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin:15% 0 10%;
     h1{
         font-size: 3rem;
@@ -223,8 +224,8 @@ div{
     // vertical-align: text-top;
  
     /* height:60px; */
-    background-color: #ffffff4f;
-    color: rgba(0, 0, 0, 0.747);
+    background-color: #030303b2;
+    color: rgba(0, 0, 0, 0.877);
     position: fixed;
     /* display: inline; */
     
@@ -281,7 +282,7 @@ div{
     text-align: left;
     margin: auto;
     vertical-align: middle;
-    background-color: black;
+    background-color: rgb(255, 255, 255);
     mask: url("/assets/icons/chevron-left.svg");
     -webkit-mask: url("/assets/icons/chevron-left.svg")center center;
     mask-position: center;

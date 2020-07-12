@@ -1,5 +1,6 @@
 import React ,{useState, useCallback, useRef, useEffect, Suspense} from 'react';
-import './App.css';
+import './App.scss';
+// import './_base.scss';
 import { useSpring, animated } from 'react-spring'
 import  PortfolioBG  from './components/PortfolioBG';
 import ImgGridSystem from './components/ImgGridSystem';

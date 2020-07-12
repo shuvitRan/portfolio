@@ -8,7 +8,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* background-color: rgb(245, 245, 245); */
-  background-color: rgb(235, 235, 235);
+  /* background-color: rgb(235, 235, 235); */
   
 }
 
@@ -76,12 +76,12 @@ table {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1; 
+  background: #2a2b2a; 
 }
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgb(34, 34, 34); 
+  background: rgb(24, 23, 23); 
 }
 
 /* Handle on hover */

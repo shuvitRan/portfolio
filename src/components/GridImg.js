@@ -1,6 +1,6 @@
 import React,{useEffect, useRef} from 'react';
 import ReactDOM from "react-dom";
-import styles from "./GridImg.module.css";
+import styles from "./GridImg.module.scss";
 import SplitText from "react-pose-text";
 import TextFx from './TextFx';
 // import React, {Suspense} from 'react-image'
@@ -47,7 +47,7 @@ const cardref = useRef();
            
                 
                 <div className={styles.imgContainer} >
-                    <img className={styles.eachImage}  src={"/assets/GridImg/"+props.content.src } alt={props.content.title}/>
+                    <img className={styles.eachImage}  src={"/assets/projectImgs/"+props.content.src } alt={props.content.title}/>
                
                     <div className={styles.overlay} >                   
                     </div>
@@ -65,17 +65,19 @@ const cardref = useRef();
                     </SplitText>    
                     </h1>
                     
-                    <div className={styles.cardCo}>
-                    <SplitText initialPose="exit" pose="enter" charPoses={TextFx}>
-                        {props.content.partner}
-                    </SplitText>
-                    </div>
+                 
                     <div className={styles.cardCate}>
                     <SplitText initialPose="exit" pose="enter" charPoses={TextFx}>
                         {props.content.category}
                         </SplitText>
                     </div>
                     {/* <p className={styles.cardCo}>Web Application</p> */}
+
+                    <div className={styles.cardCo}>
+                    <SplitText initialPose="exit" pose="enter" charPoses={TextFx}>
+                        {props.content.partner}
+                    </SplitText>
+                    </div>
                     </animated.div>
                 </div>
                

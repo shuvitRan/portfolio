@@ -61,7 +61,8 @@ function Swarm({ type ,count, mouse }) {
      display= (  
         <instancedMesh ref={mesh} args={[null, null, count]}>
           <sphereBufferGeometry attach="geometry" args={[20, 32, 32]} />
-          <meshPhongMaterial attach="material" color="rgb(155, 155, 155)"  transparent= "true" opacity="0.5" />
+          <meshLambertMaterial attach="material" color="rgb(35, 35, 35)"  transparent= "true" opacity="0.5" />
+          {/* <meshNormalMaterial attach="material" color="rgb(35, 35, 35)"  transparent= "true" opacity="0.1" /> */}
         </instancedMesh>
       )
     } else if(type=="linev"){
@@ -108,12 +109,14 @@ const SwarmGroup=(props)=> {
           gl.toneMapping = THREE.ACESFilmicToneMapping
           gl.outputEncoding = THREE.sRGBEncoding
         }}>
-        <ambientLight intensity={1} />
-        <pointLight position={[100, 100, 100]} intensity={1.2} />
-        <pointLight position={[-100, -100, -100]} intensity={1} color="rgb(0, 0, 200)" />
+        <ambientLight intensity={0.1} />
+        {/* <pointLight position={[100, 100, 100]} intensity={0.1} /> */}
+        <pointLight position={[-100, -100, -100]} intensity={0.8} color="rgb(30, 30, 30)" />
+        <pointLight position={[100, 100, 100]} intensity={0.3} color="rgb(55, 25, 10)" />
+        <pointLight position={[-100, 100, 100]} intensity={0.2} color="rgb(50, 54, 100)" />
         {/* <Swarm type='lineh' mouse={props.mouse} count={120} /> */}
         {/* <Swarm type='linev' mouse={props.mouse} count={3} /> */}
-        <Swarm type='snowBall' mouse={props.mouse} count={5} />
+        <Swarm type='snowBall' mouse={props.mouse} count={6} />
         
         <Suspense fallback={null}>
         {/* <Effects /> */}

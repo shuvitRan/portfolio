@@ -5,7 +5,7 @@ import {Box} from './Box';
 import MyModel from './myModel/MyModel'
 
 // import Box from './components/Box'
-import '../App.css';
+import '../App.scss';
 
 
 

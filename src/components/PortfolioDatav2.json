@@ -60,7 +60,7 @@
       "imgFolder": "Firis",
       "header":"Artboard.jpg",
       "imgsSection": [
-         {"img":"ironduan.gif", "title":"What's Firis?", "text":"Have you or your friends dreamed to at as Harley Quinn or IronMan in a movie video? We are building a mobile app to enable you to fuse yourself with the movie characters you love and even place yourself into movie fragments using computer vision. The new character can look like you or even be you but speaking the original lines in the movie video. Besides that, you can also share your videos to social networks and receive likes and followers."},
+         {"img":"ironduan.gif", "title":"What's Firis?", "text":"Have you or your friends dreamed to act as Harley Quinn or IronMan in a movie video? We are building a mobile app to enable you to fuse yourself with the movie characters you love and even place yourself into movie fragments using computer vision. The new character can look like you or even be you but speaking the original lines in the movie video. Besides that, you can also share your videos to social networks and receive likes and followers."},
          {  "img":"2.jpg",
             "text":"As the full-stack designer, I teamed up with four developers. I designed full package for the Firis, including brand identity, pitch deck, UI/UX, motion and interaction, special effects and video comercial."},
          {"img":"FirisMotion.gif"},

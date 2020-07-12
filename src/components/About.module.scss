@@ -1,3 +1,5 @@
+@import'../base.scss';
+
 .aboutContainer{
     display: flex;
     position: relative;
@@ -12,10 +14,10 @@
     right: 0;
     
     /* z-index: 0; */
-    margin-top: 1em;
+    margin-top: 10em;
     z-index:1;
     word-wrap: break-word;
-
+    color:$primeTextColor;
 }
 
 .aboutContentContainer{
@@ -39,7 +41,7 @@
 .linkOut a{
     font-family: Futura, Arial, sans-serif;
     text-decoration: none;
-    color: rgb(41, 41, 41);
+    color: $linkColor;
     z-index: 5;
     display: inline-block;
     position: relative;
@@ -53,7 +55,7 @@
 .linkOut a:hover{
     /* text-decoration: none; */
     /* background-color: black; */
-    color: #ff0080;
+    color: $linkHoverColor;
     z-index: 5;
     display: inline-block;
     position: relative;
@@ -126,23 +128,32 @@
 }
 
 .decoTextTop{
-    padding: 0em 3rem;
+    padding: 0em 5%;
     margin: none;
     writing-mode: vertical-rl;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     /* letter-spacing: 1px; */
+    
+    right: 5%;
+    font-size: 2em;
     float: right;
-    font-size: 3em;
+    // position: fixed;
+    // right: 5%;
 }
 
 .decoTextBottom{
-    padding: 0em 3rem;
+    padding: 5em 10% 5em;
     margin: none;
     writing-mode: vertical-rl;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    right: 0;
-    float: left;
-    font-size: 3em;
+    // right: 0;
+    float: right;
+    font-size: 1.5em;
+    height:230px;
+    width: 100%;
+    // position: fixed;
+    // left: 5%;
+    // bottom: 4%;
 }
 
 

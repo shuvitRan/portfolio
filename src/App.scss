@@ -1,9 +1,11 @@
+ @import'./base.scss';
+
 .App {
   /* text-align: center; */
   width: 100%;
   /* height:auto; */
   top:0;
-  background-color: rgb(235, 235, 235);
+  background-color: $primeBgColor;
   position: absolute;
 }
 
@@ -27,6 +29,7 @@ a{
 
   left:0;
   z-index: 1;
+  background-color: $primeBgColor;
   /* overflow: hidden; */
 }
 .noselect {
@@ -55,7 +58,7 @@ a{
    /* height: 600px;  */
   /* height: 30%; */
   /* margin: 0 3rem; */
-  margin: 0rem 0 4em;
+  margin: 6rem 0;
   z-index: 2;
   
   /* justify-content: center; */
@@ -101,16 +104,18 @@ a{
 }
 
 .footer{
-  margin:0rem 4rem 1rem;
-  font-size: 10px;
+  margin:1rem 5% 1rem;
+  font-size: 0.8rem;
   float: left;
   width: 60%;
-  opacity: 0.6;
-  /* color: #000; */
+  opacity: 1;
+  // color: $primeTextColor;
+  color:white !important;
   animation: fadein 4s;
   /* bottom: 5px; */
   z-index: 30;
   /* color: #ff0080; */
+  position: relative;
   
 }
 

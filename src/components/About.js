@@ -1,6 +1,6 @@
 import React,{useEffect} from 'react'
 import { DefaultLoadingManager } from 'three'
-import styles from './About.module.css';
+import styles from './About.module.scss';
 import ReactGa from 'react-ga';
 import SplitText from "react-pose-text";
 import TextFx from './TextFx'
@@ -12,9 +12,9 @@ const About=()=>{
 
     return(
         <div className={styles.aboutContainer}>
-            <div className={styles.decoContainer}>
+            {/* <div className={styles.decoContainer}>
             <div className={styles.decoTextTop}>关于</div>
-            </div>
+            </div> */}
             
             <div className={styles.aboutContentContainer}>
             <div className={styles.textBlock}>
@@ -72,13 +72,15 @@ const About=()=>{
                                     > danranpresent.com</ReactGa.OutboundLink></div>
             </div>
                 {/* <a href="mailto:randanfx@gmail.com">randanfx@gmail.com</a> <a href="https://vimeo.com/randan">vimeo.com/randan</a> <a href="http://www.danranpresent.com/">danranpresent.com</a>*/}
-            
+                <div className={styles.decoContainer}>
+            <div className={styles.decoTextBottom}>大家好，我叫冉聃，我是一个多学科设计师和创意开发者。现居住在纽约，当然不管在哪，如果有好玩的项目都可以联系我， 还请多多关照。</div>
+            </div>
             <div className={styles.textBlockReco}>
                 <SplitText initialPose="exit" pose="enter" charPoses={TextFx}>
                     Exhibition & Recognition
                 </SplitText>
             </div>
-              
+           
             <div className={styles.textBlockC2}> 
                 <p>Enter Playmode, Wonderville, Brooklyn, New York, Game Showcase, Project: Blue Desert Disco, Type: Digital Game, December 2019</p>
                 <p>Pratt Digital Arts 2017 Exhibition, Pablo’s Birthday Gallery Manhattan, New York, Group Exhibition, Project: Wuwei, Type: Interactive Projection Art, Apr 30-May 6, 2017</p>
@@ -92,9 +94,7 @@ const About=()=>{
             
             </div>
 
-            <div className={styles.decoContainer}>
-            <div className={styles.decoTextBottom}>冉聃</div>
-            </div>
+
             
 
         </div>
