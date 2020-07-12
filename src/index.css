@@ -76,12 +76,12 @@ table {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #2a2b2a; 
+  background: #000000; 
 }
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgb(24, 23, 23); 
+  background: rgb(175, 134, 21); 
 }
 
 /* Handle on hover */

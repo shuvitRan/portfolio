@@ -21,6 +21,7 @@
     justify-content: space-between;
     align-items: flex-end;
     
+    // text-shadow: 0px 0px 5px rgb(24, 23, 24);
     /* width: 80%; */
     /* display: inline-block; */
     /* display: inline-block; */
@@ -45,6 +46,7 @@
 .menu a:hover{
     color: $hoverColor;
     letter-spacing: 3px;
+   
 }
 
 /* .menu a:hover{
@@ -69,7 +71,7 @@ margin: 0em 5vw;
     position: relative;
     /* display:inline; */
     /* text-decoration: none; */
-     
+    
 }
 .recent{
     font-size: 0.6em;

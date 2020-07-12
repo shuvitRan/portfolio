@@ -71,7 +71,7 @@ const PortfolioCotentV2 = (props)=>{
    if(eachContent[params.id].tools!='undefined'){
     Tools=(
           <span>  
-          <b>TOOLS</b> 
+          <b>SKILL</b> 
           {eachContent[params.id].tools.map((thisTools, index)=>{
           return(
           <div key={"thisTools"+index} > 
@@ -100,7 +100,8 @@ const PortfolioCotentV2 = (props)=>{
                                   
                               >
                                   
-                                  &nbsp;&gt; {eachContent[params.id].buttonName[index]}
+                                  {/* &nbsp;&gt; {eachContent[params.id].buttonName[index]} */}
+                                   {eachContent[params.id].buttonName[index]}
                                   
                                   </ReactGa.OutboundLink>
                   {/* <a target="_blank" href={eachButton}> &nbsp;&gt; {eachContent[props.contentId].buttonName[index]}</a> */}

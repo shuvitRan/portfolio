@@ -205,7 +205,7 @@
     // display: none;
     // height: 0;
     transform: translateY(100%);
-    transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1);
   }
 
   .cardContainer:hover  .cardCate{
@@ -219,7 +219,7 @@
     // font-size: 1em;
     // position: relative;
     // height: auto;
-    transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1);
   }
 
   @keyframes floating {
