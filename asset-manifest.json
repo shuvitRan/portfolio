@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.8e0473e2.chunk.css",
+    "main.css": "/static/css/main.7817df69.chunk.css",
     "main.js": "/static/js/main.25eaa0d1.chunk.js",
     "main.js.map": "/static/js/main.25eaa0d1.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.ee3a7e75.js",
@@ -13,10 +13,10 @@
     "static/js/4.d7129721.chunk.js": "/static/js/4.d7129721.chunk.js",
     "static/js/4.d7129721.chunk.js.map": "/static/js/4.d7129721.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.b9dd7079e3c3a30bfab293dbd0af60ff.js": "/precache-manifest.b9dd7079e3c3a30bfab293dbd0af60ff.js",
+    "precache-manifest.174912b4dd08bde5a7c5c35054c820a5.js": "/precache-manifest.174912b4dd08bde5a7c5c35054c820a5.js",
     "service-worker.js": "/service-worker.js",
     "static/css/3.f3c2aeaf.chunk.css.map": "/static/css/3.f3c2aeaf.chunk.css.map",
-    "static/css/main.8e0473e2.chunk.css.map": "/static/css/main.8e0473e2.chunk.css.map",
+    "static/css/main.7817df69.chunk.css.map": "/static/css/main.7817df69.chunk.css.map",
     "static/js/2.42c78d50.chunk.js.LICENSE.txt": "/static/js/2.42c78d50.chunk.js.LICENSE.txt",
     "static/media/FuturaBoldfont.ttf": "/static/media/FuturaBoldfont.4c62644b.ttf",
     "static/media/FuturaMediumBT.ttf": "/static/media/FuturaMediumBT.ee64fb9d.ttf"
@@ -24,7 +24,7 @@
   "entrypoints": [
     "static/js/runtime-main.ee3a7e75.js",
     "static/js/2.42c78d50.chunk.js",
-    "static/css/main.8e0473e2.chunk.css",
+    "static/css/main.7817df69.chunk.css",
     "static/js/main.25eaa0d1.chunk.js"
   ]
 }
