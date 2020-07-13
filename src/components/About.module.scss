@@ -7,7 +7,7 @@
   justify-content: center;
     text-align: left;
     flex-direction: column;
-    /* width: 100%; */
+     width: 100%; 
     /* height: 100%; */
     
     font-family: Futura, Arial, sans-serif;
@@ -156,6 +156,21 @@
     // bottom: 4%;
 }
 
+.ChineseText{
+    padding: 5em 10% 5em;
+    margin: none;
+    writing-mode: vertical-rl;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    // right: 0;
+    float: right;
+    font-size: 1.5em;
+    height:230px;
+    width: 100%;
+    // position: fixed;
+    // left: 5%;
+    // bottom: 4%;
+}
+
 
 @media only screen and (max-width: 768px) {
     .aboutContainer{
@@ -169,7 +184,7 @@
         
         animation: fadein 2s;
         right: 0;
-        padding-top: 2rem;
+        padding-top: 0rem;
         /* z-index: 0; */
         margin-left: 1.5rem;
         
@@ -180,7 +195,7 @@
         margin: 0 1rem 0;
     }
     .aboutContainer h1{
-        font-size: 2.5em;
+        font-size: 1.5em;
        
         
     }
@@ -193,7 +208,7 @@
         /* margin-left: 5rem; */
         padding-bottom: 2rem;
         width: 80%;
-        min-width: 200px;
+        // min-width: 200px;
         /* font-weight: bold; */
         /* z-index: 5; */
     }
@@ -216,10 +231,10 @@
         position: static;
         float: right;
         /* margin-left: 10rem; */
-        min-width: 200px;
+        // min-width: 200px;
         max-width: 1000px;
-        font-size: 1.2em;
-        /* padding-left: 20%; */
+        font-size: 1em;
+         padding: 0 2rem; 
     }
     .decoTextTop{
         padding: 0em 1rem;
@@ -229,6 +244,20 @@
     .decoTextBottom{
         padding: 0em 1rem;
     
+    }
+    .ChineseText{
+        padding: 4em 1.5em 0em;
+        margin: none;
+        writing-mode: vertical-rl;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        // right: 0;
+        float: right;
+        font-size: 1.2em;
+        height:140px;
+        width: 100%;
+        // position: fixed;
+        // left: 5%;
+        // bottom: 4%;
     }
     
 }

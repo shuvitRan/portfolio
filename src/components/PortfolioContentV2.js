@@ -213,7 +213,7 @@ if (eachContent[params.id]&& typeof eachContent[params.id].imgsSection!='undefin
 
          
 
-       
+<div className={styles.containerWrap}>
         <div className={styles.contentContainer}>
        
         <div onClick={goBackHandler} className={[styles.goBack, "noselect"].join(' ')} >
@@ -227,6 +227,7 @@ if (eachContent[params.id]&& typeof eachContent[params.id].imgsSection!='undefin
             {videoShow}
    
         </div>
+    </div>
 
 </>
     )

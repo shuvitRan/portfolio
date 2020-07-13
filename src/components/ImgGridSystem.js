@@ -29,7 +29,8 @@ const ImgGridSystem = (props)=>{
     const trans = (x, y, s) => `perspective(1000px) scale(${s}) `;
     const trans2 = (x, y, s) => `perspective(2500px) rotateX(${x}deg) rotateY(${y}deg) scale(${s}) `;
     
-    const calc = (x, y) => [-(y - window.innerHeight / 2) / 150, (x - window.innerWidth / 2) / 150, 0.95]
+    // const calc = (x, y) => [-(y - window.innerHeight / 2) / 150, (x - window.innerWidth / 2) / 150, 0.97]
+    const calc = (x, y) => [-((y - window.innerHeight / 2) / ( window.innerHeight/2))*3, ((x - window.innerWidth / 2)/ ( window.innerWidth/2))*3, 0.97]
     // const calc = (x, y) => [-(y - element.clientHeight / 2) / 30, (x - element.clientHeight / 2) / 30, 0.9]
 // const trans = (x, y, s) => `perspective(1000px) rotateX(${x}deg) rotateY(${y}deg) scale(${s}) `;
 

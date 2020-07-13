@@ -31,7 +31,8 @@ const cardref = useRef();
 //     };
 //   }, []);
 
-  const calc = (x, y) => [-(y - window.innerHeight / 2) / 30, (x - window.innerWidth / 2) / 30, 0.9]
+//   const calc = (x, y) => [-(y - window.innerHeight / 2) / 30, (x - window.innerWidth / 2) / 30, 0.9]
+    const calc = (x, y) => [-((y - window.innerHeight / 2) / ( window.innerHeight/2))*15, ((x - window.innerWidth / 2)/ ( window.innerWidth/2))*15, 0.9]
 
 
 

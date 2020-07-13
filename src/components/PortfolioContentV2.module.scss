@@ -2,6 +2,15 @@
 
 @import'../base.scss';
 
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+.containerWrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .contentContainer{
     position: relative;
     display: flex;
@@ -30,6 +39,7 @@
     // top:-100px;
     // position: absolute;
     // display: inline-flex;
+    animation: fadein 2s;
 
     img{
         width:100%;
@@ -77,6 +87,7 @@ div{
 
 
 .textLayout{
+    animation: fadein 2s;
     // margin:0;
     // padding:0;
     position: relative;
@@ -287,4 +298,103 @@ div{
     -webkit-mask: url("/assets/icons/chevron-left.svg")center center;
     mask-position: center;
     /* -webkit-mask-size: 150% 150%; */
+  }
+
+
+  @media only screen and (max-width: 768px) {
+    .mainLayout{
+        width: 90%;
+        padding:5% 0 3%;
+       
+    
+        h1{
+            font-size: 2rem;
+            max-width:1000px ;
+           
+        }
+        a{
+            text-decoration: none;
+            color: $linkColor;
+            transition:0.5s;
+        }
+        a:hover{
+            text-decoration: none;
+            color: $hoverColor;
+        }
+    }
+
+    
+
+    .DescriptionWithTitle{
+        font-size: 1rem;
+        margin-top:10%;
+        h1{
+            font-size: 2rem;
+            max-width:1000px ;
+            padding-bottom: 5%;
+        }
+        div{
+            margin-bottom: 10%;
+        }
+    
+    }
+    .moreDescriptionText{
+        font-size: 1rem;
+        margin:15% 0 10%;
+        h1{
+            font-size: 1rem;
+            max-width:1000px ;
+        }
+    
+    }
+
+    .textLayout{
+        // margin:0;
+        // padding:0;
+        position: relative;
+        margin-left: 25%;
+        width: 75%;
+        max-width: 1000px;
+        float: left;
+        // width: 10%;
+        display: flex;
+        flex-direction: column;
+        .descriptionText{
+            font-size: 1rem;
+            padding:8% 0 8%;
+        }
+        .categoryColumns{
+            display: flex;
+            flex-direction: row;
+            // justify-content: space-between;
+            width:100%;
+    
+            span{
+                width:33%;
+            }
+        }
+    }
+    .videoContainer{
+        width: 100%;
+        // background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        // position: relative;
+        .videoTitle{
+            padding:50px 0 0;
+            width: 90%;
+            align-items: start;
+        }
+        h1{
+            padding:0;
+            margin:0;
+            font-size: 1.2rem;
+            // color:white;
+        }
+    }
+    
+
+
   }
