@@ -3,8 +3,10 @@ import ReactDOM from 'react-dom';
 import React, { Suspense, useCallback, useRef, useMemo } from 'react';
 import { Canvas, useFrame } from 'react-three-fiber';
 import Effects from './Effects';
-import DisplayText from './DisplayText'
+import DisplayText from './DisplayText';
 // import './styles.css'
+
+// import MyModel from '../myModel/MyModel';
 
 
 
@@ -61,6 +63,7 @@ function Swarm({ type ,count, mouse }) {
      display= (  
         <instancedMesh ref={mesh} args={[null, null, count]}>
           <sphereBufferGeometry attach="geometry" args={[20, 32, 32]} />
+          
           <meshLambertMaterial attach="material" color="rgb(35, 35, 35)"  transparent= "true" opacity="0.5" />
           {/* <meshNormalMaterial attach="material" color="rgb(35, 35, 35)"  transparent= "true" opacity="0.1" /> */}
         </instancedMesh>
@@ -103,7 +106,7 @@ const SwarmGroup=(props)=> {
         
       <Canvas 
         gl={{ alpha: true, antialias: false, logarithmicDepthBuffer: true }}
-        camera={{ fov: 50, position: [0, 0, 70] }}
+        camera={{ fov: 50, position: [0, 0, 30] }}
         onCreated={({ gl }) => {
           // gl.setClearColor('rgb(235, 235, 235)')
           gl.toneMapping = THREE.ACESFilmicToneMapping
@@ -112,8 +115,8 @@ const SwarmGroup=(props)=> {
         <ambientLight intensity={0.1} />
         {/* <pointLight position={[100, 100, 100]} intensity={0.1} /> */}
         <pointLight position={[-100, -100, -100]} intensity={0.8} color="rgb(30, 30, 30)" />
-        <pointLight position={[100, 100, 100]} intensity={0.3} color="rgb(55, 25, 10)" />
-        <pointLight position={[-100, 100, 100]} intensity={0.2} color="rgb(50, 54, 100)" />
+        <pointLight position={[100, 100, 100]} intensity={0.3} color="rgb(65, 15, 10)" />
+        <pointLight position={[-100, 100, 100]} intensity={0.5} color="rgb(50, 54, 100)" />
         {/* <Swarm type='lineh' mouse={props.mouse} count={120} /> */}
         {/* <Swarm type='linev' mouse={props.mouse} count={3} /> */}
         <Swarm type='snowBall' mouse={props.mouse} count={6} />
@@ -122,9 +125,9 @@ const SwarmGroup=(props)=> {
         {/* <Effects /> */}
      
         {/* <DisplayText mouse={props.mouse} /> */}
-        
+       
         </Suspense>
-
+        {/* <MyModel /> */}
   
   
       </Canvas>

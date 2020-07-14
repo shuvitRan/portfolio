@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect }from 'react';
+import React, { useRef, useState, useEffect,useLayoutEffect }from 'react';
 import ReactDOM from "react-dom";
 // import React, {Suspense} from 'react-image'
 // import {useImage} from 'react-image';
@@ -10,27 +10,49 @@ import ReactGa from 'react-ga';
 
 import {Route, NavLink, Switch} from 'react-router-dom';
 
+//size Hook
+function useWindowSize() {
+  const [size, setSize] = useState([0, 0]);
+  useLayoutEffect(() => {
+    function updateSize() {
+      setSize([window.innerWidth, window.innerHeight]);
+    }
+    window.addEventListener('resize', updateSize);
+    updateSize();
+    return () => window.removeEventListener('resize', updateSize);
+  }, []);
+  return size;
+}
+
+
 const ImgGridSystem = (props)=>{
 
    
     const fadeinAnimation = useSpring({opacity: 1, from: {opacity: 0}})
 
     let imgList = [
-        {id: 0, src: 'WCMA/WCMAHeader.jpg', title: 'All AT ONCE - WCMA', partner:"Studio TheGreenEyl", category:"creative web app", descriptions:"tqqqqqqghis adsd <br> sdf <b>sdads</b> adsqwewqrwqrwqrwq"},
-        {id: 1, src: 'TNC/TNCHeader.jpg', title: 'MEGA CITY',partner:"The Natrual Conservancy", category:"web app, interactive storytelling", descriptions:'wqex ff sdsfq'},
-        {id: 2, src: 'Firis/FirisHeader.jpg', title: 'FIRIS', partner:"Cornell Start-up Studio", category:"ui/ux, product design, motion ",descriptions:'ffffff adsd sds fqrwqrwq'},
-        {id: 3, src: 'Met/METHeader.png', title: 'MET',partner:"Metropolitan Museum of Art", category:"creative app", descriptions:'sdawr adsd sds ff sdadsadsqwewqrwqrwqrwq'},
-        {id: 4, src: 'Peeq/PeeqHeader.jpg', title: 'PEEQ',partner:"Peeq Data Inc", category:"ui/ux, motion, video", descriptions:'ffffff adsd sds fqrwqrwq'},
-        {id: 5, src: 'Games/GamesHeader.jpg', title: 'BLUE DESERT DISCO', partner:"Wonderville Brooklyn", category:"game development, phsyical computing",descriptions:'ffffff adsd sds fqrwqrwq'}
+        {id: 0, src: 'WCMA/WCMAHeader.jpg', title: 'All AT ONCE - WCMA', partner:"Studio TheGreenEyl", category:"creative web app"},
+        {id: 1, src: 'TNC/TNCHeader.jpg', title: 'MEGA CITY',partner:"The Natrual Conservancy", category:"web app, interactive storytelling"},
+        {id: 2, src: 'Firis/FirisHeader.jpg', title: 'FIRIS', partner:"Cornell Start-up Studio", category:"ui/ux, product design, motion "},
+        {id: 3, src: 'Met/METHeader.png', title: 'MET',partner:"Metropolitan Museum of Art", category:"creative app",},
+        {id: 4, src: 'Peeq/PeeqHeader.jpg', title: 'PEEQ',partner:"Peeq Data Inc", category:"ui/ux, motion, video", },
+        {id: 5, src: 'Games/GamesHeader.jpg', title: 'BLUE DESERT DISCO', partner:"Wonderville Brooklyn", category:"game development, phsyical computing"}
     ]; 
     // let isImgClicked = false;
     // let activeId ='';
     const [animationCard, set] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 5, tension: 350, friction: 60 } }))
-    const trans = (x, y, s) => `perspective(1000px) scale(${s}) `;
+    // const trans = (x, y, s) => `perspective(1000px) scale(${s}) `;
     const trans2 = (x, y, s) => `perspective(2500px) rotateX(${x}deg) rotateY(${y}deg) scale(${s}) `;
     
     // const calc = (x, y) => [-(y - window.innerHeight / 2) / 150, (x - window.innerWidth / 2) / 150, 0.97]
-    const calc = (x, y) => [-((y - window.innerHeight / 2) / ( window.innerHeight/2))*3, ((x - window.innerWidth / 2)/ ( window.innerWidth/2))*3, 0.97]
+    // const calc = (x, y) => [-((y - window.innerHeight / 2) / ( window.innerHeight/2))*3, ((x - window.innerWidth / 2)/ ( window.innerWidth/2))*3, 0.97]
+    const [width, height] = useWindowSize();
+    let calc;
+        if(width>768){    
+        calc = (x, y) => [-((y - window.innerHeight / 2) / ( window.innerHeight/2))*4, ((x - window.innerWidth / 2)/ ( window.innerWidth/2))*4, 0.97]
+        } else{
+            calc = (x, y) => [0, 0, 1]
+        }
     // const calc = (x, y) => [-(y - element.clientHeight / 2) / 30, (x - element.clientHeight / 2) / 30, 0.9]
 // const trans = (x, y, s) => `perspective(1000px) rotateX(${x}deg) rotateY(${y}deg) scale(${s}) `;
 
@@ -48,7 +70,7 @@ const ImgGridSystem = (props)=>{
   
         gridimg=(// return (
           <animated.div 
-          onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
+          onMouseOver={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
           onMouseLeave={() => set({ xys: [0, 0, 1] })}
           style={{ transform: animationCard.xys.interpolate(trans2) }}> 
            <div className="gridSystem"> 

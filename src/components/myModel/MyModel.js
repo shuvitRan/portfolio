@@ -34,15 +34,16 @@ function Model({ url }) {
         <mesh
         {...props}
         ref={mesh}
-        scale={active ? [1.5, 1.5, 1.5] : [0.5, 0.5, 0.5]}
+        scale={active ? [1, 1, 1] : [1, 1, 1]}
         onClick={(e) => setActive(!active)}
         onPointerOver={(e) => setHover(true)}
         onPointerOut={(e) => setHover(false)}>
-       
-        <Model attach="geometry" color='hotpink' url={"/portfolio/assets/3dModel/JoyStick.obj"} />
-         <meshBasicMaterial attach="material" color={hovered ? 'hotpink' : 'orange'} />
+       <meshLambertMaterial attach="material" color="rgb(35, 35, 35)"  transparent= "true" opacity="0.5" />
+        <Model attach="geometry" color="rgb(35, 35, 35)"  url={"assets/3dModel/Thinker.obj"} />
+        
+        {/* <meshBasicMaterial attach="material" color={hovered ? 'orange' : 'orange'} /> */}
    
-    </mesh>
+     </mesh>
     )
  }   
 

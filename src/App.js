@@ -2,15 +2,18 @@ import React ,{useState, useCallback, useRef, useEffect, Suspense} from 'react';
 import './App.scss';
 // import './_base.scss';
 import { useSpring, animated } from 'react-spring'
-import  PortfolioBG  from './components/PortfolioBG';
-import ImgGridSystem from './components/ImgGridSystem';
+
+// import ImgGridSystem from './components/ImgGridSystem';
 import Menu from './components/Menu';
 // import About from './components/About';
 import SwarmGroup from './components/InteractiveBG/SwarmGroup';
 import ReactGa from 'react-ga';
 
-import PortfolioCotent from './components/PortfolioContentV2';
+// import PortfolioCotent from './components/PortfolioContentV2';
 import {Route, NavLink,Link, BrowserRouter,useHistory, Switch, HashRouter,withRouter} from 'react-router-dom';
+
+const ImgGridSystem = React.lazy(()=>import('./components/ImgGridSystem'));
+const PortfolioCotent = React.lazy(()=>import('./components/PortfolioContentV2'));
 const About = React.lazy(()=>import('./components/About'));
 const ErrorPage = React.lazy(()=>import('./components/ErrorPage'));
 
@@ -66,19 +69,21 @@ function App() {
       </Route>
     <Route path={'/:id/:name'} exact>
           {/* <div className="gridContainer"> */}
-                       
+          <Suspense fallback='null'>  
                         <PortfolioCotent  />
-                   
+          </Suspense>
         {/* </div>   */}
     </Route>
     
         
 
-
+    
       <Route path='/' exact>
+      <Suspense fallback={<h1>Loading</h1>}>    
             <ImgGridSystem mouse={mouse}  />
+            </Suspense>
       </Route>
-
+      
    
       <Route path="*">
       <Suspense fallback='null'>

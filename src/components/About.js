@@ -73,7 +73,11 @@ const About=()=>{
             </div>
                 {/* <a href="mailto:randanfx@gmail.com">randanfx@gmail.com</a> <a href="https://vimeo.com/randan">vimeo.com/randan</a> <a href="http://www.danranpresent.com/">danranpresent.com</a>*/}
                 <div className={styles.decoContainer}>
-            <div className={styles.ChineseText}>大家好，我叫冉聃，我是一个多学科设计师和创意开发者。现居住在纽约，当然不管在哪，如果有好玩的项目都可以联系我， 还请多多关照。</div>
+            <div className={styles.ChineseText}>
+            <SplitText initialPose="exit" pose="enter" charPoses={TextFx}>
+                大家好，我叫冉聃，是一个多学科设计师和创意开发者。现居住在纽约，当然不管在哪，如果有好玩的项目都可以联系我，还请多多关照。
+            </SplitText>
+            </div>
             </div>
             <div className={styles.textBlockReco}>
                 <SplitText initialPose="exit" pose="enter" charPoses={TextFx}>

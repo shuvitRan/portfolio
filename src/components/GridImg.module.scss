@@ -1,17 +1,27 @@
 
 @import'../base.scss';
+
+.cardHoverContainer{
+  position: relative;
+  /* height: 30%; */
+  min-width: 28%;
+  width: 28%;
+  max-width: 1080px;
+  padding: 1%;
+  // transition: 0.5s cubic-bezier(.1,.56,.5,1.21);
+}
 .cardContainer{
-    
+  z-index: 10;
     /* height:20vh; */
     /* display:inline-block; */
     position: relative;
     /* height: 30%; */
-    min-width: 28%;
-    width: 28%;
+    min-width: 100%;
+    width: 100%;
     /* height: auto; */
     /* background-color: rgb(29, 29, 29); */
-    max-width: 1080px;
-   padding: 1%;
+    // max-width: 1080px;
+   
     cursor: pointer;  
     margin: none;
     font-family: $mainTitileFont;
@@ -23,19 +33,49 @@
     /* margin-right:15px;
     margin-bottom: 15px; */
     /* overflow: hidden; */
-    /* animation: fadein 4s; */
+    //  animation: fadein 4s; 
+    // transform: scale(1);
+    transition: 1s cubic-bezier(.41,1.84,.46,.85);
   }
 
-  .cardContainer:hover{
+  .cardHoverContainer:hover .cardContainer{
     /* padding:0 20px; */
-    transition: 2s;
+    // transition: 2s;
     z-index: 10;
     /* position: fixed; */
+  
+    transform: scale(0.9);
+    // transition: 0.5s;
+    transition: 0.6s ease;
+    // transition: 0.6s ;
+       
+   
   }
 
 
 
   @media only screen and (max-width: 768px) {
+    .cardHoverContainer{
+      position: relative;
+      /* height: 30%; */
+      min-width: 100%;
+      width: 100%;
+      max-width: 1080px;
+      padding: 1%;
+    }
+    .cardHoverContainer:hover .cardContainer{
+      /* padding:0 20px; */
+      // transition: 2s;
+      z-index: 10;
+      /* position: fixed; */
+    
+      transform: scale(1);
+      // transition: 0.5s;
+      transition: 0.4s cubic-bezier(.1,.56,.5,1.21);
+         
+     
+    }
+  
     .cardContainer{
     
       /* height:20vh; */
@@ -53,6 +93,7 @@
       /* padding: 5px; */
       /* overflow: hidden; */
       /* animation: fadein 4s; */
+    
     }
   }
 
@@ -133,7 +174,7 @@
     background-size: cover;
   background-repeat: no-repeat;
     opacity: 0;
-    transition: .5s ease;
+    transition: 0.5s ease;
     background-color: rgba(0, 0, 0, 0.4);
     background-image: url('/assets/GridImg/grid4.png');
   }
@@ -149,7 +190,7 @@
       /* right: 0; */
       text-align: left;
       /* padding-left: 8px; */
-      transition: 2s;
+      transition: 1s;
   }
   .cardText {
     
@@ -157,20 +198,22 @@
     font-weight: bold;
     /* font-weight: normal; */
     /* display: none; */
-    display: inline-block;
-    /* position: absolute; */
-    /* bottom: -1.2em; */
+    // display: inline-block;
+    
+    //  position: absolute; 
+    //  bottom: 0.5em; 
     /* left: 0.1em; */
     /* padding-right: 10px; */
     /* left: 1px; */
     font-size: 2.5em;
     margin: 5px 0 0;
-    padding:0;
+    padding:5px 0;
     /* padding: 0; */
     color: rgb(255, 255, 255);
     /* z-index: 1; */
-    animation: fadein 5s;
-    transition: 0.5s; 
+    // animation: fadein 5s;
+    transition: translateY(0%);
+    transition: 0.5s ; 
   }
 
 
@@ -191,40 +234,35 @@
     // position: fixed;
     font-weight: bold;
     // margin: 0;
-     visibility: hidden; 
+    //  visibility: hidden; 
     opacity: 0;
     // margin: -10px 0;
     max-height: 0px;
+    
     /* font-weight: bold; */
     color: #f3f3f3;;
     /* font-family: 'Courier New', Courier, monospace; */
     /* visibility: hidden; */
     /* opacity:0;
     position: absolute; */
-    // overflow: hidden;
+    overflow: hidden;
     // display: none;
     // height: 0;
-    transform: translateY(100%);
-    transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    transform: translateY(60%);
+    transition: 0.5s cubic-bezier(.26,.86,.68,.97);
   }
-
+  // .cardContainer:hover .cardText{
+  //   transition: translateY(-800%);
+  //   transition: 0.5s;    
+  // }
   .cardContainer:hover  .cardCate{
     color: rgb(255, 255, 255);
-    visibility: visible; 
+    // visibility: visible; 
     opacity: 1;
-    margin: 8px 0;
+    // margin: 8px 0;
     transform: translateY(0%);
-    
-    max-height: 200px;
-    // font-size: 1em;
-    // position: relative;
-    // height: auto;
-    transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    // display: inline;
+    max-height: 100px;
+    transition: 0.5s cubic-bezier(.26,.86,.68,.97);
+    // transition: 0.5s ;
   }
-
-  @keyframes floating {
-    from { transform: translate(0,  0px); }
-    60%  { transform: translate(0px, -5px); }
-    /* 80%  { transform: translate(0px, 5px); } */
-    to   { transform: translate(0, -0px); }    
-}

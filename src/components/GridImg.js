@@ -9,6 +9,7 @@ import TextFx from './TextFx';
 import { NavLink, Switch} from 'react-router-dom';
 import { useSpring, animated } from 'react-spring'
 
+
 const GridImg = (props)=>{
 
 
@@ -16,10 +17,11 @@ const GridImg = (props)=>{
 // const calc = (x, y) => [-(y - element.clientHeight / 2) / 30, (x - element.clientHeight / 2) / 30, 0.9]
 // const trans = (x, y, s) => `perspective(1000px) rotateX(${x}deg) rotateY(${y}deg) scale(${s}) `;
 const trans = (x, y, s) => `perspective(1000px) scale(${s}) `;
-const trans2 = (x, y, s) => `perspective(700px) rotateX(${x}deg) rotateY(${y}deg) scale(${s}) `;
+// const trans2 = (x, y, s) => `perspective(700px) rotateX(${x}deg) rotateY(${y}deg) scale(${s}) `;
+const trans2 = (x, y) => `perspective(700px) rotateX(${x}deg) rotateY(${y}deg) `;
 const [animationCard, set] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 5, tension: 350, friction: 40 } }))
 
-const cardref = useRef();
+// const cardref = useRef();
 
 // let cardX,cardY;
 // useEffect(() => {
@@ -32,16 +34,17 @@ const cardref = useRef();
 //   }, []);
 
 //   const calc = (x, y) => [-(y - window.innerHeight / 2) / 30, (x - window.innerWidth / 2) / 30, 0.9]
-    const calc = (x, y) => [-((y - window.innerHeight / 2) / ( window.innerHeight/2))*15, ((x - window.innerWidth / 2)/ ( window.innerWidth/2))*15, 0.9]
+
+const calc = (x, y) => [-((y - window.innerHeight / 2) / ( window.innerHeight/2))*15, ((x - window.innerWidth / 2)/ ( window.innerWidth/2))*15]
 
 
 
     return (
         <>
-     
+     <div  className ={styles.cardHoverContainer}  >
         <div  className ={styles.cardContainer}  >
         <animated.div 
-                    onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
+                    onMouseOver={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
                     onMouseLeave={() => set({ xys: [0, 0, 1] })}
                     style={{ transform: animationCard.xys.interpolate(trans) }}>
                 <NavLink to={{pathname:'/'+props.projectId+"/"+props.content.title.replace(/\s/g, '')}} >
@@ -86,7 +89,7 @@ const cardref = useRef();
                 </NavLink>  
                 </animated.div>
         </div>
-       
+        </div>
         </>
     )
 }
