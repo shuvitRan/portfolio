@@ -57,14 +57,21 @@
       "title": "Firis App Design",
       "tools": ["Product Design","Sketch","After Effects", "Premiere", "Illustrator","UI & UX", "Motion Graphics","VFX","Video Editing"],
       "role":[ "Designer"],
-      "descriptions": "Firis is a video-making app that swaps user's face and voice into premium videos. it is a startup idea and product prototype developed in <b>Cornell Tech Startup studio.</b> <br><br>  ",
+      "descriptions": "Have you or your friends dreamed to act as Harley Quinn or IronMan in a movie video? We are building a mobile app to enable you to fuse yourself with the movie characters you love and even place yourself into movie fragments using computer vision. Firis is a startup idea and product prototype developed and incubated in <b>Cornell Tech Startup studio.</b> <br><br>  ",
       "imgFolder": "Firis",
       "header":"FirisTop.jpg",
       "imgsSection": [
-         {"img":"ironduan.gif", "title":"What's Firis?", "text":"Have you or your friends dreamed to act as Harley Quinn or IronMan in a movie video? We are building a mobile app to enable you to fuse yourself with the movie characters you love and even place yourself into movie fragments using computer vision. The new character can look like you or even be you but speaking the original lines in the movie video. Besides that, you can also share your videos to social networks and receive likes and followers."},
+         {"img":"ironduan.gif", "title":"What's Firis?", "text":"Firis is more than a logo and a set of UI. It’s a story, a mood, a tone of voice, a dependable experience that consumers trust and love."},
          {  "img":"FirisMotion.gif",
-            "text":"As the full-stack designer, I teamed up with four developers. I designed full package for the Firis, including brand identity, pitch deck, UI/UX, motion and interaction, special effects and video comercial."},
-         {"img":"2.png"},
+            "text":"As the full-stack designer, I teamed up with four developers. I designed full package for the Firis, including brand identity, pitch deck, UI/UX, motion and interaction, special effects and video comercial."},            
+            {"img":"Essense.jpg"},
+            {"img":"Logo.jpg"}, 
+            {"img":"Components.jpg"},     
+            {"img":"UIMotion.gif"}, 
+                
+         
+         {"img":"firisUI.jpg"},
+         {"img":"firisUINite.jpg", "des":"Nite Mode Test"},
          {"img":"3.jpg"}
          
       ]
