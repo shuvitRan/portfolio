@@ -61,11 +61,12 @@
       "imgFolder": "Firis",
       "header":"FirisTop.jpg",
       "imgsSection": [
-         {"img":"ironduan.gif", "title":"What's Firis?", "text":"Firis is more than a logo and a set of UI. It’s a story, a mood, a tone of voice, a dependable experience that consumers trust and love."},
+         {"img":"ironduan.gif",  "text":"Firis is more than a logo and a set of UI. It’s a story, a mood, a tone of voice, a dependable experience that consumers trust and love."},
          {  "img":"FirisMotion.gif",
             "text":"As the full-stack designer, I teamed up with four developers. I designed full package for the Firis, including brand identity, pitch deck, UI/UX, motion and interaction, special effects and video comercial."},            
             {"img":"Essense.jpg"},
             {"img":"Logo.jpg"}, 
+            {"img":"FirisColornType.jpg"}, 
             {"img":"Components.jpg"},     
             {"img":"UIMotion.gif"}, 
                 
