@@ -1,0 +1,2 @@
+(this["webpackJsonpdanran-portfolio"]=this["webpackJsonpdanran-portfolio"]||[]).push([[6],{440:function(a,e,t){"use strict";t.r(e);var n=t(1),o=t.n(n);e.default=function(){return o.a.createElement("div",{className:"ErroPage"},o.a.createElement("h1",null,"Oops...the path is not available."))}}}]);
+//# sourceMappingURL=6.0bdc0afa.chunk.js.map
