@@ -7,7 +7,7 @@
   justify-content: center;
     text-align: left;
     flex-direction: column;
-     width: 100%; 
+     width: 100vw; 
     /* height: 100%; */
     
     font-family: Futura, Arial, sans-serif;
@@ -21,9 +21,12 @@
 }
 
 .aboutContentContainer{
-    min-width: 200px;
+    // min-width: 200px;
+    // width:100%;
+    width: auto;
     max-width: 1240px;
-       margin: 2rem 7rem 0;
+    position: relative;
+    margin: 2rem 7rem 0;
 }
 
 .aboutContainer h1{
@@ -158,10 +161,10 @@
 
 .ChineseText{
     padding: 5em 10% 5em;
-    margin: none;
+    // margin: none;
     writing-mode: vertical-rl;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    // right: 0;
+    // right: 105px;
     float: right;
     font-size: 1.5em;
     height:230px;
@@ -193,6 +196,7 @@
 
     .aboutContentContainer{
         margin: 0 1rem 0;
+        width: 100%;
     }
     .aboutContainer h1{
         font-size: 1.5em;
@@ -246,7 +250,7 @@
     
     }
     .ChineseText{
-        padding: 4em 1.5em 0em;
+        // padding: 4em 1.5em 0em;
         margin: none;
         writing-mode: vertical-rl;
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -255,9 +259,7 @@
         font-size: 1.2em;
         height:140px;
         width: 100%;
-        // position: fixed;
-        // left: 5%;
-        // bottom: 4%;
+       
     }
     
 }
