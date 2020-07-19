@@ -123,6 +123,7 @@ div{
 .imgSecLayout{
     width: 90%;
     margin: 5% 0 0;
+
     img{
         width:100%;
         // margin: none;
@@ -132,19 +133,21 @@ div{
         position: relative;
         padding: none;
         margin:none;
+        animation: fadein 2s;
     }
     
 }
 .DescriptionWithTitle{
     font-size: 1.5rem;
     margin-top:10%;
+    
     h1{
         font-size: 3rem;
         max-width:1000px ;
         padding-bottom: 5%;
     }
-    div{
-        margin-bottom: 10%;
+    span{
+        margin-bottom: 10%;     
     }
 
 }
@@ -175,7 +178,7 @@ div{
     /* height: auto; */
     /* margin-bottom: 0px; */
     /* margin-top: 0; */
-    animation: fadein 3s;
+    
     margin:0;
     
     
@@ -195,6 +198,7 @@ div{
     padding: none;
     border: none;
     display:block; 
+    animation: fadein 3s;
     
    
 }
@@ -255,7 +259,7 @@ div{
     line-height:1px
   }
   .goBack:hover {
-    color: #ff0080;
+    color: #ffffff;
     opacity: 1;
     transition: 0.5s;
   
@@ -265,7 +269,7 @@ div{
   }
   
   .goBack:hover .goBackIcon{
-    background-color: #ff0080;
+    background-color: rgb(175, 134, 21);
     opacity: 1;
     transition: 0.5s;
     
@@ -381,6 +385,7 @@ div{
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        animation: fadein 2s;
         // position: relative;
         .videoTitle{
             padding:50px 0 0;

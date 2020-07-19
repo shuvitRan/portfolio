@@ -48,7 +48,7 @@
     z-index: 5;
     display: inline-block;
     position: relative;
-    animation: fadein 4s;
+    animation: fadein 7s;
     transition: 1s;
     font-weight: 500;
     margin: none;
@@ -107,10 +107,13 @@
     font-size: 1.2em;
     /* padding-left: 20%; */
     padding-bottom: 6em;
+    animation: fadein 5s;
 }
 
 .textBlockC2 p{
     margin: 40px 0;
+    animation: fadein 4s;
+    
 }
 
 @keyframes fadein {
