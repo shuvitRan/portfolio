@@ -40,9 +40,10 @@
     // position: absolute;
     // display: inline-flex;
     animation: fadein 2s;
-
+    
     img{
         width:100%;
+        
         // margin: none;
         // padding: none;
         // border: none;
@@ -113,26 +114,35 @@ div{
         }
     }
 }
-
+.imgDes{
+    max-width: 1400px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
 .imgDes p{
     margin: 5px 0 0;
     font-family: "Futura";
+    
 }
 
 
 .imgSecLayout{
     width: 90%;
-    margin: 5% 0 0;
-
+    margin: 0 0 5%;
+    
     img{
         width:100%;
+        max-width: 1400px;
         // margin: none;
         // padding: none;
         // border: none;
         display: block;
+        margin-left: auto;
+        margin-right: auto;
         position: relative;
         padding: none;
-        margin:none;
+        // margin:none;
         animation: fadein 2s;
     }
     
@@ -209,6 +219,7 @@ div{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin-bottom:5%;
     // position: relative;
     .videoTitle{
         padding:50px 0 0;
@@ -337,7 +348,7 @@ div{
             max-width:1000px ;
             padding-bottom: 5%;
         }
-        div{
+        span{
             margin-bottom: 10%;
         }
     

@@ -31,12 +31,16 @@ const ImgGridSystem = (props)=>{
     const fadeinAnimation = useSpring({opacity: 1, from: {opacity: 0}})
 
     let imgList = [
-        {id: 0, src: 'WCMA/WCMAHeader.jpg', title: 'All AT ONCE - WCMA', partner:"Studio TheGreenEyl", category:"creative web app"},
-        {id: 1, src: 'TNC/TNCHeader.jpg', title: 'MEGA CITY',partner:"The Natrual Conservancy", category:"web app, interactive storytelling"},
-        {id: 2, src: 'Firis/FirisHeader.jpg', title: 'FIRIS', partner:"Cornell Start-up Studio", category:"ui/ux, product design, motion "},
-        {id: 3, src: 'Met/METHeader.png', title: 'MET',partner:"Metropolitan Museum of Art", category:"creative app",},
-        {id: 4, src: 'Peeq/PeeqHeader.jpg', title: 'PEEQ',partner:"Peeq Data Inc", category:"ui/ux, motion, video", },
-        {id: 5, src: 'Games/GamesHeader.jpg', title: 'BLUE DESERT DISCO', partner:"Wonderville Brooklyn", category:"game development, phsyical computing"}
+        {id: 0, src: 'WCMA/WCMAHeader3.jpg', title: 'All AT ONCE - WCMA', partner:"Studio TheGreenEyl", category:"creative web app"},
+        {id: 1, src: 'TNC/TNCHeader2.jpg', title: 'MEGA CITY',partner:"The Nature Conservancy", category:"web app, interactive storytelling"},
+        {id: 2, src: 'Firis/FirisHeader2.jpg', title: 'FIRIS', partner:"Cornell Start-up Studio", category:"ui/ux, product design, motion "},
+        {id: 3, src: 'Met/METHeader.png', title: 'MET',partner:"Metropolitan Museum of Art", category:"creative apps"},
+        {id: 4, src: 'Peeq/PeeqHeader.jpg', title: 'PEEQ',partner:"Peeq Data Inc", category:"ui/ux, motion, video" },
+        {id: 5, src: 'Games/GamesHeader2.jpg', title: 'BLUE DESERT DISCO', partner:"Wonderville Brooklyn", category:"game development, physical computing"},
+        {id: 6, src: 'WUWEI/wuweiheader2.jpg', title: 'WUWEI', partner:"Pablo's Birthday Gallery", category:"Interactive Installation, Art"},
+        {id: 7, src: 'LVL/LVLheader.jpg', title: 'LVL++', partner:"Ann Street Gallery", category:"Interactive Installation, Art"},
+        {id: 8, src: 'ASSORTED/assortedheader.jpg', title: 'ASSORTED WORKS', partner:"Multiple Clients", category:"Design, Illustrations, Product Design"}
+        
     ]; 
     // let isImgClicked = false;
     // let activeId ='';
@@ -68,7 +72,7 @@ const ImgGridSystem = (props)=>{
       
       let gridimg = null;
   
-        gridimg=(// return (
+        gridimg=(
           <animated.div 
           onMouseOver={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
           onMouseLeave={() => set({ xys: [0, 0, 1] })}
@@ -97,8 +101,7 @@ const ImgGridSystem = (props)=>{
 
     return (
         <>
-            {/* <div></div> */}
-        {/* <div className="gridSystem">     */}
+        
         <div className="projectContentContainer">  
           <div className="gridContainer">
             {gridimg}

@@ -19,7 +19,7 @@
        "videoLink": [
           "https://player.vimeo.com/video/428276309"
        ],
-       "videoTop": true,
+       "videoTop": false,
        "button":[],
        "buttonName":[]
     },
@@ -33,18 +33,18 @@
           "https://shuvitran.github.io/szapp/", "https://github.com/shuvitRan/ShenzhenLivability/blob/master/ShenzhenLivabilityinThreeAspects.pdf"
        ],
        "buttonName": [
-          "Desktop App", "Academic Paper"
+          "Desktop Web App", "Academic Paper"
        ],
        "imgFolder": "TNC",
        "header":"TNCTop.jpg",
        "imgsSection": [
          {"img":"1.png", "title":"Why Shenzhen", "text":"Shenzhen, known as China's booming silicon valley today, used to be a small fish town 40 years ago. Today, it ranks one of the top mega-cities in China and leading examples of urbanization in developing countries. By looking at Shenzhen, we could learn about the challenges that come with rapid growth and learn to build our city better."},
-         {"img":"2.jpg"},
-         {"img":"3.jpg"},
-         {"img":"4.jpg"},
-         {"img":"5.jpg"},
-         {"img":"6.jpg"},
-         {"img":"7.jpg"}
+         {"img":"2.jpg","des":"Story of Growth Intro"},
+         {"img":"3.jpg","des":"Story of Growth 1979 Satellite Image"},
+         {"img":"4.jpg", "des":"Story of Growth"},
+         {"img":"5.jpg", "des":"The Livability in Three Aspects: Green Coverage"},
+         {"img":"6.jpg", "des":"The Livability in Three Aspects: Hospital Accessibility"},
+         {"img":"7.jpg", "des":"The Livability in Three Aspects: Crime and Safety"}
          
         
        ],
@@ -63,7 +63,7 @@
       "imgFolder": "Firis",
       "header":"FirisTop.jpg",
       "imgsSection": [
-         {"img":"ironduan.gif",  "text":"As the full-stack designer, I teamed up with four developers. I designed full package for the Firis, including brand identity, pitch deck, UI/UX, motion and interaction, special effects and video comercial."},
+         {"img":"ironduan.gif",  "text":"As the full-stack designer, I teamed up with four developers. I designed a full package for the Firis, including brand identity, pitch deck, UI/UX, motion and interaction, special effects, and video commercial."},
          {  "img":"FirisMotion.gif",
             "text":"Firis is more than a logo and a set of UI. It’s a story, a mood, a tone of voice, a dependable experience that consumers trust and love."},            
             {"img":"Essense.jpg"},
@@ -77,7 +77,12 @@
          {"img":"firisUINite.jpg", "des":"Nite Mode Test"},
          {"img":"3.jpg"}
          
-      ]
+      ],
+      "videoName":"Firis Pitch Video",
+       "videoLink": [
+          "https://player.vimeo.com/video/440402251"
+       ],
+       "videoTop": false
   
    },
     {
@@ -100,7 +105,7 @@
           "What Are They Painting?",
           "Let the Music Play"
        ],
-       "header":"METTop.png",
+       "header":"METTop.jpg",
        "imgsSection": [
          {"img":"1.jpg", "title":"Buddha at The Met", "text":" A computer-vision based research and data visualization on the Buddha statues at the museum."},
          {"img":"2.jpg","title":"Met Masquerade", "text":"A playful AR application, introducing the mask collection at the Met."},
@@ -121,10 +126,10 @@
        "imgFolder": "Peeq",
        "header":"1.jpg",
        "imgsSection": [
-         {"img":"PeeqMov2.gif", "des":"Peeq demo video intro.", "text":"I was a full-time motion and interaction designer at Peeq Data, Inc. Responsible for design related activities including creating motion graphics and processing video, user interface and user experience of the website and mobile applications."},
+         {"img":"PeeqMov2.gif", "des":"Peeq demo video intro.", "text":"I was a full-time motion and interaction designer at Peeq Data, Inc. Responsible for design-related activities including creating motion graphics and processing video, user interface, and user experience of the website and mobile applications."},
          {"img":"4.gif", "des":"Video tags motion design."},
          {"img":"PeeqSwitchAngle.gif","des":"Switch angle."}, 
-         {"img":"2.jpg", "text":"I was in charge of design interaction motion template and video sample for the Peeq app and its video product. The clients of our video products include Dew NBA, SteveNash Foundation, Drew League, and WorkForce Athletics.  As a member of the Peeq design team, I worked on the app UI/UX design, Peeq website design and its development. One of the video samples that I created was shown on Discovery channel Daily Planet Show which featuring Peeq on December 2017."},
+         {"img":"2.jpg", "text":"I was in charge of the design interaction motion template and video sample for the Peeq app and its video product. The clients of our video products include Dew NBA, SteveNash Foundation, Drew League, and WorkForce Athletics.  As a member of the Peeq design team, I worked on the app UI/UX design, Peeq website design, and its development. One of the video samples that I created was shown on the Discovery Channel Daily Planet Show featuring Peeq in December 2017."},
          {"img":"3.gif", "des":"App onboarding."},
          {"img":"5.jpg", "des":"Capture flow."}
           
@@ -140,9 +145,9 @@
       "title": "Blue Desert Disco",
       "role":["Project Manager","Game Designer", "Game Developer"],
       "tools": ["Unity","C#","Game Design & Development" , "Physical Computing","Arduino"],
-      "descriptions": "Blue Desert Disco is a 2-3 players fighting digital game that comes with custom 3D print controllers.  It was showcased in Wonderville ( An Independent Game Space) in Brooklyn in December 2019. I lead the team and serve as the concept designer and developer of this game. I am the sole developer of the game software. I also helped with physical computing development.",
+      "descriptions": "Blue Desert Disco is a multiple-players fighting digital game that comes with custom 3D print controllers.  It was showcased in Wonderville ( An Independent Game Space) in Brooklyn in December 2019. I lead the team and serve as the concept designer and developer of this game. I am the sole developer of the game software. I also helped with physical computing development.",
       "imgFolder": "Games",
-      "header":"GamesTop.jpg",
+      "header":"GamesTopNew.jpg",
       "imgsSection": [
          {"img":"1.jpg", "text":"In this game, each gamer has their own custom 3D print controller paired with a specific character in the game. Each character has their own unique \"weapon\" that reflects on their corresponding controller. Their speed and strengths also vary from each other. The controllers are identical in their overall shape but different in the reflective device/components of the characters' abilities. The players have to adapt to the controller and figure out their own way to play quickly, and meanwhile, defeats the other players. The winner, of course, has the dance floor all to herself/himself."},
          {"img":"2.jpg","des":"Game characters."},
@@ -162,5 +167,92 @@
          "https://player.vimeo.com/video/378023986"
       ],
       "videoTop": true
+   },
+   {
+      "id": 6,
+      "title": "Wuwei",
+      "role":["Artist","Experience Designer", "Creative Technologist"],
+      "tools": ["Unreal Engine","C++","Open Framework" , "Physical Computing","Arduino", "Projection Mapping"],
+      "descriptions": "Wuwei is an interactive installation that utilizes video projection to share the idea of “action without action”. It is significant to understand “action without action” if we seek for the harmony between outside world and us.",
+      "imgFolder": "WUWEI",
+      "header":"wuwei1.jpg",
+      "imgsSection": [
+         {"img":"wuwei2.jpg", "text":"The First Scene: It is a harmonious small island, which has some trees and bushes, on the ocean. When the PIR sensor detects human activities, the environment around the island changes from harmonious to chaotic. The ocean will gradually appear to become polluted. Haze will gather, and once enough human activity is collected by the sensor,  the bushes on the island will catch fire and spread to the trees.The message of this scene is very straightforward; human activities can disturb the harmony of nature."},
+         {"img":"wuwei3.jpg","text":"The Second Scene: Everything has a path. The moving dot follows its journey along the path in infinite loop.The dot and its movement symbolizes the circulation of nature. A minor disturbance will cause a huge change. Once the change has been made, the dot can never go to its original path. However, the system will assign it a new path, every time after disturbance. Just as nature, it will finally find its balance after human disturbance. This piece expands the idea of action without action. The audience can choose how they interact with this piece. They can celebrate in the chaos, or appreciate the peace of the circulation. I hope at the end of the day, the audience can see the beauty of the harmony without disturbance."}
+         
+     
+      ],
+      "button": [
+         "https://vimeo.com/166305384",
+         "https://vimeo.com/166160326"
+      ],
+      "buttonName": [
+         "Installation False Needs ",
+         "Installation Follower"
+      ],
+      "videoName":"Video Documentation",
+      "videoLink": [
+         "https://player.vimeo.com/video/215936047"
+      ],
+      "videoTop": true
+   },
+   {
+      "id": 7,
+      "title": "Lvl++",
+      "role":["Artist","Experience Designer", "Creative Technologist"],
+      "tools": ["Raspberry Pi","Java","Processing" , "Physical Computing"],
+      "descriptions": "Lvl plus plus is the first project I did in the Sadness of Modernity series. It is an interactive game about how there is always an illusion behind hierarchy. ",
+      "imgFolder": "LVL",
+      "header":"lvl1.jpg",
+      "imgsSection": [
+         {"img":"lvl3.jpg", "text":"The player can play this game by using one black button. The purpose or goal of this game is for the player to try to push the button and get to the highest level. In this game I’m using simple numbers as a metaphor of different classes in the capitalist society. "},
+         {"img":"lvl4.jpg"},
+         {"img":"lvl5.jpg"},
+         {"img":"lvl2.jpg"}
+         
+     
+      ],
+      "button": [
+         "https://vimeo.com/166305384",
+         "https://vimeo.com/166160326"
+      ],
+      "buttonName": [
+         "Related: Installation False Needs ",
+         "Related: Installation Follower"
+      ],
+      "videoName":"Video Documentation",
+      "videoLink": [
+         "https://player.vimeo.com/video/166150628"
+      ],
+      "videoTop": true
+   },
+   {
+      "id": 8,
+      "title": "Assorted Works",
+      "role":["Designer","Product Designer", "Creative Technologist", "Illustrator"],
+      "tools": ["Adobe Creative Suite","Product Design","Poster Design", "Video Editing", "Motion Graphics"],
+      "descriptions": "This is a collection of some previous works.",
+      "imgFolder": "ASSORTED",
+      "header":"assortedTop.jpg",
+      "imgsSection": [
+         {"img":"2.jpg"},
+         {"img":"3.jpg"}
+         
+     
+      ],
+      "button": [
+         "https://vimeo.com/166305384",
+         "https://vimeo.com/166160326"
+      ],
+      "buttonName": [
+         "Installation False Needs ",
+         "Installation Follower"
+      ],
+      "videoName":"Demo Reel",
+      "videoLink": [
+         "https://player.vimeo.com/video/223741570"
+      ],
+      "videoTop": true
    }
+   
  ]

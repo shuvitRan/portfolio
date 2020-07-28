@@ -282,7 +282,25 @@ if (eachContent[params.id]&& typeof eachContent[params.id].imgsSection!='undefin
         }
     
   
+        let ImgNVideo;
+        if(eachContent[params.id]&& eachContent[params.id].videoTop!='undefined' && eachContent[params.id].videoTop){
+            ImgNVideo=(
+                <>
+                 {videoShow}
+                {imgSection}
+           
+                </>
+            )
 
+        } else {
+            ImgNVideo=(
+                <>
+                       {imgSection}
+            {videoShow}
+            
+                </>
+            )
+        }
 
 
 
@@ -306,8 +324,8 @@ if (eachContent[params.id]&& typeof eachContent[params.id].imgsSection!='undefin
        
             {imgHeader}
             {mainInfo}
-            {imgSection}
-            {videoShow}
+            {ImgNVideo}
+            
    
         </div>
     </div>
