@@ -36,10 +36,10 @@ const ImgGridSystem = (props)=>{
         {id: 2, src: 'Firis/FirisHeader2.jpg', title: 'FIRIS', partner:"Cornell Start-up Studio", category:"ui/ux, product design, motion "},
         {id: 3, src: 'Met/METHeader.png', title: 'MET',partner:"Metropolitan Museum of Art", category:"creative apps"},
         {id: 4, src: 'Peeq/PeeqHeader.jpg', title: 'PEEQ',partner:"Peeq Data Inc", category:"ui/ux, motion, video" },
-        {id: 5, src: 'Games/GamesHeader2.jpg', title: 'BLUE DESERT DISCO', partner:"Wonderville Brooklyn", category:"game development, physical computing"},
-        {id: 6, src: 'WUWEI/wuweiheader2.jpg', title: 'WUWEI', partner:"Pablo's Birthday Gallery", category:"Interactive Installation, Art"},
-        {id: 7, src: 'LVL/LVLheader.jpg', title: 'LVL++', partner:"Ann Street Gallery", category:"Interactive Installation, Art"},
-        {id: 8, src: 'ASSORTED/assortedheader.jpg', title: 'ASSORTED WORKS', partner:"Multiple Clients", category:"Design, Illustrations, Product Design"}
+        {id: 5, src: 'ASSORTED/assortedheader2.jpg', title: 'ASSORTED WORKS', partner:"Multiple Clients", category:"design, illustration"},
+        {id: 6, src: 'WUWEI/wuweiheader2.jpg', title: 'WUWEI', partner:"Pablo's Birthday Gallery", category:"interactive installation art"},
+        {id: 7, src: 'LVL/lvlheader.jpg', title: 'LVL++', partner:"Ann Street Gallery", category:"interactive installation art"},
+        {id: 8, src: 'Games/GamesHeader2.jpg', title: 'BLUE DESERT DISCO', partner:"Wonderville Brooklyn", category:"game development, physical computing"}
         
     ]; 
     // let isImgClicked = false;

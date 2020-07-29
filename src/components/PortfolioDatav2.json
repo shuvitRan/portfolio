@@ -140,40 +140,39 @@
        ]
     },
 
-    {
+
+   {
       "id": 5,
-      "title": "Blue Desert Disco",
-      "role":["Project Manager","Game Designer", "Game Developer"],
-      "tools": ["Unity","C#","Game Design & Development" , "Physical Computing","Arduino"],
-      "descriptions": "Blue Desert Disco is a multiple-players fighting digital game that comes with custom 3D print controllers.  It was showcased in Wonderville ( An Independent Game Space) in Brooklyn in December 2019. I lead the team and serve as the concept designer and developer of this game. I am the sole developer of the game software. I also helped with physical computing development.",
-      "imgFolder": "Games",
-      "header":"GamesTopNew.jpg",
+      "title": "Assorted Works",
+      "role":["Designer", "Creative Technologist", "Illustrator"],
+      "tools": ["Adobe Creative Suite","Product Design","Poster Design", "Video Editing", "Motion Graphics"],
+      "descriptions": "This is a collection of my previous works.",
+      "imgFolder": "ASSORTED",
+      "header":"assortedTop.png",
       "imgsSection": [
-         {"img":"1.jpg", "text":"In this game, each gamer has their own custom 3D print controller paired with a specific character in the game. Each character has their own unique \"weapon\" that reflects on their corresponding controller. Their speed and strengths also vary from each other. The controllers are identical in their overall shape but different in the reflective device/components of the characters' abilities. The players have to adapt to the controller and figure out their own way to play quickly, and meanwhile, defeats the other players. The winner, of course, has the dance floor all to herself/himself."},
-         {"img":"2.jpg","des":"Game characters."},
-         {"img":"3.jpg", "des":"Game showcase in Brooklyn."}
+         {"img":"booklet1N.jpg", "des":"Graphic Design Booklet Part 1."},
+         {"img":"booklet2N.jpg", "des":"Graphic Design Booklet Part 2."},
+         {"img":"xixi.jpg","des":"Poster designer, illustrator, and colorist for short film Double Happiness."},
+         {"img":"night.jpg", "des":"Production Designer, Poster Designer, and Colorist for short film Persimmon Night."},
+         {"img":"augr.jpg", "des":"Product development for Free Wheel at Cornell Product Studio."},
+         {"img":"pp.jpg","des":"E-commerce product design"},
+         {"img":"mpc.jpg","des":"Motion and gesture live music console prototype."}
+         
      
       ],
-      "button": [
-         "https://vimeo.com/376450826",
-         "https://vimeo.com/370009707"
-      ],
-      "buttonName": [
-         "early stage documenation",
-         "more game I made - Love You Away"
-      ],
-      "videoName":"Video Documentation",
+   
+      "videoName":"Demo Reel",
       "videoLink": [
-         "https://player.vimeo.com/video/378023986"
+         "https://player.vimeo.com/video/223741570"
       ],
-      "videoTop": true
+      "videoTop": false
    },
    {
       "id": 6,
       "title": "Wuwei",
       "role":["Artist","Experience Designer", "Creative Technologist"],
       "tools": ["Unreal Engine","C++","Open Framework" , "Physical Computing","Arduino", "Projection Mapping"],
-      "descriptions": "Wuwei is an interactive installation that utilizes video projection to share the idea of “action without action”. It is significant to understand “action without action” if we seek for the harmony between outside world and us.",
+      "descriptions": "Wuwei is an interactive installation that utilizes video projection to share the idea of “action without action”. It is significant to understand “action without action” if we seek for the harmony between outside world and us. It was exhibited in Pablo’s Birthday Gallery (Manhattan, NY) in 2017 ",
       "imgFolder": "WUWEI",
       "header":"wuwei1.jpg",
       "imgsSection": [
@@ -201,7 +200,7 @@
       "title": "Lvl++",
       "role":["Artist","Experience Designer", "Creative Technologist"],
       "tools": ["Raspberry Pi","Java","Processing" , "Physical Computing"],
-      "descriptions": "Lvl plus plus is the first project I did in the Sadness of Modernity series. It is an interactive game about how there is always an illusion behind hierarchy. ",
+      "descriptions": "Lvl++ is the first project of the Sadness of Modernity series. It is an interactive installation about how there is always an illusion behind hierarchy. It was exhibited in Myrtle Gallery (Brooklyn, NY) and Ann Street Gallery (Newburgh, NY) in 2016.",
       "imgFolder": "LVL",
       "header":"lvl1.jpg",
       "imgsSection": [
@@ -228,29 +227,29 @@
    },
    {
       "id": 8,
-      "title": "Assorted Works",
-      "role":["Designer","Product Designer", "Creative Technologist", "Illustrator"],
-      "tools": ["Adobe Creative Suite","Product Design","Poster Design", "Video Editing", "Motion Graphics"],
-      "descriptions": "This is a collection of some previous works.",
-      "imgFolder": "ASSORTED",
-      "header":"assortedTop.jpg",
+      "title": "Blue Desert Disco",
+      "role":["Project Manager","Game Designer", "Game Developer"],
+      "tools": ["Unity","C#","Game Design & Development" , "Physical Computing","Arduino"],
+      "descriptions": "Blue Desert Disco is a multiple-players fighting digital game that comes with custom 3D print controllers.  It was showcased in Wonderville ( An Independent Game Space) in Brooklyn in December 2019. I lead the team and serve as the concept designer and developer of this game. I am the sole developer of the game software. I also helped with physical computing development.",
+      "imgFolder": "Games",
+      "header":"GamesTopNew.jpg",
       "imgsSection": [
-         {"img":"2.jpg"},
-         {"img":"3.jpg"}
-         
+         {"img":"1.jpg", "text":"In this game, each gamer has their own custom 3D print controller paired with a specific character in the game. Each character has their own unique \"weapon\" that reflects on their corresponding controller. Their speed and strengths also vary from each other. The controllers are identical in their overall shape but different in the reflective device/components of the characters' abilities. The players have to adapt to the controller and figure out their own way to play quickly, and meanwhile, defeats the other players. The winner, of course, has the dance floor all to herself/himself."},
+         {"img":"2.jpg","des":"Game characters."},
+         {"img":"3.jpg", "des":"Game showcase in Brooklyn."}
      
       ],
       "button": [
-         "https://vimeo.com/166305384",
-         "https://vimeo.com/166160326"
+         "https://vimeo.com/376450826",
+         "https://vimeo.com/370009707"
       ],
       "buttonName": [
-         "Installation False Needs ",
-         "Installation Follower"
+         "early stage documenation",
+         "more game I made - Love You Away"
       ],
-      "videoName":"Demo Reel",
+      "videoName":"Video Documentation",
       "videoLink": [
-         "https://player.vimeo.com/video/223741570"
+         "https://player.vimeo.com/video/378023986"
       ],
       "videoTop": true
    }
